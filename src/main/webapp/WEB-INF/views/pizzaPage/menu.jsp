@@ -8,9 +8,9 @@
   <%@include file="../dynamic/navigationMain.jspf" %>
     <!-- END nav -->
 
-    <section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
+    <section class="home-slider owl-carousel img" style="background-image: url(/resources/images/bg_1.jpg);">
 
-      <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
+      <div class="slider-item" style="background-image: url(/resources/images/bg_3.jpg);">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center">
@@ -38,7 +38,7 @@
     		<div class="row no-gutters d-flex">
     			<div class="col-lg-4 d-flex ftco-animate">
     				<div class="services-wrap d-flex">
-    					<a href="#" class="img" style="background-image: url(images/pizza-1.jpg);"></a>
+    					<a href="#" class="img" style="background-image: url(/resources/images/pizza-1.jpg);"></a>
     					<div class="text p-4">
     						<h3>Italian Pizza</h3>
     						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia </p>
@@ -48,7 +48,7 @@
     			</div>
     			<div class="col-lg-4 d-flex ftco-animate">
     				<div class="services-wrap d-flex">
-    					<a href="#" class="img" style="background-image: url(images/pizza-2.jpg);"></a>
+    					<a href="#" class="img" style="background-image: url(/resources/images/pizza-2.jpg);"></a>
     					<div class="text p-4">
     						<h3>Greek Pizza</h3>
     						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
@@ -58,7 +58,7 @@
     			</div>
     			<div class="col-lg-4 d-flex ftco-animate">
     				<div class="services-wrap d-flex">
-    					<a href="#" class="img" style="background-image: url(images/pizza-3.jpg);"></a>
+    					<a href="#" class="img" style="background-image: url(/resources/images/pizza-3.jpg);"></a>
     					<div class="text p-4">
     						<h3>Caucasian Pizza</h3>
     						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
@@ -69,7 +69,7 @@
 
     			<div class="col-lg-4 d-flex ftco-animate">
     				<div class="services-wrap d-flex">
-    					<a href="#" class="img order-lg-last" style="background-image: url(images/pizza-4.jpg);"></a>
+    					<a href="#" class="img order-lg-last" style="background-image: url(/resources/images/pizza-4.jpg);"></a>
     					<div class="text p-4">
     						<h3>American Pizza</h3>
     						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia </p>
@@ -79,7 +79,7 @@
     			</div>
     			<div class="col-lg-4 d-flex ftco-animate">
     				<div class="services-wrap d-flex">
-    					<a href="#" class="img order-lg-last" style="background-image: url(images/pizza-5.jpg);"></a>
+    					<a href="#" class="img order-lg-last" style="background-image: url(/resources/images/pizza-5.jpg);"></a>
     					<div class="text p-4">
     						<h3>Tomatoe Pie</h3>
     						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
@@ -89,7 +89,7 @@
     			</div>
     			<div class="col-lg-4 d-flex ftco-animate">
     				<div class="services-wrap d-flex">
-    					<a href="#" class="img order-lg-last" style="background-image: url(images/pizza-6.jpg);"></a>
+    					<a href="#" class="img order-lg-last" style="background-image: url(/resources/images/pizza-6.jpg);"></a>
     					<div class="text p-4">
     						<h3>Margherita</h3>
     						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
@@ -106,7 +106,7 @@
     <section class="ftco-menu">
     	<div class="container-fluid">
     		<div class="row d-md-flex">
-	    		<div class="col-lg-4 ftco-animate img f-menu-img mb-5 mb-md-0" style="background-image: url(images/about.jpg);">
+	    		<div class="col-lg-4 ftco-animate img f-menu-img mb-5 mb-md-0" style="background-image: url(/resources/images/about.jpg);">
 	    		</div>
 	    		<div class="col-lg-8 ftco-animate p-md-5">
 		    		<div class="row">
@@ -129,7 +129,7 @@
 		              	<div class="row">
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/pizza-1.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(/resources/images/pizza-1.jpg);"></a>
 		              				<div class="text">
 		              					<h3><a href="#">Itallian Pizza</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -140,7 +140,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/pizza-2.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(/resources/images/pizza-2.jpg);"></a>
 		              				<div class="text">
 		              					<h3><a href="#">Itallian Pizza</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -151,7 +151,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/pizza-3.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(/resources/images/pizza-3.jpg);"></a>
 		              				<div class="text">
 		              					<h3><a href="#">Itallian Pizza</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -167,7 +167,7 @@
 		                <div class="row">
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-1.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(/resources/images/drink-1.jpg);"></a>
 		              				<div class="text">
 		              					<h3><a href="#">Lemonade Juice</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -178,7 +178,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-2.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(/resources/images/drink-2.jpg);"></a>
 		              				<div class="text">
 		              					<h3><a href="#">Pineapple Juice</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -189,7 +189,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-3.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(/resources/images/drink-3.jpg);"></a>
 		              				<div class="text">
 		              					<h3><a href="#">Soda Drinks</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -205,7 +205,7 @@
 		                <div class="row">
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/burger-1.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(/resources/images/burger-1.jpg);"></a>
 		              				<div class="text">
 		              					<h3><a href="#">Itallian Pizza</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -216,7 +216,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/burger-2.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(/resources/images/burger-2.jpg);"></a>
 		              				<div class="text">
 		              					<h3><a href="#">Itallian Pizza</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -227,7 +227,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/burger-3.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(/resources/images/burger-3.jpg);"></a>
 		              				<div class="text">
 		              					<h3><a href="#">Itallian Pizza</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -243,7 +243,7 @@
 		                <div class="row">
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/pasta-1.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(/resources/images/pasta-1.jpg);"></a>
 		              				<div class="text">
 		              					<h3><a href="#">Itallian Pizza</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -254,7 +254,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/pasta-2.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(/resources/images/pasta-2.jpg);"></a>
 		              				<div class="text">
 		              					<h3><a href="#">Itallian Pizza</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -265,7 +265,7 @@
 		              		</div>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/pasta-3.jpg);"></a>
+		              				<a href="#" class="menu-img img mb-4" style="background-image: url(/resources/images/pasta-3.jpg);"></a>
 		              				<div class="text">
 		              					<h3><a href="#">Itallian Pizza</a></h3>
 		              					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
