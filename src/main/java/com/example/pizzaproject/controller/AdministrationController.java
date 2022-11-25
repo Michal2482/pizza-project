@@ -4,13 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomeController {
+public class AdministrationController {
 
-    @GetMapping("/")
-    public String getHome() {
-        return "index";
+    @GetMapping("/admin")
+    public String getAdmin() {
+        return "pizzaPage/administration";
     }
 }
-
-
-
