@@ -8,6 +8,6 @@ public class AdministrationController {
 
     @GetMapping("/admin")
     public String getAdmin() {
-        return "pizzaPage/administration";
+        return "admin/administration";
     }
 }
