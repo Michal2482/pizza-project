@@ -19,7 +19,7 @@ public class AdministrationController {
     @PostMapping("/admin/addMeal")                          //dodawanie dania
     public RedirectView postAddMeal(Meal meal) {
         mealService.addMeal(meal);
-        return new RedirectView("admin/administration");
+        return new RedirectView("/admin");
     }
     @PostMapping("/admin/deleteMeal")                       //usuwanie dania
     public RedirectView postDeleteMeal(Meal meal) {

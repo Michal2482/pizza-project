@@ -9,6 +9,7 @@ public class Meal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
+    private String photo;
     private String category;
     private String name;
     private String description;
@@ -17,12 +18,21 @@ public class Meal {
     public Meal() {
     }
 
-    public Meal(Long id, String category, String name, String description, Double price) {
+    public Meal(Long id, String photo, String category, String name, String description, Double price) {
         this.id = id;
+        this.photo = photo;
         this.category = category;
         this.name = name;
         this.description = description;
         this.price = price;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 
     public Long getId() {

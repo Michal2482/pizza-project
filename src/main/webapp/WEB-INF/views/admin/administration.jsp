@@ -204,6 +204,7 @@
                             <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>
                         </form>
                         <h5>Position of Menu</h5>
+                        <form method="post" action='<c:url value="/admin/addMeal"/>'>
                         To wszystko obudowac w seletca od tego miejsca<br>
                         Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
                         <div class="form-group">
@@ -218,8 +219,8 @@
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Product name</h6></label>
                                 <div class="col-8">
-                                    <input class="form-control" type="text" name="ProductName[1]"
-                                           placeholder="product name">
+                                    <input class="form-control" type="text" name="name"
+                                           placeholder="nazwa dania">
                                 </div>
                             </div>
 
@@ -228,26 +229,27 @@
                                 <div class="col-8">
                                     To na pewno też musi być opkaowane jakimś selectem, tak, żeby użytkownik wyierał
                                     sobie kategorie, a nie wpisywał kolejne
-                                    <input class="form-control" type="text" name="Category" placeholder="category">
+                                    <input class="form-control" type="text" name="category" placeholder="Wpisz kategorię: pizza, makaron, burger, napój">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Price</h6></label>
                                 <div class="col-8">
-                                    <input class="form-control" type="text" name="pizzaPrice" placeholder="price">
+                                    <input class="form-control" type="text" name="price" placeholder="Wpisz cenę">
                                 </div>
                             </div>
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Description Product</h6></label>
                                 <div class="col-8">
                                     <textarea class="form-control" rows="4" id="descriptionProduct"
-                                              name="descriptionProduct"
-                                              placeholder="Description Product and ingredients"></textarea>
+                                              name="description"
+                                              placeholder="Podaj opis i składniki"></textarea>
                                 </div>
                             </div>
                             To wszystko obudowac w seletca do tego miejsca<br>
-                            <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>
+                            <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Zapisz"></input>
+                    </form>
                     </form>
 
                     <form action="#" class="menu-form">
