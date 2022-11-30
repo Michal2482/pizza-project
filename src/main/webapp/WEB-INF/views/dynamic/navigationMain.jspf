@@ -6,6 +6,9 @@
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item acitve">
+                    <a href='<c:url value="/order"/>' class="nav-link"><span class="flaticon-pizza mr-1"></span>Order</a>
+                </li>
                 <li class="nav-item"><a href='<c:url value="/"/>' class="nav-link">Home</a></li>
                 <li class="nav-item"><a href='<c:url value="/menu"/>' class="nav-link">Menu</a></li>
                 <li class="nav-item"><a href='<c:url value="/services"/>' class="nav-link">Services</a></li>
