@@ -1614,6 +1614,8 @@ select.form-control:focus::-ms-value {
   display: block;
   width: 100%; }
 
+
+
 .col-form-label {
   padding-top: calc(0.375rem + 1px);
   padding-bottom: calc(0.375rem + 1px);
@@ -7859,6 +7861,12 @@ h1, h2, h3, h4, h5,
 
 .ftco-gallery {
   padding-top: 7em; }
+
+.administration-style {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 500px;
+  font-weight: bold; }
 
 .gallery {
   display: block;
