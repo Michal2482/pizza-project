@@ -30,7 +30,7 @@
             <form action="#" class="contact-form">
                 <h4>Basic Information</h4>
                 <div class="form-group row">
-                    <label class="col-2 col-form-label  administration-style">Pizzeria name:</label>
+                    <label class="col-2 col-form-label">Pizzeria name:</label>
                     <div class="col-5">
                         <input class="form-control" type="text" name="firstPartName"
                                placeholder="Firt part of pizzeria name">
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-2 col-form-label administration-style">Phone number:</label>
+                    <label class="col-2 col-form-label">Phone number:</label>
                     <div class="col-4">
                         <input class="form-control" type="text" name="phoneNumber"
                                placeholder="phone number">
@@ -52,15 +52,15 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-1 col-form-label administration-style">City:</label>
+                    <label class="col-1 col-form-label">City:</label>
                     <div class="col-3">
                         <input class="form-control" type="text" name="city" placeholder="city">
                     </div>
-                    <label class="col-1 col-form-label administration-style">Street:</label>
+                    <label class="col-1 col-form-label">Street:</label>
                     <div class="col-3">
                         <input class="form-control" type="text" name="street" placeholder="street">
                     </div>
-                    <label class="col-2 col-form-label administration-style">Nr:</label>
+                    <label class="col-2 col-form-label">Nr:</label>
                     <div class="col-2">
                         <input class="form-control" type="text" name="propertyNumber"
                                placeholder="Number">
@@ -68,54 +68,54 @@
                 </div>
                 <h5>Open Hours</h5>
                 <div class="form-group row">
-                    <label class="col-2 col-form-label administration-style">Monday:</label>
+                    <label class="col-2 col-form-label">Monday:</label>
                     <div class="col-2">
                         <input class="form-control" type="text" name="facebook" placeholder="from - to">
                     </div>
-                    <label class="col-2 col-form-label administration-style">Tuesday:</label>
+                    <label class="col-2 col-form-label">Tuesday:</label>
                     <div class="col-2">
                         <input class="form-control" type="text" name="facebook" placeholder="from - to">
                     </div>
-                    <label class="col-2 col-form-label administration-style">Wednesday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-2 col-form-label administration-style">Thursday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                    </div>
-                    <label class="col-2 col-form-label administration-style">Friday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                    </div>
-                    <label class="col-2 col-form-label administration-style">Saturday:</label>
+                    <label class="col-2 col-form-label">Wednesday:</label>
                     <div class="col-2">
                         <input class="form-control" type="text" name="facebook" placeholder="from - to">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-2 col-form-label administration-style">Sunday:</label>
+                    <label class="col-2 col-form-label">Thursday:</label>
+                    <div class="col-2">
+                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
+                    </div>
+                    <label class="col-2 col-form-label">Friday:</label>
+                    <div class="col-2">
+                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
+                    </div>
+                    <label class="col-2 col-form-label">Saturday:</label>
+                    <div class="col-2">
+                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Sunday:</label>
                     <div class="col-2">
                         <input class="form-control" type="text" name="facebook" placeholder="from - to">
                     </div>
                 </div>
                 <h5>Social Media:</h5>
                 <div class="form-group row">
-                    <label class="col-3 col-form-label administration-style">Twitter:</label>
+                    <label class="col-3 col-form-label">Twitter:</label>
                     <div class="col-8">
                         <input class="form-control" type="text" name="twitter" placeholder="url Twitter">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-3 col-form-label administration-style">Facebook:</label>
+                    <label class="col-3 col-form-label">Facebook:</label>
                     <div class="col-8">
                         <input class="form-control" type="text" name="facebook" placeholder="url Facebook">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-3 col-form-label administration-style">Instagram:</label>
+                    <label class="col-3 col-form-label">Instagram:</label>
                     <div class="col-8">
                         <input class="form-control" type="text" name="instagram"
                                placeholder="url Instagram">
@@ -135,7 +135,7 @@
             <form action="#" class="contact-form">
                 <h4>Description on pages</h4>
                 <div class="form-group row">
-                    <label class="col-4 col-form-label administration-style">Short description Home
+                    <label class="col-4 col-form-label">Short description Home
                         Page:</label>
                     <div class="col-8">
                                 <textarea class="form-control" rows="5" id="shortDescriptionHomePage"
@@ -144,7 +144,7 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-4 col-form-label administration-style">Short description Menu
+                    <label class="col-4 col-form-label">Short description Menu
                         Page:</label>
                     <div class="col-8">
                                 <textarea class="form-control" rows="5" id="shortDescriptionMenuPage"
@@ -153,7 +153,7 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-4 col-form-label administration-style">Short despription Services
+                    <label class="col-4 col-form-label">Short despription Services
                         Page:</label>
                     <div class="col-8">
                                 <textarea class="form-control" rows="5" id="shortDescriptionServicesPage"
@@ -176,7 +176,7 @@
                 To wszystko obudowac w seletca od tego miejsca<br>
                 Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
                 <div class="form-group row">
-                    <label class="col-4 col-form-label administration-style">Photo Advert</label>
+                    <label class="col-4 col-form-label">Photo Advert</label>
                     <div class="col-8">
                         <input class="form-control" type="text" name="photoAdvert"
                                placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">
@@ -184,14 +184,14 @@
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-4 col-form-label administration-style">Slogan</label>
+                    <label class="col-4 col-form-label">Slogan</label>
                     <div class="col-8">
                         <input class="form-control" type="text" name="slogan" placeholder="slogan">
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-4 col-form-label administration-style">Product name</label>
+                    <label class="col-4 col-form-label">Product name</label>
                     <div class="col-8">
                         <input class="form-control" type="text" name="ProductAdvertName[1]"
                                placeholder="product Advert name">
@@ -199,7 +199,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-4 col-form-label administration-style">Description Product</label>
+                    <label class="col-4 col-form-label">Description Product</label>
                     <div class="col-8">
                                     <textarea class="form-control" rows="4" id="descriptionPizza"
                                               name="descriptionProduct"
@@ -223,7 +223,7 @@
                 To wszystko obudowac w możliwośc dodawania kolejnych kategorii. Może po prostu dodanie
                 jednej kategorii -> "save" i tak po kolei będą dodawac się do bazy<br>
                 <div class="form-group row">
-                    <label class="col-4 col-form-label administration-style">Product name</label>
+                    <label class="col-4 col-form-label">Product name</label>
                     <div class="col-8">
                         <input class="form-control" type="text" name="ProductName[1]"
                                placeholder="product name">
@@ -243,21 +243,21 @@
                 To wszystko obudowac w seletca od tego miejsca<br>
                 Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
                 <div class="form-group row">
-                    <label class="col-4 col-form-label administration-style">Photo</label>
+                    <label class="col-4 col-form-label">Photo</label>
                     <div class="col-8">
                         <input class="form-control" type="text" name="photo"
                                placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-4 col-form-label administration-style">Product name</label>
+                    <label class="col-4 col-form-label">Product name</label>
                     <div class="col-8">
                         <input class="form-control" type="text" name="ProductName[1]"
                                placeholder="product name">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-4 col-form-label administration-style">Category</label>
+                    <label class="col-4 col-form-label">Category</label>
                     <div class="col-8">
                         To na pewno też musi być opkaowane jakimś selectem, tak, żeby użytkownik wyierał
                         sobie kategorie, a nie wpisywał kolejne
@@ -265,13 +265,13 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-4 col-form-label administration-style">Price:</label>
+                    <label class="col-4 col-form-label">Price:</label>
                     <div class="col-8">
                         <input class="form-control" type="text" name="pizzaPrice" placeholder="price">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-4 col-form-label administration-style">Description Product</label>
+                    <label class="col-4 col-form-label">Description Product</label>
                     <div class="col-8">
                         <textarea class="form-control" rows="4" id="descriptionProduct"
                                   name="descriptionProduct"
@@ -294,7 +294,7 @@
                 To wszystko obudowac w seletca od tego miejsca<br>
                 <div class="form-group row">
 
-                    <label class="col-4 col-form-label administration-style">Picture</label>
+                    <label class="col-4 col-form-label">Picture</label>
                     <div class="col-8">
                         <input class="form-control" type="text" name="picture"
                                placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">
@@ -302,7 +302,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-4 col-form-label administration-style">Service name</label>
+                    <label class="col-4 col-form-labe">Service name</label>
                     <div class="col-8">
                         <input class="form-control" type="text" name="ServiceName[1]"
                                placeholder="service name">
@@ -310,7 +310,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-4 col-form-label administration-style">Description Service</label>
+                    <label class="col-4 col-form-label">Description Service</label>
                     <div class="col-8">
                                     <textarea class="form-control" rows="4" id="descriptionService"
                                               name="descriptionService" placeholder="Description Service"></textarea>
