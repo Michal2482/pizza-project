@@ -10,27 +10,7 @@ import org.springframework.web.servlet.view.RedirectView;
 @Controller
 public class AdministrationController {
 
-    private final MealService mealService;
 
-    public AdministrationController(MealService mealService) {
-        this.mealService = mealService;
-    }
-
-    @PostMapping("/admin/addMeal")                          //dodawanie dania
-    public RedirectView postAddMeal(Meal meal) {
-        mealService.addMeal(meal);
-        return new RedirectView("/admin");
-    }
-    @PostMapping("/admin/deleteMeal")                       //usuwanie dania
-    public RedirectView postDeleteMeal(Meal meal) {
-        mealService.deleteMeal(meal);
-        return new RedirectView("admin/administration");
-    }
-    @PostMapping("/admin/getMeals")                         //wyświetlanie dań
-    public RedirectView getMeals(Meal meal) {
-        mealService.getMeals();
-        return new RedirectView("admin/administration");
-    }
 
     @GetMapping("/admin")                                   //wyświetlanie strony
     public String getAdmin() {

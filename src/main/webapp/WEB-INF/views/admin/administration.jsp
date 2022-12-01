@@ -127,6 +127,7 @@
                             </div>
 
                             <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>
+                        </div>
                     </form>
 
                     <form action="#" class="home-form">
@@ -176,6 +177,7 @@
                             </div>
                             To wszystko obudowac w seletca do tego miejsca<br>
                             <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>
+                        </div>
                     </form>
 
 
@@ -203,7 +205,7 @@
 
                             <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>
                         </form>
-                        <h5>Position of Menu</h5>
+                        <h5>Pozycje w Menu</h5>
                         <form method="post" action='<c:url value="/admin/addMeal"/>'>
                         To wszystko obudowac w seletca od tego miejsca<br>
                         Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
@@ -248,8 +250,12 @@
                                 </div>
                             </div>
                             To wszystko obudowac w seletca do tego miejsca<br>
-                            <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Zapisz"></input>
-                    </form>
+<%--                            <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>--%>
+                            <a class="btn btn-primary" href='<c:url value="/addDish"/>' role="button">Dodaj danie</a>
+                            <a class="btn btn-primary" href='<c:url value="/editDish"/>' role="button">Edytuj danie</a>
+                            <a class="btn btn-primary" href='<c:url value="#"/>' role="button">Wyświetl dania</a>
+                        </div>
+                        </form>
                     </form>
 
                     <form action="#" class="menu-form">
@@ -290,10 +296,12 @@
                             </div>
                             To wszystko obudowac w seletca do tego miejsca<br>
                             <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
+    </div>
 </section>
 
 <div id="map"></div>
