@@ -25,281 +25,307 @@
 </section>
 
 <section class="ftco-section administration-section">
-    <div class="container mt-5">
-        <div class="row block-12">
-            <div class="col-md-12 administration-info ftco-animate">
-                <div class="row">
+    <div class="container mt-4">
+        <div class="col-md-12 contact-info ftco-animate">
+            <form action="#" class="contact-form">
+                <h4>Basic Information</h4>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label  administration-style">Pizzeria name:</label>
+                    <div class="col-5">
+                        <input class="form-control" type="text" name="firstPartName"
+                               placeholder="Firt part of pizzeria name">
+                    </div>
+                    <div class="col-5">
+                        <input class="form-control" type="text" name="SecondPartName"
+                               placeholder="Second part of pizzeria name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label administration-style">Phone number:</label>
+                    <div class="col-4">
+                        <input class="form-control" type="text" name="phoneNumber"
+                               placeholder="phone number">
+                    </div>
+                    <label class="col-1 col-form-label">E-mail:</label>
+                    <div class="col-4">
+                        <input class="form-control" type="text" name="Email" placeholder="your e-mail">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-1 col-form-label administration-style">City:</label>
+                    <div class="col-3">
+                        <input class="form-control" type="text" name="city" placeholder="city">
+                    </div>
+                    <label class="col-1 col-form-label administration-style">Street:</label>
+                    <div class="col-3">
+                        <input class="form-control" type="text" name="street" placeholder="street">
+                    </div>
+                    <label class="col-2 col-form-label administration-style">Nr:</label>
+                    <div class="col-2">
+                        <input class="form-control" type="text" name="propertyNumber"
+                               placeholder="Number">
+                    </div>
+                </div>
+                <h5>Open Hours</h5>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label administration-style">Monday:</label>
+                    <div class="col-2">
+                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
+                    </div>
+                    <label class="col-2 col-form-label administration-style">Tuesday:</label>
+                    <div class="col-2">
+                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
+                    </div>
+                    <label class="col-2 col-form-label administration-style">Wednesday:</label>
+                    <div class="col-2">
+                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label administration-style">Thursday:</label>
+                    <div class="col-2">
+                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
+                    </div>
+                    <label class="col-2 col-form-label administration-style">Friday:</label>
+                    <div class="col-2">
+                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
+                    </div>
+                    <label class="col-2 col-form-label administration-style">Saturday:</label>
+                    <div class="col-2">
+                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label administration-style">Sunday:</label>
+                    <div class="col-2">
+                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
+                    </div>
+                </div>
+                <h5>Social Media:</h5>
+                <div class="form-group row">
+                    <label class="col-3 col-form-label administration-style">Twitter:</label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="twitter" placeholder="url Twitter">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-3 col-form-label administration-style">Facebook:</label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="facebook" placeholder="url Facebook">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-3 col-form-label administration-style">Instagram:</label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="instagram"
+                               placeholder="url Instagram">
+                    </div>
+                </div>
 
-                    <form action="#" class="contact-form">
-                        <div class="col-md-12 mb-4">
-                            <h2 class="h4">Basic Information</h2>
-                            <div class="form-group row">
-                                <label class="col-2 col-form-label"><h6>Pizzeria name:</h6></label>
-                                <div class="col-5">
-                                    <input class="form-control" type="text" name="firstPartName"
-                                           placeholder="Firt part of pizzeria name">
-                                </div>
-                                <div class="col-5">
-                                    <input class="form-control" type="text" name="SecondPartName"
-                                           placeholder="Second part of pizzeria name">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-2 col-form-label"><h6>Phone number:</h6></label>
-                                <div class="col-4">
-                                    <input class="form-control" type="text" name="phoneNumber"
-                                           placeholder="phone number">
-                                </div>
-                                <label class="col-2 col-form-label"><h6>E-mail:</h6></label>
-                                <div class="col-4">
-                                    <input class="form-control" type="text" name="Email" placeholder="your e-mail">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-1 col-form-label"><h6>City:</h6></label>
-                                <div class="col-3">
-                                    <input class="form-control" type="text" name="city" placeholder="city">
-                                </div>
-                                <label class="col-1 col-form-label"><h6>Street:</h6></label>
-                                <div class="col-3">
-                                    <input class="form-control" type="text" name="street" placeholder="street">
-                                </div>
-                                <label class="col-1 col-form-label"><h6>Nr:</h6></label>
-                                <div class="col-4">
-                                    <input class="form-control" type="text" name="propertyNumber"
-                                           placeholder="property number ">
-                                </div>
-                            </div>
-                            <h5>Open Hours</h5>
-                            <div class="form-group row">
-                                <label class="col-2 col-form-label"><h6>Monday:</h6></label>
-                                <div class="col-2">
-                                    <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                                </div>
-                                <label class="col-2 col-form-label"><h6>Tuesday:</h6></label>
-                                <div class="col-2">
-                                    <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                                </div>
-                                <label class="col-2 col-form-label"><h6>Wednesday:</h6></label>
-                                <div class="col-2">
-                                    <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-2 col-form-label"><h6>Thursday:</h6></label>
-                                <div class="col-2">
-                                    <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                                </div>
-                                <label class="col-2 col-form-label"><h6>Friday:</h6></label>
-                                <div class="col-2">
-                                    <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                                </div>
-                                <label class="col-2 col-form-label"><h6>Saturday:</h6></label>
-                                <div class="col-2">
-                                    <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-2 col-form-label"><h6>Sunday:</h6></label>
-                                <div class="col-2">
-                                    <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                                </div>
-                            </div>
-                            <h5>Social Media:</h5>
-                            <div class="form-group row">
-                                <label class="col-3 col-form-label"><h6>Twitter:</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="twitter" placeholder="url Twitter">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-3 col-form-label"><h6>Facebook:</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="facebook" placeholder="url Facebook">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-3 col-form-label"><h6>Instagram:</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="instagram"
-                                           placeholder="url Instagram">
-                                </div>
-                            </div>
+                <div class="d-flex justify-content-end">
+                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
+                           value="Save">
+                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
+                           value="Edit">
+                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"
+                           value="Delete">
+                </div>
+            </form>
 
-                            <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>
-                        </div>
-                    </form>
-
-                    <form action="#" class="home-form">
-                        <h2 class="h4">Home Page</h2>
-                        <div class="form-group row">
-                            <label class="col-4 col-form-label"><h6>Short despription Menu Page:</h6></label>
-                            <div class="col-8">
+            <form action="#" class="contact-form">
+                <h4>Description on pages</h4>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label administration-style">Short description Home
+                        Page:</label>
+                    <div class="col-8">
+                                <textarea class="form-control" rows="5" id="shortDescriptionHomePage"
+                                          name="shortDescriptionHomePage"
+                                          placeholder="Short despription Home Page"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label administration-style">Short description Menu
+                        Page:</label>
+                    <div class="col-8">
                                 <textarea class="form-control" rows="5" id="shortDescriptionMenuPage"
                                           name="shortDescriptionMenuPage"
                                           placeholder="Short despription Menu Page"></textarea>
-                            </div>
-                        </div>
-                        <h5>Position of Advert</h5>
-                        To wszystko obudowac w seletca od tego miejsca<br>
-                        Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
-                        <div class="form-group">
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Photo Advert</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="photoAdvert"
-                                           placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Slogan</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="slogan" placeholder="slogan">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Product name</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="ProductAdvertName[1]"
-                                           placeholder="product Advert name">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Description Product</h6></label>
-                                <div class="col-8">
-                                    <textarea class="form-control" rows="4" id="descriptionPizza"
-                                              name="descriptionProduct"
-                                              placeholder="Description Product and ingredients"></textarea>
-                                </div>
-                            </div>
-                            To wszystko obudowac w seletca do tego miejsca<br>
-                            <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>
-                        </div>
-                    </form>
-
-
-                    <form action="#" class="menu-form">
-                        <h2 class="h4">Menu Page</h2>
-                        <div class="form-group row">
-                            <label class="col-4 col-form-label"><h6>Short despription Menu Page:</h6></label>
-                            <div class="col-8">
-                                <textarea class="form-control" rows="5" id="shortDescriptionMenuPage"
-                                          name="shortDescriptionMenuPage"
-                                          placeholder="Short despription Menu Page"></textarea>
-                            </div>
-                        </div>
-                        <h5>Category:</h5>
-                        <form action="#" class="menu-form">
-                            To wszystko obudowac w możliwośc dodawania kolejnych kategorii. Może po prostu dodanie
-                            jednej kategorii -> "save" i tak po kolei będą dodawac się do bazy<br>
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Product name</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="ProductName[1]"
-                                           placeholder="product name">
-                                </div>
-                            </div>
-
-                            <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>
-                        </form>
-                        <h5>Pozycje w Menu</h5>
-                        <form method="post" action='<c:url value="/admin/addMeal"/>'>
-                        To wszystko obudowac w seletca od tego miejsca<br>
-                        Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
-                        <div class="form-group">
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Photo</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="photo"
-                                           placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Product name</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="name"
-                                           placeholder="nazwa dania">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Category</h6></label>
-                                <div class="col-8">
-                                    To na pewno też musi być opkaowane jakimś selectem, tak, żeby użytkownik wyierał
-                                    sobie kategorie, a nie wpisywał kolejne
-                                    <input class="form-control" type="text" name="category" placeholder="Wpisz kategorię: pizza, makaron, burger, napój">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Price</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="price" placeholder="Wpisz cenę">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Description Product</h6></label>
-                                <div class="col-8">
-                                    <textarea class="form-control" rows="4" id="descriptionProduct"
-                                              name="description"
-                                              placeholder="Podaj opis i składniki"></textarea>
-                                </div>
-                            </div>
-                            To wszystko obudowac w seletca do tego miejsca<br>
-<%--                            <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>--%>
-                            <a class="btn btn-primary" href='<c:url value="/addDish"/>' role="button">Dodaj danie</a>
-                            <a class="btn btn-primary" href='<c:url value="/editDish"/>' role="button">Edytuj danie</a>
-                            <a class="btn btn-primary" href='<c:url value="#"/>' role="button">Wyświetl dania</a>
-                        </div>
-                        </form>
-                    </form>
-
-                    <form action="#" class="menu-form">
-                        <h2 class="h4">Services Page</h2>
-                        <div class="form-group row">
-                            <label class="col-4 col-form-label"><h6>Short despription Services Page:</h6></label>
-                            <div class="col-8">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label administration-style">Short despription Services
+                        Page:</label>
+                    <div class="col-8">
                                 <textarea class="form-control" rows="5" id="shortDescriptionServicesPage"
                                           name="shortDescriptionServicesPage"
                                           placeholder="Short despription Services Page"></textarea>
-                            </div>
-                        </div>
-                        <h5>Position of Services</h5>
-                        To wszystko obudowac w seletca od tego miejsca<br>
-                        <div class="form-group">
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Picture</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="picture"
-                                           placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
+                           value="Save">
+                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
+                           value="Edit">
+                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"
+                           value="Delete">
+                </div>
+            </form>
 
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Service name</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="ServiceName[1]"
-                                           placeholder="service name">
-                                </div>
-                            </div>
+            <form action="#" class="contact-form">
+                <h4>Position of Advert</h4>
+                To wszystko obudowac w seletca od tego miejsca<br>
+                Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
+                <div class="form-group row">
+                    <label class="col-4 col-form-label administration-style">Photo Advert</label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="photoAdvert"
+                               placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">
+                    </div>
+                </div>
 
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Description Service</h6></label>
-                                <div class="col-8">
+                <div class="form-group row">
+                    <label class="col-4 col-form-label administration-style">Slogan</label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="slogan" placeholder="slogan">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-4 col-form-label administration-style">Product name</label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="ProductAdvertName[1]"
+                               placeholder="product Advert name">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-4 col-form-label administration-style">Description Product</label>
+                    <div class="col-8">
+                                    <textarea class="form-control" rows="4" id="descriptionPizza"
+                                              name="descriptionProduct"
+                                              placeholder="Description Product and ingredients"></textarea>
+                    </div>
+                </div>
+                To wszystko obudowac w seletca do tego miejsca<br>
+
+                <div class="d-flex justify-content-end">
+                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
+                           value="Save">
+                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
+                           value="Edit">
+                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"
+                           value="Delete">
+                </div>
+            </form>
+
+            <form action="#" class="contact-form">
+                <h4>Category:</h4>
+                To wszystko obudowac w możliwośc dodawania kolejnych kategorii. Może po prostu dodanie
+                jednej kategorii -> "save" i tak po kolei będą dodawac się do bazy<br>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label administration-style">Product name</label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="ProductName[1]"
+                               placeholder="product name">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
+                           value="Save">
+                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
+                           value="Edit">
+                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"
+                           value="Delete">
+                </div>
+            </form>
+            <form action="#" class="contact-form">
+                <h5>Position of Menu</h5>
+                To wszystko obudowac w seletca od tego miejsca<br>
+                Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
+                <div class="form-group row">
+                    <label class="col-4 col-form-label administration-style">Photo</label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="photo"
+                               placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label administration-style">Product name</label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="ProductName[1]"
+                               placeholder="product name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label administration-style">Category</label>
+                    <div class="col-8">
+                        To na pewno też musi być opkaowane jakimś selectem, tak, żeby użytkownik wyierał
+                        sobie kategorie, a nie wpisywał kolejne
+                        <input class="form-control" type="text" name="Category" placeholder="category">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label administration-style">Price:</label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="pizzaPrice" placeholder="price">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label administration-style">Description Product</label>
+                    <div class="col-8">
+                        <textarea class="form-control" rows="4" id="descriptionProduct"
+                                  name="descriptionProduct"
+                                  placeholder="Description Product and ingredients"></textarea>
+                    </div>
+                    To wszystko obudowac w seletca do tego miejsca<br>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
+                           value="Save">
+                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
+                           value="Edit">
+                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"
+                           value="Delete">
+                </div>
+            </form>
+
+            <form action="#" class="contact-form">
+                <h4>Position of Services</h4>
+                To wszystko obudowac w seletca od tego miejsca<br>
+                <div class="form-group row">
+
+                    <label class="col-4 col-form-label administration-style">Picture</label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="picture"
+                               placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-4 col-form-label administration-style">Service name</label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="ServiceName[1]"
+                               placeholder="service name">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-4 col-form-label administration-style">Description Service</label>
+                    <div class="col-8">
                                     <textarea class="form-control" rows="4" id="descriptionService"
                                               name="descriptionService" placeholder="Description Service"></textarea>
-                                </div>
-                            </div>
-                            To wszystko obudowac w seletca do tego miejsca<br>
-                            <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>
-                        </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
+                To wszystko obudowac w seletca do tego miejsca<br>
+                <div class="d-flex justify-content-end">
+                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
+                           value="Save">
+                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
+                           value="Edit">
+                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"
+                           value="Delete">
+                </div>
+            </form>
         </div>
     </div>
 </section>
