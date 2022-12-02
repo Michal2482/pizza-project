@@ -8,7 +8,6 @@
 <%@include file="../dynamic/navigationMain.jspf" %>
 <!-- END nav -->
 
-
 <%--<section class="home-slider owl-carousel img" style="background-image: url(/resources/images/bg_1.jpg);">--%>
 
 <%--    <div class="slider-item" style="background-image: url(/resources/images/bg_3.jpg);">--%>
@@ -219,8 +218,7 @@
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Product name</h6></label>
                                 <div class="col-8">
-                                    <input class="form-control" type="text" name="name"
-                                           placeholder="nazwa dania">
+                                    <input class="form-control" type="text" value="${meal.name}" placeholder="nazwa dania">
                                 </div>
                             </div>
 
@@ -229,22 +227,20 @@
                                 <div class="col-8">
                                     To na pewno też musi być opkaowane jakimś selectem, tak, żeby użytkownik wyierał
                                     sobie kategorie, a nie wpisywał kolejne
-                                    <input class="form-control" type="text" name="category" placeholder="Wpisz kategorię: pizza, makaron, burger, napój">
+                                    <input class="form-control" type="text" value="${meal.category}" placeholder="Wpisz kategorię: pizza, makaron, burger, napój">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Price</h6></label>
                                 <div class="col-8">
-                                    <input class="form-control" type="text" name="price" placeholder="Wpisz cenę">
+                                    <input class="form-control" type="text" value="${meal.price}" placeholder="Wpisz cenę">
                                 </div>
                             </div>
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Description Product</h6></label>
                                 <div class="col-8">
-                                    <textarea class="form-control" rows="4" id="descriptionProduct"
-                                              name="description"
-                                              placeholder="Podaj opis i składniki"></textarea>
+                                    <input class="form-control" rows="4" id="descriptionProduct" value="${meal.description}" placeholder="Podaj opis i składniki">
                                 </div>
                             </div>
                             To wszystko obudowac w seletca do tego miejsca<br>

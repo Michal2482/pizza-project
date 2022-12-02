@@ -18,11 +18,15 @@ public class MealService {
         mealRepository.save(meal);
     }
 
-    public List<Meal> getMeals() {
-        return mealRepository.findAll();
+    public List<Meal> getMeals() {                          //pobiera wszystkie dania, korzysta z niej
+        return mealRepository.findAll();                    //met. getMealList w MenuControllerze
     }
 
     public void deleteMeal(Meal meal) {
         mealRepository.delete(meal);
+    }
+
+    public Meal getMeal(Long id) {
+        return mealRepository.findById(id).orElse(null);
     }
 }

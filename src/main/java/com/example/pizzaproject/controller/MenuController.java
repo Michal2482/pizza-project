@@ -18,7 +18,7 @@ public class MenuController {
     }
 
     @GetMapping ("/menu")
-    public String getMealList(Model model) {
+    public String getMealList(Model model) {                //wyświetla widok menu z listą
         List<Meal> mealList = mealService.getMeals();
         model.addAttribute("meal", mealList);
         return "pizzaPage/menu";

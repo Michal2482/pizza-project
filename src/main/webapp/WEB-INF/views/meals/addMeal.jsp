@@ -8,7 +8,6 @@
 <%@include file="../dynamic/navigationMain.jspf" %>
 <!-- END nav -->
 
-
 <%--<section class="home-slider owl-carousel img" style="background-image: url(/resources/images/bg_1.jpg);">--%>
 
 <%--    <div class="slider-item" style="background-image: url(/resources/images/bg_3.jpg);">--%>
