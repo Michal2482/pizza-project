@@ -17,17 +17,17 @@ public class MenuController {
         this.mealService = mealService;
     }
 
-    @GetMapping ("/menu/getMeals")
+    @GetMapping ("/menu")
     public String getMealList(Model model) {
         List<Meal> mealList = mealService.getMeals();
         model.addAttribute("meal", mealList);
         return "pizzaPage/menu";
     }
 
-    @GetMapping("/menu")
-    public String getAbout() {
-        return "pizzaPage/menu";
-    }
+//    @GetMapping("/menu")
+//    public String getAbout() {
+//        return "pizzaPage/menu";
+//    }
 
 
 

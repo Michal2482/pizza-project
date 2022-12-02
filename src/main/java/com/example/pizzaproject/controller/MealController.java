@@ -15,30 +15,30 @@ public class MealController {
         this.mealService = mealService;
     }
 
-    @GetMapping("/addDish")
+    @GetMapping("/addDish")                                 //wyświetla widok formularza
     public String getAddDish() {
         return "meals/addMeal";
     }
 
-    @GetMapping("/editDish")
+    @GetMapping("/editDish")                                //wyświetla widok formularza
     public String getEditDish() {
         return "meals/editMeal";
     }
 
 
-//    @PostMapping("/admin/addMeal")                          //dodawanie dania
-//    public RedirectView postAddMeal(Meal meal) {
-//        mealService.addMeal(meal);
-//        return new RedirectView("/admin");
-//    }
+    @PostMapping("/addDish")                          //dodawanie dania
+    public RedirectView postAddMeal(Meal meal) {
+        mealService.addMeal(meal);
+        return new RedirectView("/addDish");
+    }
 //    @PostMapping("/admin/deleteMeal")                       //usuwanie dania
 //    public RedirectView postDeleteMeal(Meal meal) {
 //        mealService.deleteMeal(meal);
 //        return new RedirectView("admin/administration");
 //    }
-//    @PostMapping("/admin/getMeals")                         //wyświetlanie dań
+//    @PostMapping("/getMeals")                         //wyświetlanie dań
 //    public RedirectView getMeals(Meal meal) {
 //        mealService.getMeals();
-//        return new RedirectView("admin/administration");
+//        return new RedirectView("pizzaPage/menu");
 //    }
 }

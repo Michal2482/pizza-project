@@ -204,7 +204,7 @@
 <%--                            <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>--%>
 <%--                        </form>--%>
                         <h5>Position of Menu</h5>
-                        <form method="post" action='<c:url value="/admin/addMeal"/>'>
+                        <form method="post" action='<c:url value="/addDish"/>'>
                         To wszystko obudowac w seletca od tego miejsca<br>
                         Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
                         <div class="form-group">

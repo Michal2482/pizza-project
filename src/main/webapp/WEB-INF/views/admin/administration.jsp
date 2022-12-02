@@ -280,10 +280,13 @@
                     To wszystko obudowac w seletca do tego miejsca<br>
                 </div>
                 <div class="d-flex justify-content-end">
-                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
-                           value="Save">
-                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
-                           value="Edit">
+<%--                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"--%>
+<%--                           value="Save">--%>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/addDish" />' role="button">Add dish</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/editDish" />' role="button">Edit dish</a>
+
+<%--                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"--%>
+<%--                           value="Edit">--%>
                     <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"
                            value="Delete">
                 </div>
