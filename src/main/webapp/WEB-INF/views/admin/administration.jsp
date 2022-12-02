@@ -48,7 +48,7 @@
                     </div>
                     <label class="col-1 col-form-label">E-mail:</label>
                     <div class="col-4">
-                        <input class="form-control" type="text" name="Email" placeholder="your e-mail">
+                        <input class="form-control" type="email" name="Email" placeholder="your e-mail">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -68,39 +68,82 @@
                 </div>
                 <h5>Open Hours</h5>
                 <div class="form-group row">
-                    <label class="col-2 col-form-label">Monday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
+                    <span>Monday</span>
+                    <label for="openHoursMondayFrom" class="col-1 col-form-label">from:</label>
+                    <div class="col-1">
+                        <input type="time" id="openHoursMondayFrom" name="openHoursMonday" class="form-control">
                     </div>
-                    <label class="col-2 col-form-label">Tuesday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
+                    <label for="openHoursMondayTo" class="col-1 col-form-label">to:</label>
+                    <div class="col-1">
+                        <input type="time" id="openHoursMondayTo" name="openHoursMonday" class="form-control">
                     </div>
-                    <label class="col-2 col-form-label">Wednesday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
+                    <div class="col-1"></div>
+                    <span>Tuesday</span>
+                    <label for="openHoursTuesdayFrom" class="col-1 col-form-label">from:</label>
+                    <div class="col-1">
+                        <input type="time" id="openHoursTuesdayFrom" name="openHoursMonday" class="form-control">
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-2 col-form-label">Thursday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                    </div>
-                    <label class="col-2 col-form-label">Friday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                    </div>
-                    <label class="col-2 col-form-label">Saturday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
+                    <label for="openHoursTuesdayTo" class="col-1 col-form-label">to:</label>
+                    <div class="col-1">
+                        <input type="time" id="openHoursTuesdayTo" name="openHoursMonday" class="form-control">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-2 col-form-label">Sunday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
+                    <span>Wednesay</span>
+                    <label for="openHoursWednesayFrom" class="col-1 col-form-label">from:</label>
+                    <div class="col-1">
+                        <input type="time" id="openHoursWednesayFrom" name="openHoursMonday" class="form-control">
+                    </div>
+                    <label for="openHoursWednesayTo" class="col-1 col-form-label">to:</label>
+                    <div class="col-1">
+                        <input type="time" id="openHoursWednesayTo" name="openHoursMonday" class="form-control">
+                    </div>
+                    <div class="col-1"></div>
+                    <span>Thursday</span>
+                    <label for="openHoursThursdayFrom" class="col-1 col-form-label">from:</label>
+                    <div class="col-1">
+                        <input type="time" id="openHoursThursdayFrom" name="openHoursMonday" class="form-control">
+                    </div>
+                    <label for="openHoursThursdayTo" class="col-1 col-form-label">to:</label>
+                    <div class="col-1">
+                        <input type="time" id="openHoursThursdayTo" name="openHoursMonday" class="form-control">
                     </div>
                 </div>
+                <div class="form-group row">
+                    <span>Friday</span>
+                    <label for="openHoursFridayFrom" class="col-1 col-form-label">from:</label>
+                    <div class="col-1">
+                        <input type="time" id="openHoursFridayFrom" name="openHoursMonday" class="form-control">
+                    </div>
+                    <label for="openHoursFridayTo" class="col-1 col-form-label">to:</label>
+                    <div class="col-1">
+                        <input type="time" id="openHoursFridayTo" name="openHoursMonday" class="form-control">
+                    </div>
+                    <div class="col-1"></div>
+                    <span>Saturday</span>
+                    <label for="openHoursSaturdayFrom" class="col-1 col-form-label">from:</label>
+                    <div class="col-1">
+                        <input type="time" id="openHoursSaturdayFrom" name="openHoursMonday" class="form-control">
+                    </div>
+                    <label for="openHoursSaturdayTo" class="col-1 col-form-label">to:</label>
+                    <div class="col-1">
+                        <input type="time" id="openHoursSaturdayTo" name="openHoursMonday" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <span>Sunday</span>
+                    <label for="openHoursSundayFrom" class="col-1 col-form-label">from:</label>
+                    <div class="col-1">
+                        <input type="time" id="openHoursSundayFrom" name="openHoursMonday" class="form-control"
+                               min="09:00" max="18:00" required>
+                    </div>
+                    <label for="openHoursSundayTo" class="col-1 col-form-label">to:</label>
+                    <div class="col-1">
+                        <input type="time" id="openHoursSundayTo" name="openHoursMonday" class="form-control"
+                               min="09:00" max="18:00" required>
+                    </div>
+                </div>
+
                 <h5>Social Media:</h5>
                 <div class="form-group row">
                     <label class="col-3 col-form-label">Twitter:</label>
