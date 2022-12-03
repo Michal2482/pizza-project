@@ -12,9 +12,6 @@ public class AdministrationController {
         return "admin/administration";
     }
 
-    @GetMapping("/basicInformation")
-    public String getBasicInformationForm() {
-        return "";
-    }
+
 
 }

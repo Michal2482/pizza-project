@@ -1,5 +1,8 @@
 package com.example.pizzaproject.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,6 +10,9 @@ import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import java.time.LocalTime;
 
+
+@Getter
+@Setter
 @Entity
 public class BasicInformation {
 
@@ -22,6 +28,7 @@ public class BasicInformation {
     private String city;
     private String street;
     private String propertyNumber;
+//    private List<OpenHours> openHours; list.add, list.
     private LocalTime openHoursMondayFrom;
     private LocalTime openHoursMondayTo;
     private LocalTime openHoursTuesdayFrom;
