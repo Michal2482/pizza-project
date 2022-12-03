@@ -203,7 +203,7 @@
 <%--                            <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>--%>
 <%--                        </form>--%>
                         <h5>Position of Menu</h5>
-                        <form method="post" action='<c:url value="/editDish"/>'>
+                        <form method="post" action='<c:url value="/addDish/${meal.id}"/>'>
                         To wszystko obudowac w seletca od tego miejsca<br>
                         Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
                         <div class="form-group">
@@ -218,7 +218,7 @@
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Product name</h6></label>
                                 <div class="col-8">
-                                    <input class="form-control" type="text" value="${meal.name}" placeholder="nazwa dania">
+                                    <input class="form-control" type="text" name="name" value="${meal.name}" placeholder="nazwa dania">
                                 </div>
                             </div>
 
@@ -227,20 +227,20 @@
                                 <div class="col-8">
                                     To na pewno też musi być opkaowane jakimś selectem, tak, żeby użytkownik wyierał
                                     sobie kategorie, a nie wpisywał kolejne
-                                    <input class="form-control" type="text" value="${meal.category}" placeholder="Wpisz kategorię: pizza, makaron, burger, napój">
+                                    <input class="form-control" type="text" name="category" value="${meal.category}" placeholder="Wpisz kategorię: pizza, makaron, burger, napój">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Price</h6></label>
                                 <div class="col-8">
-                                    <input class="form-control" type="text" value="${meal.price}" placeholder="Wpisz cenę">
+                                    <input class="form-control" type="text" name="price" value="${meal.price}" placeholder="Wpisz cenę">
                                 </div>
                             </div>
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Description Product</h6></label>
                                 <div class="col-8">
-                                    <input class="form-control" rows="4" id="descriptionProduct" value="${meal.description}" placeholder="Podaj opis i składniki">
+                                    <input class="form-control" rows="4" id="descriptionProduct" name="description" value="${meal.description}" placeholder="Podaj opis i składniki">
                                 </div>
                             </div>
                             To wszystko obudowac w seletca do tego miejsca<br>

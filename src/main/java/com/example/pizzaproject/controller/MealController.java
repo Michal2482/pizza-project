@@ -24,7 +24,7 @@ public class MealController {
         return "meals/addMeal";
     }
 
-    @GetMapping("/editDish")                                //wyświetla widok formularza
+    @GetMapping("/editDish")                                //wyświetla widok formularza edycji
     public String getEditDish() {
         return "meals/editMeal";
     }
@@ -59,5 +59,14 @@ public class MealController {
         model.addAttribute("meal", mealList);
         return "meals/edit2Meal";
     }
+
+    @PostMapping("/addDish/{id}")                       //zapisuje edytowane danie
+    public RedirectView postEditMeal(Meal editedMeal, @PathVariable("id")Long id) {
+        mealService.editMeal(editedMeal);
+        return new RedirectView("/edit2Dish");          //przekierowuje na widok listy do edycji
+
+    }
+
+
 
 }

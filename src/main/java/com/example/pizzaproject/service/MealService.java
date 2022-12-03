@@ -29,4 +29,10 @@ public class MealService {
     public Meal getMeal(Long id) {
         return mealRepository.findById(id).orElse(null);
     }
+
+    public void editMeal(Meal meal) {                       //do zapisywania edycji
+        mealRepository.save(meal);
+    }
+
+
 }
