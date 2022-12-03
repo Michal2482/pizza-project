@@ -203,10 +203,11 @@
 <%--                            <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>--%>
 <%--                        </form>--%>
                         <h5>Position of Menu</h5>
-                        <form method="post" action='<c:url value="/addDish/${meal.id}"/>'>
+
                         To wszystko obudowac w seletca od tego miejsca<br>
                         Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
                         <div class="form-group">
+                            <form method="post" action='<c:url value="/addDish/${meal.id}"/>'>
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Photo</h6></label>
                                 <div class="col-8">
@@ -245,8 +246,17 @@
                             </div>
                             To wszystko obudowac w seletca do tego miejsca<br>
                             <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Zapisz"></input>
+                            </form>
+                            <form method="post" action='<c:url value="/editDish/${meal.id}"/>'>
+                            <input class="btn btn-danger py-2 px-4 " style="margin:10px" type="submit" value="Usuń">
+                            </form>
                         </div>
-                        </form>
+
+                        <div>
+
+                        </div>
+
+
 <%--                    </form>--%>
 
 <%--                    <form action="#" class="menu-form">--%>

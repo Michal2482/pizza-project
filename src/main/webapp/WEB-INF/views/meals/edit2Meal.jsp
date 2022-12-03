@@ -43,8 +43,7 @@
                         <div class="text p-4">
                             <h3>${title.name}</h3>
                             <p>${title.description}</p>
-                            <p class="price"><span>${title.price}</span> <a href='<c:url value="/editDish/${title.id}" />' class="ml-2 btn btn-white btn-outline-white">Edytuj</a>
-                            </p>
+                            <p class="price"><span>${title.price}</span> <a href='<c:url value="/editDish/${title.id}" />' class="ml-2 btn btn-white btn-outline-white">Edytuj</a></p>
                         </div>
                     </div>
                 </div>
