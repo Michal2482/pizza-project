@@ -239,57 +239,57 @@
                 </div>
             </form>
             <form action="#" class="contact-form">
-                <h5>Position of Menu</h5>
+                <h4>Position of Menu</h4>
                 To wszystko obudowac w seletca od tego miejsca<br>
                 Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Photo</label>
-                    <div class="col-8">
-                        <input class="form-control" type="text" name="photo"
-                               placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Product name</label>
-                    <div class="col-8">
-                        <input class="form-control" type="text" name="ProductName[1]"
-                               placeholder="product name">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Category</label>
-                    <div class="col-8">
-                        To na pewno też musi być opkaowane jakimś selectem, tak, żeby użytkownik wyierał
-                        sobie kategorie, a nie wpisywał kolejne
-                        <input class="form-control" type="text" name="Category" placeholder="category">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Price:</label>
-                    <div class="col-8">
-                        <input class="form-control" type="text" name="pizzaPrice" placeholder="price">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Description Product</label>
-                    <div class="col-8">
-                        <textarea class="form-control" rows="4" id="descriptionProduct"
-                                  name="descriptionProduct"
-                                  placeholder="Description Product and ingredients"></textarea>
-                    </div>
-                    To wszystko obudowac w seletca do tego miejsca<br>
-                </div>
+<%--                <div class="form-group row">--%>
+<%--                    <label class="col-4 col-form-label">Photo</label>--%>
+<%--                    <div class="col-8">--%>
+<%--                        <input class="form-control" type="text" name="photo"--%>
+<%--                               placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <div class="form-group row">--%>
+<%--                    <label class="col-4 col-form-label">Product name</label>--%>
+<%--                    <div class="col-8">--%>
+<%--                        <input class="form-control" type="text" name="ProductName[1]"--%>
+<%--                               placeholder="product name">--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <div class="form-group row">--%>
+<%--                    <label class="col-4 col-form-label">Category</label>--%>
+<%--                    <div class="col-8">--%>
+<%--                        To na pewno też musi być opkaowane jakimś selectem, tak, żeby użytkownik wyierał--%>
+<%--                        sobie kategorie, a nie wpisywał kolejne--%>
+<%--                        <input class="form-control" type="text" name="Category" placeholder="category">--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <div class="form-group row">--%>
+<%--                    <label class="col-4 col-form-label">Price:</label>--%>
+<%--                    <div class="col-8">--%>
+<%--                        <input class="form-control" type="text" name="pizzaPrice" placeholder="price">--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <div class="form-group row">--%>
+<%--                    <label class="col-4 col-form-label">Description Product</label>--%>
+<%--                    <div class="col-8">--%>
+<%--                        <textarea class="form-control" rows="4" id="descriptionProduct"--%>
+<%--                                  name="descriptionProduct"--%>
+<%--                                  placeholder="Description Product and ingredients"></textarea>--%>
+<%--                    </div>--%>
+<%--                    To wszystko obudowac w seletca do tego miejsca<br>--%>
+<%--                </div>--%>
                 <div class="d-flex justify-content-end">
 <%--                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"--%>
 <%--                           value="Save">--%>
                     <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/addDish" />' role="button">Add dish</a>
-                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/editDish" />' role="button">Edit dish</a>
-                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/edit2Dish" />' role="button">Edit2 dish</a>
+<%--                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/editDish" />' role="button">Edit dish</a>--%>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/edit2Dish" />' role="button">Edit dish</a>
 
 <%--                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"--%>
 <%--                           value="Edit">--%>
-                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"
-                           value="Delete">
+<%--                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"--%>
+<%--                           value="Delete">--%>
                 </div>
             </form>
 

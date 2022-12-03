@@ -22,9 +22,9 @@ public class MealService {
         return mealRepository.findAll();                    //met. getMealList w MenuControllerze
     }
 
-    public void deleteMeal(Meal meal) {
-        mealRepository.delete(meal);
-    }
+//    public void deleteMeal(Meal meal) {
+//        mealRepository.delete(meal);
+//    }
 
     public Meal getMeal(Long id) {
         return mealRepository.findById(id).orElse(null);
@@ -32,6 +32,12 @@ public class MealService {
 
     public void editMeal(Meal meal) {                       //do zapisywania edycji
         mealRepository.save(meal);
+    }
+
+    public void deleteMeal(Long id) {
+        mealRepository.deleteById(id);
+        System.out.println("Deleting meal on id " + id);
+
     }
 
 

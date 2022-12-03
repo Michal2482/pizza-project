@@ -43,16 +43,6 @@ public class MealController {
         return new RedirectView("/addDish");
     }
 
-    //    @PostMapping("/admin/deleteMeal")                       //usuwanie dania
-//    public RedirectView postDeleteMeal(Meal meal) {
-//        mealService.deleteMeal(meal);
-//        return new RedirectView("admin/administration");
-//    }
-//    @PostMapping("/getMeals")                         //wyświetlanie dań
-//    public RedirectView getMeals(Meal meal) {
-//        mealService.getMeals();
-//        return new RedirectView("pizzaPage/menu");
-//    }
     @GetMapping("/edit2Dish")                           //wyświetla widok z listą dań pod edycję
     public String getMealList(Model model) {
         List<Meal> mealList = mealService.getMeals();
@@ -65,6 +55,12 @@ public class MealController {
         mealService.editMeal(editedMeal);
         return new RedirectView("/edit2Dish");          //przekierowuje na widok listy do edycji
 
+    }
+
+    @PostMapping("editDish/{id}")
+    public RedirectView deleteMeal(@PathVariable("id")Long id) {
+        mealService.deleteMeal(id);
+        return new RedirectView("/edit2Dish");
     }
 
 
