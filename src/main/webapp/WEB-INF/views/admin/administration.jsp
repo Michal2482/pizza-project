@@ -222,16 +222,16 @@
                 <h4>Category:</h4>
                 To wszystko obudowac w możliwośc dodawania kolejnych kategorii. Może po prostu dodanie
                 jednej kategorii -> "save" i tak po kolei będą dodawac się do bazy<br>
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Product name</label>
-                    <div class="col-8">
-                        <input class="form-control" type="text" name="ProductName[1]"
-                               placeholder="product name">
-                    </div>
-                </div>
+<%--                <div class="form-group row">--%>
+<%--                    <label class="col-4 col-form-label">Product name</label>--%>
+<%--                    <div class="col-8">--%>
+<%--                        <input class="form-control" type="text" name="ProductName[1]"--%>
+<%--                               placeholder="category name">--%>
+<%--                    </div>--%>
+<%--                </div>--%>
                 <div class="d-flex justify-content-end">
                     <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/addCategory" />' role="button">Add category</a>
-                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="#" />' role="button">Edit category</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/categories" />' role="button">Edit category</a>
 <%--                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"--%>
 <%--                           value="Save">--%>
 <%--                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"--%>

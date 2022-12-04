@@ -3,10 +3,12 @@ package com.example.pizzaproject.controller;
 import com.example.pizzaproject.model.Category;
 import com.example.pizzaproject.service.CategoryService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
 
+import java.util.List;
 import java.util.Locale;
 
 @Controller
@@ -17,8 +19,10 @@ public class CategoryController {
         this.categoryService = categoryService;
     }
 
-    @GetMapping("/categories")                      //wyświetlanie widoku listy kategorii
-    public String getCategoryList() {
+    @GetMapping("/categories")                                  //wyświetlanie widoku listy kategorii
+    public String getCategoryList(Model model) {                   //pobieranych z bazy
+        List<Category> categoryList = categoryService.getCategories();
+        model.addAttribute("category", categoryList);
         return "categories/categoryList";
     }
 
@@ -31,6 +35,11 @@ public class CategoryController {
     public RedirectView postAddCategory(Category category) {   //na formularz dodawania
         categoryService.addCategory(category);
         return new RedirectView("/addCategory");
+    }
+
+    @GetMapping("/editCategory")
+    public String getEditCategory() {
+        return "categories/editCategory";
     }
 
 
