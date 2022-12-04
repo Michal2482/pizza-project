@@ -19,7 +19,7 @@ public class MealController {
         this.mealService = mealService;
     }
 
-    @GetMapping("/addDish")                                 //wyświetla widok formularza do
+    @GetMapping("/addDish")                                 //wyświetla widok formularza do dodawania
     public String getAddDish() {
         return "meals/addMeal";
     }
@@ -35,7 +35,6 @@ public class MealController {
         model.addAttribute("meal", meal);
         return "meals/editMeal";
     }
-
 
     @PostMapping("/addDish")                          //dodawanie dania
     public RedirectView postAddMeal(Meal meal) {

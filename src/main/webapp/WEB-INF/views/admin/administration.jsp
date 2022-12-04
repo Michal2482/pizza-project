@@ -230,12 +230,14 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-end">
-                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
-                           value="Save">
-                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
-                           value="Edit">
-                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"
-                           value="Delete">
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/addCategory" />' role="button">Add category</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="#" />' role="button">Edit category</a>
+<%--                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"--%>
+<%--                           value="Save">--%>
+<%--                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"--%>
+<%--                           value="Edit">--%>
+<%--                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"--%>
+<%--                           value="Delete">--%>
                 </div>
             </form>
             <form action="#" class="contact-form">
