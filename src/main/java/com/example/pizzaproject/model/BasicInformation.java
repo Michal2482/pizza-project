@@ -3,10 +3,7 @@ package com.example.pizzaproject.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.time.LocalTime;
 
@@ -20,6 +17,9 @@ public class BasicInformation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
+    @OneToOne
+    private Company company;
+
     private String firstPartName;
     private String secondPartName;
     private String phoneNumber;
@@ -29,8 +29,8 @@ public class BasicInformation {
     private String street;
     private String propertyNumber;
 //    private List<OpenHours> openHours; list.add, list.
-    private LocalTime openHoursMondayFrom;
-    private LocalTime openHoursMondayTo;
+    private String openHoursMondayFrom;
+    private String openHoursMondayTo;
     private LocalTime openHoursTuesdayFrom;
     private LocalTime openHoursTuesdayTo;
     private LocalTime openHoursWednesdayFrom;
@@ -46,5 +46,7 @@ public class BasicInformation {
     private String twitterUrl;
     private String facebookUrl;
     private String instagramUrl;
+
+
 
 }

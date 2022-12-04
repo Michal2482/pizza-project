@@ -16,10 +16,11 @@ public class HomeController {
 
     @GetMapping("/")
     public String getHome(Model model) {
-        BasicInformation basicInformation = basicInformationService.getInformation();
+        BasicInformation basicInformation = basicInformationService.getInformation("pizzeria");
         model.addAttribute("basicInformation", basicInformation);
         return "index";
     }
+
 }
 
 
