@@ -24,6 +24,7 @@ public class BasicInformationService {
         inDataBase.setSecondPartName(basicInformation.getSecondPartName());
         inDataBase.setPhoneNumber(basicInformation.getPhoneNumber());
         inDataBase.setEmail(basicInformation.getEmail());
+        inDataBase.setZipCode(basicInformation.getZipCode());
         inDataBase.setCity(basicInformation.getCity());
         inDataBase.setStreet(basicInformation.getStreet());
         inDataBase.setPropertyNumber(basicInformation.getPropertyNumber());
