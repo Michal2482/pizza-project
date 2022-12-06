@@ -83,6 +83,7 @@
                         <div class="text">
                             <h3>${basicInformation.phoneNumber}</h3>
                             <p>A small river named Duden flows</p>
+
                         </div>
                     </div>
                     <div class="col-md-3 d-flex ftco-animate">

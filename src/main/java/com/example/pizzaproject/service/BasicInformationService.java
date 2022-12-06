@@ -48,4 +48,8 @@ public class BasicInformationService {
         inDataBase.setFacebookUrl(basicInformation.getFacebookUrl());
         inDataBase.setInstagramUrl(basicInformation.getInstagramUrl());
     }
+
+    public void deleteBasicInformation(String prefix) {
+        basicInformationRepository.deleteByCompanyPrefix(prefix);
+    }
 }

@@ -320,6 +320,10 @@ h3, .h3 {
 h4, .h4 {
   font-size: 1.5rem; }
 
+h4, .h4-black {
+  font-size: 1.5rem;
+  color: black; }
+
 h5, .h5 {
   font-size: 1.25rem; }
 
@@ -7720,6 +7724,8 @@ h1, h2, h3, h4, h5,
       background: #000;
       border-color: #000;
       color: #fff; }
+
+
 
 input[type="time"]::-webkit-calendar-picker-indicator {
   filter: invert(100%) sepia(0%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
