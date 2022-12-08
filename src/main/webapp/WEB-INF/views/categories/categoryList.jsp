@@ -118,16 +118,16 @@
 <%--		              <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Pizza</a>--%>
 
 		              <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">${title1.categoryName}</a>
-					  <a href='<c:url value="/editCategory/" />' class="ml-2 btn btn-white btn-outline-white">Edytuj</a>
+					  <a href='<c:url value="/editCategory/${title1.id}" />' class="ml-2 btn btn-white btn-outline-white">Edytuj</a>
 
 <%--		              <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Burgers</a>--%>
 
 <%--		              <a class="nav-link" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false">Pasta</a>--%>
 		            </div>
 		          </div>
-		          <div class="col-md-12 d-flex align-items-center">
-		            
-		            <div class="tab-content ftco-animate" id="v-pills-tabContent">
+<%--		          <div class="col-md-12 d-flex align-items-center">--%>
+<%--		            --%>
+<%--		            <div class="tab-content ftco-animate" id="v-pills-tabContent">--%>
 
 <%--		              <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">--%>
 <%--		              	<div class="row">--%>
@@ -202,8 +202,8 @@
 <%--		              				</div>--%>
 <%--		              			</div>--%>
 <%--		              		</div>--%>
-		              	</div>
-		              </div>
+<%--		              	</div>--%>
+<%--		              </div>--%>
 
 <%--		              <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">--%>
 <%--		                <div class="row">--%>
@@ -240,8 +240,8 @@
 <%--		              				</div>--%>
 <%--		              			</div>--%>
 <%--		              		</div>--%>
-		              	</div>
-		              </div>
+<%--		              	</div>--%>
+<%--		              </div>--%>
 
 <%--		              <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">--%>
 <%--		                <div class="row">--%>
@@ -280,8 +280,8 @@
 <%--		              		</div>--%>
 <%--		              	</div>--%>
 <%--		              </div>--%>
-		            </div>
-		          </div>
+<%--		            </div>--%>
+<%--		          </div>--%>
 		        </div>
 		      </div>
 		</c:forEach>

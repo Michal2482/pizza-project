@@ -245,10 +245,14 @@
                                 </div>
                             </div>
                             To wszystko obudowac w seletca do tego miejsca<br>
+                                <div class="d-flex justify-content-end">
                             <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Zapisz"></input>
+                                </div>
                             </form>
                             <form method="post" action='<c:url value="/editDish/${meal.id}"/>'>
+                                <div class="d-flex justify-content-end">
                             <input class="btn btn-danger py-2 px-4 " style="margin:10px" type="submit" value="Usuń">
+                                </div>
                             </form>
                         </div>
 

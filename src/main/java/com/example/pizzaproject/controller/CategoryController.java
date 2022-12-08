@@ -5,6 +5,7 @@ import com.example.pizzaproject.service.CategoryService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -37,9 +38,22 @@ public class CategoryController {
         return new RedirectView("/addCategory");
     }
 
-    @GetMapping("/editCategory")
-    public String getEditCategory() {
+    @GetMapping("/editCategory/{id}")
+    public String getEditCategory(@PathVariable("id")Long id, Model model) {
+        Category category = categoryService.getCategory(id);
+        model.addAttribute("category", category);
         return "categories/editCategory";
+    }
+    @PostMapping("/addCategory/{id}")
+    public RedirectView postEditCategory(Category editedCategory, @PathVariable("id")Long id) {
+        categoryService.editCategory((editedCategory));
+        return new RedirectView("/categories");
+    }
+
+    @PostMapping("editCategory/{id}")
+    public RedirectView deleteCategory(@PathVariable("id")Long id) {
+        categoryService.deleteCategory(id);
+        return new RedirectView("/categories");
     }
 
 

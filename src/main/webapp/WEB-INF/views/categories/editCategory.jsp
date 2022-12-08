@@ -217,20 +217,23 @@
 <%--                           value="Delete">--%>
 <%--                </div>--%>
 <%--            </form>--%>
-<form method="post" action='<c:url value="/addCategory" />'>
+<form method="post" action='<c:url value="/addCategory/${category.id}" />'>
             <form action="#" class="contact-form">
                 <h4>Category:</h4>
-                To wszystko obudowac w możliwośc dodawania kolejnych kategorii. Może po prostu dodanie
-                jednej kategorii -> "save" i tak po kolei będą dodawac się do bazy<br>
                 <div class="form-group row">
-                    <label class="col-4 col-form-label">Product name</label>
+                    <label class="col-4 col-form-label">Nazwa kategorii:</label>
                     <div class="col-8">
-                        <input class="form-control" type="text" name="categoryName"
+                        <input class="form-control" type="text" name="categoryName" value="${category.categoryName}"
                                placeholder="Podaj nazwę kategorii">
                     </div>
                 </div>
                 <div class="d-flex justify-content-end">
                     <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit" value="Zapisz">
+                </div>
+            </form>
+</form>
+    <form method="post" action='<c:url value="/editCategory/${category.id}" />'>
+                <div class="d-flex justify-content-end">
                     <input class="btn btn-danger py-2 px-4 " style="margin:10px" type="submit" value="Usuń">
 
 <%--                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"--%>
@@ -238,8 +241,9 @@
 <%--                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"--%>
 <%--                           value="Delete">--%>
                 </div>
-            </form>
-</form>
+    </form>
+
+
 <%--            <form action="#" class="contact-form">--%>
 <%--                <h4>Position of Menu</h4>--%>
 <%--                To wszystko obudowac w seletca od tego miejsca<br>--%>
