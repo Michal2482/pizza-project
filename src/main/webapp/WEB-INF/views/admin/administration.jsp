@@ -32,7 +32,7 @@
             <p> Pizzeria name, Phone number, E-mail</p>
                 <p> Address, Open hours, Social media</p>
                 <div class="d-flex justify-content-end">
-                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/admin/basicInformation" />' role="button">Edit</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/admin/basicInformation" />' role="button">Edit</a>
                 </div>
             </form>
 

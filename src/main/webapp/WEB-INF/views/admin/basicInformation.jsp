@@ -12,7 +12,7 @@
 <section class="ftco-section administration-section">
     <div class="container mt-4">
         <div class="col-md-12 contact-info ftco-animate">
-            <form method="post" class="contact-form" action='<c:url value="/admin/basicInformation"/>'>
+            <form method="post" class="contact-form" action='<c:url value="/${prefix}/admin/basicInformation"/>'>
                 <h4>Basic Information</h4>
                 <div class="form-group row">
                     <label class="col-2 col-form-label">Pizzeria name:</label>
@@ -205,7 +205,7 @@
                     <!-- Modal footer -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-                        <form method="post" class="contact-form" action='<c:url value="/admin/basicInformation"/>'>
+                        <form method="post" class="contact-form" action='<c:url value="/${prefix}/admin/basicInformation"/>'>
                             <input type="submit" class="btn btn-danger" name="submitAndGoHomePage" value="Delete"/>
                         </form>
                     </div>
