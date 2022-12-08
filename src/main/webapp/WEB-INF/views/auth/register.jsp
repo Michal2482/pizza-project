@@ -19,7 +19,7 @@
 
                 <div class="col-xl-10 col-lg-12 col-md-9">
 
-                    <div class="card-auth o-hidden border-0 shadow-lg my-5">
+                    <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row d-flex justify-content-center align-items-center">
@@ -29,7 +29,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Register now!</h1>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" method="post" action='<c:url value="/register"/>'>
                                         <div class="form-group">
 
                                             <input type="text" class="form-control form-control-user"
@@ -50,14 +50,13 @@
                                                        id="exampleRepeatPassword" placeholder="Confirm Password ">
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="text" class="form-control" id="exampleRepeatPassword"
+                                                <input type="text" class="form-control" id="prefix" name="prefix"
                                                        placeholder="Prefix">
                                             </div>
                                         </div>
-                                        <a href="login.html" class="btn btn-primary btn-user btn-block">
-                                            Register
-                                        </a>
-                                        <hr>
+                                        <input class="btn btn-primary btn-user btn-block" type="submit" name="submit"
+                                               value="Register"/>
+
 
                                     </form>
                                     <div class="text-center">

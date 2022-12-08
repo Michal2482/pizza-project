@@ -43,7 +43,7 @@ public class BasicInformationController {
 
     @PostMapping(value = "/admin/basicInformation", params="delete")
     public RedirectView deleteBasicInformation(@PathVariable String prefix) {
-        basicInformationService.deleteBasicInformation("pizzeria");
+        basicInformationService.deleteBasicInformation(prefix);
         return new RedirectView("");
     }
 

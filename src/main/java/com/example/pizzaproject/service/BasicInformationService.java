@@ -1,6 +1,7 @@
 package com.example.pizzaproject.service;
 
 import com.example.pizzaproject.model.BasicInformation;
+import com.example.pizzaproject.model.DescriptionOnPages;
 import com.example.pizzaproject.repository.BasicInformationRepository;
 import org.springframework.stereotype.Service;
 
@@ -17,9 +18,12 @@ public class BasicInformationService {
     public BasicInformation getInformation(String prefix) {
         return basicInformationRepository.findByCompanyPrefix(prefix).orElse(null);
     }
-@Transactional
+
+    @Transactional
     public void addBasicInformation(BasicInformation basicInformation, String prefix) {
-       BasicInformation inDataBase =  basicInformationRepository.findByCompanyPrefix(prefix).orElse(null);
+        BasicInformation inDataBase = basicInformationRepository.findByCompanyPrefix(prefix).orElseGet(() ->
+                basicInformationRepository.save(new BasicInformation()));
+//        inDataBase.setCompany(basicInformationRepository.findByCompanyPrefix(prefix));
         inDataBase.setFirstPartName(basicInformation.getFirstPartName());
         inDataBase.setSecondPartName(basicInformation.getSecondPartName());
         inDataBase.setPhoneNumber(basicInformation.getPhoneNumber());

@@ -27,54 +27,21 @@
 <section class="ftco-section administration-section">
     <div class="container mt-4">
         <div class="col-md-12 contact-info ftco-animate">
-            <form action="#" class="contact-form">
                 <h4>Basic Information</h4>
             <p> Pizzeria name, Phone number, E-mail</p>
                 <p> Address, Open hours, Social media</p>
                 <div class="d-flex justify-content-end">
                     <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/admin/basicInformation" />' role="button">Edit</a>
                 </div>
-            </form>
+
+            <h4>Description on pages</h4>
+            <p> Description on:</p>
+            <p> Home Page, Menu Page and Services Page</p>
+            <div class="d-flex justify-content-end">
+                <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/admin/descriptionOnPages" />' role="button">Edit</a>
+            </div>
 
 
-            <form action="#" class="contact-form">
-                <h4>Description on pages</h4>
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Short description Home
-                        Page:</label>
-                    <div class="col-8">
-                                <textarea class="form-control" rows="5" id="shortDescriptionHomePage"
-                                          name="shortDescriptionHomePage"
-                                          placeholder="Short despription Home Page"></textarea>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Short description Menu
-                        Page:</label>
-                    <div class="col-8">
-                                <textarea class="form-control" rows="5" id="shortDescriptionMenuPage"
-                                          name="shortDescriptionMenuPage"
-                                          placeholder="Short despription Menu Page"></textarea>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Short despription Services
-                        Page:</label>
-                    <div class="col-8">
-                                <textarea class="form-control" rows="5" id="shortDescriptionServicesPage"
-                                          name="shortDescriptionServicesPage"
-                                          placeholder="Short despription Services Page"></textarea>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-end">
-                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
-                           value="Save">
-                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
-                           value="Edit">
-                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"
-                           value="Delete">
-                </div>
-            </form>
 
             <form action="#" class="contact-form">
                 <h4>Position of Advert</h4>

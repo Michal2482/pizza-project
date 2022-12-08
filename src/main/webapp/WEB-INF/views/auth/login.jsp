@@ -17,7 +17,7 @@
         
               <div class="col-xl-10 col-lg-12 col-md-9">
         
-                <div class="card-auth o-hidden border-0 shadow-lg my-5">
+                <div class="card o-hidden border-0 shadow-lg my-5">
                   <div class="card-body p-0" >
                     <!-- Nested Row within Card Body -->
                     <div class="row  d-flex justify-content-center align-items-center">
@@ -29,7 +29,7 @@
                           </div>
                           <form class="user" method="post" action='<c:url value="/login"/>'>
                             <div class="form-group h4">
-                              <input type="text" class="form-control" name="username" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Login">
+                              <input type="text" class="form-control" name="id" placeholder="Login">
                             </div>
                             <div class="form-group">
                               <input type="password" class="form-control" name="password" id="exampleInputPassword" placeholder="Password">
@@ -41,7 +41,8 @@
                                 <label class="custom-control-label" for="customCheck">Remeber me!</label>
                               </div>
                             </div>
-                            <input type="submit" value="Login" class="btn btn-primary btn-user btn-block">
+                            <input type="submit" name="submit" value="Login" class="btn btn-primary btn-user btn-block">
+                            <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/pizzeria/admin/" />' role="button">Login</a>
         
                             <hr>
                           
