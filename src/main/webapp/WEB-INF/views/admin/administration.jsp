@@ -29,7 +29,7 @@
         <div class="col-md-12 contact-info ftco-animate">
                 <h4>Basic Information</h4>
             <p> Pizzeria name, Phone number, E-mail</p>
-                <p> Address, Open hours, Social media</p>
+                <p> Address, Open hours, Social media, Short Description Pizzeria</p>
                 <div class="d-flex justify-content-end">
                     <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/admin/basicInformation" />' role="button">Edit</a>
                 </div>

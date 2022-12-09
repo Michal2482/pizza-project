@@ -173,6 +173,14 @@
                                value="${basicInformation.instagramUrl}">
                     </div>
                 </div>
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Short description Pizzeria: </label>
+                    <div class="col-8">
+                                <textarea class="form-control" rows="3" id="shortDescriptionPizzeria"
+                                          name="shortDescriptionPizzeria"
+                                          placeholder="Short description Menu Page">${descriptionOnPages.shortDescriptionPizzeria}</textarea>
+                    </div>
+                </div>
 
                 <div class="d-flex justify-content-end">
                     <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit" name="submitAndGoAdminPage"

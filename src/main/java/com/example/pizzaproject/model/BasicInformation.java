@@ -91,4 +91,5 @@ public class BasicInformation {
     private String twitterUrl;
     private String facebookUrl;
     private String instagramUrl;
+    private String shortDescriptionPizzeria;
 }

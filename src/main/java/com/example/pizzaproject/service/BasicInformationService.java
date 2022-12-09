@@ -1,8 +1,9 @@
 package com.example.pizzaproject.service;
 
+import com.example.pizzaproject.exceptions.PizzaProjectException;
 import com.example.pizzaproject.model.BasicInformation;
-import com.example.pizzaproject.model.DescriptionOnPages;
 import com.example.pizzaproject.repository.BasicInformationRepository;
+import com.example.pizzaproject.repository.CompanyRepository;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -10,9 +11,11 @@ import javax.transaction.Transactional;
 @Service
 public class BasicInformationService {
     private final BasicInformationRepository basicInformationRepository;
+    private final CompanyRepository companyRepository;
 
-    public BasicInformationService(BasicInformationRepository basicInformationRepository) {
+    public BasicInformationService(BasicInformationRepository basicInformationRepository, CompanyRepository companyRepository) {
         this.basicInformationRepository = basicInformationRepository;
+        this.companyRepository = companyRepository;
     }
 
     public BasicInformation getInformation(String prefix) {
@@ -23,7 +26,7 @@ public class BasicInformationService {
     public void addBasicInformation(BasicInformation basicInformation, String prefix) {
         BasicInformation inDataBase = basicInformationRepository.findByCompanyPrefix(prefix).orElseGet(() ->
                 basicInformationRepository.save(new BasicInformation()));
-//        inDataBase.setCompany(basicInformationRepository.findByCompanyPrefix(prefix));
+        inDataBase.setCompany(companyRepository.findCompanyByPrefix(prefix).orElseThrow(()->new PizzaProjectException(PizzaProjectException.EMPTY_COMPANY_ID+prefix)));
         inDataBase.setFirstPartName(basicInformation.getFirstPartName());
         inDataBase.setSecondPartName(basicInformation.getSecondPartName());
         inDataBase.setPhoneNumber(basicInformation.getPhoneNumber());
@@ -51,6 +54,7 @@ public class BasicInformationService {
         inDataBase.setTwitterUrl(basicInformation.getTwitterUrl());
         inDataBase.setFacebookUrl(basicInformation.getFacebookUrl());
         inDataBase.setInstagramUrl(basicInformation.getInstagramUrl());
+        inDataBase.setShortDescriptionPizzeria(basicInformation.getShortDescriptionPizzeria());
     }
 
     public void deleteBasicInformation(String prefix) {

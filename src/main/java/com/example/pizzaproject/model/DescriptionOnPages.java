@@ -18,7 +18,11 @@ public class DescriptionOnPages {
     @OneToOne
     private Company company;
 
-    private String shortDescriptionHomePage;
+
+    @Lob
+    private String longDescriptionHomePage;
+
     private String shortDescriptionMenuPage;
+
     private String shortDescriptionServicesPage;
 }
