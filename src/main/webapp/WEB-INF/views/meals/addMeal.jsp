@@ -204,8 +204,6 @@
 <%--                        </form>--%>
                         <h5>Position of Menu</h5>
                         <form method="post" action='<c:url value="/addDish"/>'>
-                        To wszystko obudowac w seletca od tego miejsca<br>
-                        Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
                         <div class="form-group">
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Photo</h6></label>
@@ -226,9 +224,15 @@
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Category</h6></label>
                                 <div class="col-8">
-                                    To na pewno też musi być opkaowane jakimś selectem, tak, żeby użytkownik wyierał
-                                    sobie kategorie, a nie wpisywał kolejne
-                                    <input class="form-control" type="text" name="category" placeholder="Wpisz kategorię: pizza, makaron, burger, napój">
+<%--                                    Opkaowane selectem tak, żeby użytkownik wybierał--%>
+<%--                                    sobie kategorie, a nie wpisywał kolejne--%>
+                                    <select>
+                                    <imput class="form-control" type="text" name="category" placeholder="Wpisz kategorię: pizza, makaron, burger, napój">
+                                        <option hidden>Wybierz kategorię</option>
+                                        <c:forEach items="${category}" var="title">
+                                            <option> ${title.categoryName}</option>
+                                        </c:forEach>
+                                    </select>
                                 </div>
                             </div>
 
@@ -243,10 +247,10 @@
                                 <div class="col-8">
                                     <textarea class="form-control" rows="4" id="descriptionProduct"
                                               name="description"
-                                              placeholder="Podaj opis i składniki"></textarea>
+                                              placeholder="Podaj opis i składniki">
+                                    </textarea>
                                 </div>
                             </div>
-                            To wszystko obudowac w seletca do tego miejsca<br>
                             <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Zapisz"></input>
                         </div>
                         </form>

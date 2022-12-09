@@ -22,10 +22,6 @@ public class MealService {
         return mealRepository.findAll();                    //met. getMealList w MenuControllerze
     }
 
-//    public void deleteMeal(Meal meal) {
-//        mealRepository.delete(meal);
-//    }
-
     public Meal getMeal(Long id) {
         return mealRepository.findById(id).orElse(null);
     }

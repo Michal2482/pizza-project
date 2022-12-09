@@ -1,6 +1,8 @@
 package com.example.pizzaproject.controller;
 
+import com.example.pizzaproject.model.Category;
 import com.example.pizzaproject.model.Meal;
+import com.example.pizzaproject.service.CategoryService;
 import com.example.pizzaproject.service.MealService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,13 +16,17 @@ import java.util.List;
 @Controller
 public class MealController {
     private final MealService mealService;
+    private final CategoryService categoryService;
 
-    public MealController(MealService mealService) {
+    public MealController(MealService mealService, CategoryService categoryService) {
         this.mealService = mealService;
+        this.categoryService = categoryService;
     }
 
     @GetMapping("/addDish")                                 //wyświetla widok formularza do dodawania
-    public String getAddDish() {
+    public String getAddDish(Model model) {
+        List<Category> categoryList = categoryService.getCategories();  //przekazanie kategorii do widoku
+        model.addAttribute("category", categoryList);
         return "meals/addMeal";
     }
 

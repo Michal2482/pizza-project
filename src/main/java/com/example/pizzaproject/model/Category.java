@@ -1,9 +1,8 @@
 package com.example.pizzaproject.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Category {
@@ -12,12 +11,16 @@ public class Category {
     private Long id;
     private String categoryName;
 
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "category")
+    private Set<Meal> meals = new HashSet<>();
+
     public Category() {
     }
 
-    public Category(Long id, String categoryName) {
+    public Category(Long id, String categoryName, Set<Meal> meals) {
         this.id = id;
         this.categoryName = categoryName;
+        this.meals = meals;
     }
 
     public Long getId() {
@@ -34,5 +37,13 @@ public class Category {
 
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
+    }
+
+    public Set<Meal> getMeals() {
+        return meals;
+    }
+
+    public void setMeals(Set<Meal> meals) {
+        this.meals = meals;
     }
 }
