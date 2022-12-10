@@ -222,15 +222,23 @@
                                     <input class="form-control" type="text" name="name" value="${meal.name}" placeholder="nazwa dania">
                                 </div>
                             </div>
+                                <div class="row">
+                                    <label class="col-4 col-form-label"><h6>Category</h6></label>
+                                    <div class="col-8">
+                                        To na pewno też musi być opkaowane jakimś selectem, tak, żeby użytkownik wyierał
+                                        sobie kategorie, a nie wpisywał kolejne
+                                        <select name="category.id">
+                                        <input class="form-control" type="text" name="category" value="${meal.category}" placeholder="Wpisz kategorię: pizza, makaron, burger, napój">
 
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Category</h6></label>
-                                <div class="col-8">
-                                    To na pewno też musi być opkaowane jakimś selectem, tak, żeby użytkownik wyierał
-                                    sobie kategorie, a nie wpisywał kolejne
-                                    <input class="form-control" type="text" name="category" value="${meal.category}" placeholder="Wpisz kategorię: pizza, makaron, burger, napój">
+                                            <option hidden>Wybierz kategorię</option>
+                                            <c:forEach items="${category}" var="title">
+                                                <option value="${title.id}" > ${title.categoryName} </option>
+                                            </c:forEach>
+
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
+
 
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Price</h6></label>

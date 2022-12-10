@@ -11,7 +11,7 @@ public class Category {
     private Long id;
     private String categoryName;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "category")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "category")
     private Set<Meal> meals = new HashSet<>();
 
     public Category() {

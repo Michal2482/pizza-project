@@ -202,7 +202,7 @@
 
 <%--                            <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>--%>
 <%--                        </form>--%>
-                        <h5>Position of Menu</h5>
+                        <h5>Position of Staff</h5>
                         <form method="post" action='<c:url value="/addDish"/>'>
                         <div class="form-group">
                             <div class="row">
@@ -214,49 +214,33 @@
                             </div>
 
                             <div class="row">
-                                <label class="col-4 col-form-label"><h6>Product name</h6></label>
+                                <label class="col-4 col-form-label"><h6>Name</h6></label>
                                 <div class="col-8">
                                     <input class="form-control" type="text" name="name"
-                                           placeholder="nazwa dania">
+                                           placeholder="Imię i nazwisko">
                                 </div>
                             </div>
-
                             <div class="row">
-                                <label class="col-4 col-form-label"><h6>Category</h6></label>
+                                <label class="col-4 col-form-label"><h6>Function</h6></label>
                                 <div class="col-8">
-<%--                                    Opkaowane selectem tak, żeby użytkownik wybierał--%>
-<%--                                    sobie kategorie, a nie wpisywał kolejne--%>
-<%--                                    <select name="categoryId">--%>
-<%--&lt;%&ndash;                                    <imput class="form-control" type="text" name="category.id" placeholder="Wpisz kategorię: pizza, makaron, burger, napój"></imput>&ndash;%&gt;--%>
-<%--                                        <option hidden>Wybierz kategorię</option>--%>
-<%--                                        <c:forEach items="${category}" var="title">--%>
-<%--                                            <option value="${title.id}"> ${title.categoryName}</option>--%>
-<%--                                        </c:forEach>--%>
-
-<%--                                    </select>--%>
-                                    <select name="category.id">
-                                        <option hidden>Wybierz kategorię</option>
-                                        <c:forEach items="${category}" var="title">
-                                            <option value="${title.id}"> ${title.categoryName}</option>
-                                        </c:forEach>
-
-                                    </select>
-
+                                    <input class="form-control" type="text" name="function"
+                                           placeholder="Funkcja">
                                 </div>
                             </div>
 
+
+<%--                            <div class="row">--%>
+<%--                                <label class="col-4 col-form-label"><h6>Price</h6></label>--%>
+<%--                                <div class="col-8">--%>
+<%--                                    <input class="form-control" type="text" name="price" placeholder="Wpisz cenę">--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
                             <div class="row">
-                                <label class="col-4 col-form-label"><h6>Price</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="price" placeholder="Wpisz cenę">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Description Product</h6></label>
+                                <label class="col-4 col-form-label"><h6>Description</h6></label>
                                 <div class="col-8">
                                     <textarea class="form-control" rows="4" id="descriptionProduct"
                                               name="description"
-                                              placeholder="Podaj opis i składniki">
+                                              placeholder="Podaj opis">
                                     </textarea>
                                 </div>
                             </div>

@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
@@ -24,14 +25,16 @@ public class MealController {
     }
 
     @GetMapping("/addDish")                                 //wyświetla widok formularza do dodawania
-    public String getAddDish(Model model) {
+    public String getAddDish(Model model) {                     //dodany model do arg. by przekazać do widoku
         List<Category> categoryList = categoryService.getCategories();  //przekazanie kategorii do widoku
         model.addAttribute("category", categoryList);
         return "meals/addMeal";
     }
 
     @GetMapping("/editDish")                                //wyświetla widok formularza edycji
-    public String getEditDish() {
+    public String getEditDish(Model model) {
+        List<Category> categoryList = categoryService.getCategories();  //przekazanie kategorii do widoku
+        model.addAttribute("category", categoryList);
         return "meals/editMeal";
     }
 
@@ -42,6 +45,11 @@ public class MealController {
         return "meals/editMeal";
     }
 
+//    @PostMapping("/addDish")                          //dodawanie dania
+//    public RedirectView postAddMeal(Meal meal, @RequestParam Long categoryId) {
+//        mealService.addMeal(meal, categoryId);
+//        return new RedirectView("/addDish");
+//    }
     @PostMapping("/addDish")                          //dodawanie dania
     public RedirectView postAddMeal(Meal meal) {
         mealService.addMeal(meal);

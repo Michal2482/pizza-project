@@ -220,8 +220,8 @@
 
             <form action="#" class="contact-form">
                 <h4>Category:</h4>
-                To wszystko obudowac w możliwośc dodawania kolejnych kategorii. Może po prostu dodanie
-                jednej kategorii -> "save" i tak po kolei będą dodawac się do bazy<br>
+<%--                To wszystko obudowac w możliwośc dodawania kolejnych kategorii. Może po prostu dodanie--%>
+<%--                jednej kategorii -> "save" i tak po kolei będą dodawac się do bazy<br>--%>
 <%--                <div class="form-group row">--%>
 <%--                    <label class="col-4 col-form-label">Product name</label>--%>
 <%--                    <div class="col-8">--%>
@@ -242,8 +242,8 @@
             </form>
             <form action="#" class="contact-form">
                 <h4>Position of Menu</h4>
-                To wszystko obudowac w seletca od tego miejsca<br>
-                Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
+<%--                To wszystko obudowac w seletca od tego miejsca<br>--%>
+<%--                Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"--%>
 <%--                <div class="form-group row">--%>
 <%--                    <label class="col-4 col-form-label">Photo</label>--%>
 <%--                    <div class="col-8">--%>
@@ -294,7 +294,13 @@
 <%--                           value="Delete">--%>
                 </div>
             </form>
-
+            <form action="#" class="contact-form">
+                <h4>Position of Staff</h4>
+                <div class="d-flex justify-content-end">
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/addPerson" />' role="button">Add person</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/edit2Dish" />' role="button">Edit person</a>
+                </div>
+            </form>
             <form action="#" class="contact-form">
                 <h4>Position of Services</h4>
                 To wszystko obudowac w seletca od tego miejsca<br>
