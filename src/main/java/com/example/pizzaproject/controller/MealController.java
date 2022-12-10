@@ -31,17 +31,12 @@ public class MealController {
         return "meals/addMeal";
     }
 
-    @GetMapping("/editDish")                                //wyświetla widok formularza edycji
-    public String getEditDish(Model model) {
-        List<Category> categoryList = categoryService.getCategories();  //przekazanie kategorii do widoku
-        model.addAttribute("category", categoryList);
-        return "meals/editMeal";
-    }
-
-    @GetMapping("/editDish/{id}")                                //wyświetla widok listy do edytowania
+    @GetMapping("/editDish/{id}")                                //wyświetla widok formularza edytowanego dania
     public String getEdi2tDish(@PathVariable("id") Long id, Model model) {
         Meal meal = mealService.getMeal(id);
         model.addAttribute("meal", meal);
+        List<Category> categoryList = categoryService.getCategories();  //przekazanie kategorii do widoku
+        model.addAttribute("category", categoryList);
         return "meals/editMeal";
     }
 

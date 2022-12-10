@@ -225,14 +225,13 @@
                                 <div class="row">
                                     <label class="col-4 col-form-label"><h6>Category</h6></label>
                                     <div class="col-8">
-                                        To na pewno też musi być opkaowane jakimś selectem, tak, żeby użytkownik wyierał
-                                        sobie kategorie, a nie wpisywał kolejne
+
                                         <select name="category.id">
-                                        <input class="form-control" type="text" name="category" value="${meal.category}" placeholder="Wpisz kategorię: pizza, makaron, burger, napój">
+<%--                                        <input class="form-control" type="text" name="category" value="${meal.category}" placeholder="Wpisz kategorię: pizza, makaron, burger, napój">--%>
 
                                             <option hidden>Wybierz kategorię</option>
                                             <c:forEach items="${category}" var="title">
-                                                <option value="${title.id}" > ${title.categoryName} </option>
+                                                <option value="${title.id}" <c:if test="${title.id == meal.category.id}"> selected </c:if> > ${title.categoryName} </option>
                                             </c:forEach>
 
                                         </select>
