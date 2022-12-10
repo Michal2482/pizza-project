@@ -11,5 +11,5 @@ import java.util.Optional;
 public interface BasicInformationRepository extends JpaRepository<BasicInformation,Long> {
     Optional<BasicInformation> findByCompanyPrefix(String prefix);
 
-    void deleteByCompanyPrefix(String prefix);
+    void  deleteByCompanyPrefix(String prefix);
 }

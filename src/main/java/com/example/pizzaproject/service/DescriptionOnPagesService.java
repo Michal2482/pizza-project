@@ -35,6 +35,8 @@ public class DescriptionOnPagesService {
     }
 
     public void deleteDescriptionOnPages(String prefix) {
-        descriptionOnPagesRepository.deleteByCompanyPrefix(prefix);
+        Long id = descriptionOnPagesRepository.findByCompanyPrefix(prefix).stream().map(company -> company.getId()).findFirst().orElseThrow(()->new PizzaProjectException(PizzaProjectException.EMPTY_COMPANY_ID+prefix));
+       descriptionOnPagesRepository.deleteById(id);
     }
+
 }

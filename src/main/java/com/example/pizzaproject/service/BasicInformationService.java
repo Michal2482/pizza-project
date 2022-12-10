@@ -7,6 +7,7 @@ import com.example.pizzaproject.repository.CompanyRepository;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Optional;
 
 @Service
 public class BasicInformationService {
@@ -58,6 +59,7 @@ public class BasicInformationService {
     }
 
     public void deleteBasicInformation(String prefix) {
-        basicInformationRepository.deleteByCompanyPrefix(prefix);
+        Long id = basicInformationRepository.findByCompanyPrefix(prefix).stream().map(company -> company.getId()).findFirst().orElseThrow(()->new PizzaProjectException(PizzaProjectException.EMPTY_COMPANY_ID+prefix));
+        basicInformationRepository.deleteById(id);
     }
 }

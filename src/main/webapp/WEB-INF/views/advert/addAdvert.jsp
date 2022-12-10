@@ -12,7 +12,7 @@
 <section class="ftco-section administration-section">
     <div class="container mt-4">
         <div class="col-md-12 contact-info ftco-animate">
-            <form method="post" class="contact-form" action='<c:url value="/${prefix}/admin/advert"/>'>
+            <form method="post" class="contact-form" action='<c:url value="/${prefix}/admin/addAdvert"/>'>
                 <h4>Position of Advert</h4>
                 <div class="form-group row">
                     <label class="col-4 col-form-label">Photo Advert</label>
@@ -49,39 +49,8 @@
                     <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
                            name="submitAndGoHomePage"
                            value="Save/Go Home Page"/>
-
-                    <button type="button" class="btn btn-danger" data-toggle="modal" style="margin:10px"
-                            data-target="#myModal">Delete
-                    </button>
                 </div>
             </form>
-        </div>
-        <!-- The Modal -->
-        <div class="modal" id="myModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="h4-black">Are you sure?</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        If you delete it, it doesn't return
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-                        <form method="post" class="contact-form"
-                              action='<c:url value="/${prefix}/admin/descriptionOnPages"/>'>
-                            <input type="submit" class="btn btn-danger" name="submitAndGoHomePage" value="Delete"/>
-                        </form>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>

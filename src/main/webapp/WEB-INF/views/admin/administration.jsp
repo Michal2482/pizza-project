@@ -45,7 +45,8 @@
             <p> In this form you can add advert to home page</p>
             <p> Photo, slogan, product name, description product</p>
             <div class="d-flex justify-content-end">
-                <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/admin/advert" />' role="button">Edit</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/admin/addAdvert" />' role="button">Add Advert</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/admin/adverts" />' role="button">Edit Adverts</a>
             </div>
 
 

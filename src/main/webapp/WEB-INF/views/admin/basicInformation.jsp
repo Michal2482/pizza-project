@@ -214,7 +214,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
                         <form method="post" class="contact-form" action='<c:url value="/${prefix}/admin/basicInformation"/>'>
-                            <input type="submit" class="btn btn-danger" name="submitAndGoHomePage" value="Delete"/>
+                            <input type="submit" class="btn btn-danger" name="delete" value="Delete"/>
                         </form>
                     </div>
                 </div>

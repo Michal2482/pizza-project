@@ -18,7 +18,8 @@ public class Advert {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="company_id")
     private Company company;
 
     private String photoAdvert;
