@@ -7,11 +7,6 @@
 <%@include file="../dynamic/css.jspf" %>
 <body>
 <%@include file="../dynamic/navigationMain.jspf" %>
-<!-- END nav -->
-
-<%--<section class="ftco-section administration-section">--%>
-<%--    <div class="container mt-4">--%>
-<%--        <div class="col-md-12 contact-info ftco-animate">--%>
 
 <h2 class="d-flex justify-content-center py-2 row">Adverts</h2>
 <div class="row d-flex justify-content-center py-2">

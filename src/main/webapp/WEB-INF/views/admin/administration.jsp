@@ -64,8 +64,8 @@
 <%--                    </div>--%>
 <%--                </div>--%>
                 <div class="d-flex justify-content-end">
-                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/addCategory" />' role="button">Add category</a>
-                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/categories" />' role="button">Edit category</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/addCategory" />' role="button">Add category</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/categories" />' role="button">Edit category</a>
 <%--                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"--%>
 <%--                           value="Save">--%>
 <%--                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"--%>
@@ -118,9 +118,9 @@
                 <div class="d-flex justify-content-end">
 <%--                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"--%>
 <%--                           value="Save">--%>
-                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/addDish" />' role="button">Add dish</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/addDish" />' role="button">Add dish</a>
 <%--                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/editDish" />' role="button">Edit dish</a>--%>
-                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/edit2Dish" />' role="button">Edit dish</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/edit2Dish" />' role="button">Edit dish</a>
 
 <%--                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"--%>
 <%--                           value="Edit">--%>
@@ -131,8 +131,8 @@
             <form action="#" class="contact-form">
                 <h4>Position of Staff</h4>
                 <div class="d-flex justify-content-end">
-                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/addPerson" />' role="button">Add person</a>
-                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/edit2Dish" />' role="button">Edit person</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/addPerson" />' role="button">Add person</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/edit2Dish" />' role="button">Edit person</a>
                 </div>
             </form>
             <form action="#" class="contact-form">

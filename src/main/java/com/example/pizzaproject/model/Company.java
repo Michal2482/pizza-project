@@ -24,4 +24,10 @@ public class Company {
 
     @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     private Set<Advert> adverts = new HashSet<>();
+
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    private Set<Category> categories = new HashSet<>();
+
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    private Set<Meal> meals = new HashSet<>();
 }

@@ -19,6 +19,18 @@ public class Meal {
     @JoinColumn(name = "category_id")
     private Category category;
 
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="company_id")
+    private Company company;
+
     public Meal() {
     }
 

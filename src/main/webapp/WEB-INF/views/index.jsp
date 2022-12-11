@@ -10,27 +10,28 @@
 
 <section class="home-slider owl-carousel img" style="background-image: url(/resources/images/bg_1.jpg);">
     <c:forEach items="${adverts}" var="advertList">
-    <div class="slider-item">
-        <div class="overlay"></div>
+        <div class="slider-item">
+            <div class="overlay"></div>
 
-        <div class="container">
+            <div class="container">
 
-            <div class="row slider-text align-items-center" data-scrollax-parent="true">
+                <div class="row slider-text align-items-center" data-scrollax-parent="true">
 
-                <div class="col-md-6 col-sm-12 ftco-animate">
+                    <div class="col-md-6 col-sm-12 ftco-animate">
 
-                    <span class="subheading">${advertList.slogan}</span>
-                    <h1 class="mb-4">${advertList.productAdvertName}</h1>
-                    <p class="mb-4 mb-md-5">${advertList.descriptionProductAdvert}</p>
-                    <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a>
-                        <a href='<c:url value="/{prefix}/menu"/>' class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
-                </div>
-                <div class="col-md-6 ftco-animate">
-                    <img src="/resources/images/bg_1.png" class="img-fluid" alt="">
+                        <span class="subheading">${advertList.slogan}</span>
+                        <h1 class="mb-4">${advertList.productAdvertName}</h1>
+                        <p class="mb-4 mb-md-5">${advertList.descriptionProductAdvert}</p>
+                        <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a>
+                            <a href='<c:url value="/${prefix}/menu"/>'
+                               class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
+                    </div>
+                    <div class="col-md-6 ftco-animate">
+                        <img src="/resources/images/bg_1.png" class="img-fluid" alt="">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </c:forEach>
 </section>
 
@@ -60,55 +61,57 @@
                         <div class="text">
                             <h3>Open Hours:</h3>
                             <div class="row">
-                            <div class="col-6">
-                                <p>Mon: <fmt:formatDate value="${basicInformation.openHoursMondayFrom}"
-                                                             pattern="HH:mm"/>-<fmt:formatDate
-                                        value="${basicInformation.openHoursMondayTo}" pattern="HH:mm"/></p>
-                                <p>Tue: <fmt:formatDate value="${basicInformation.openHoursTuesdayFrom}"
-                                                             pattern="HH:mm"/>-<fmt:formatDate
-                                        value="${basicInformation.openHoursTuesdayTo}" pattern="HH:mm"/></p>
-                                <p>Wed: <fmt:formatDate value="${basicInformation.openHoursWednesdayFrom}"
-                                                             pattern="HH:mm"/>-<fmt:formatDate
-                                        value="${basicInformation.openHoursWednesdayTo}" pattern="HH:mm"/></p>
-                                <p>Thu: <fmt:formatDate value="${basicInformation.openHoursThursdayFrom}"
-                                                             pattern="HH:mm"/>-<fmt:formatDate
-                                        value="${basicInformation.openHoursThursdayTo}" pattern="HH:mm"/></p>
-                            </div>
-                            <div class="col-6">
-                                <p>Fri: <fmt:formatDate value="${basicInformation.openHoursFridayFrom}"
-                                                             pattern="HH:mm"/>-<fmt:formatDate
-                                        value="${basicInformation.openHoursFridayTo}" pattern="HH:mm"/></p>
-                                <p>Sat: <fmt:formatDate value="${basicInformation.openHoursSaturdayFrom}"
-                                                             pattern="HH:mm"/>-<fmt:formatDate
-                                        value="${basicInformation.openHoursSaturdayTo}" pattern="HH:mm"/></p>
-                                <p>Sun: <fmt:formatDate value="${basicInformation.openHoursSundayFrom}"
-                                                             pattern="HH:mm"/>-<fmt:formatDate
-                                        value="${basicInformation.openHoursSundayTo}" pattern="HH:mm"/></p>
-                            </div>
-                            </div>
+                                <div class="col-6">
+                                    <p>Mon: <fmt:formatDate value="${basicInformation.openHoursMondayFrom}"
+                                                            pattern="HH:mm"/>-<fmt:formatDate
+                                            value="${basicInformation.openHoursMondayTo}" pattern="HH:mm"/></p>
+                                    <p>Tue: <fmt:formatDate value="${basicInformation.openHoursTuesdayFrom}"
+                                                            pattern="HH:mm"/>-<fmt:formatDate
+                                            value="${basicInformation.openHoursTuesdayTo}" pattern="HH:mm"/></p>
+                                    <p>Wed: <fmt:formatDate value="${basicInformation.openHoursWednesdayFrom}"
+                                                            pattern="HH:mm"/>-<fmt:formatDate
+                                            value="${basicInformation.openHoursWednesdayTo}" pattern="HH:mm"/></p>
+                                    <p>Thu: <fmt:formatDate value="${basicInformation.openHoursThursdayFrom}"
+                                                            pattern="HH:mm"/>-<fmt:formatDate
+                                            value="${basicInformation.openHoursThursdayTo}" pattern="HH:mm"/></p>
+                                </div>
+                                <div class="col-6">
+                                    <p>Fri: <fmt:formatDate value="${basicInformation.openHoursFridayFrom}"
+                                                            pattern="HH:mm"/>-<fmt:formatDate
+                                            value="${basicInformation.openHoursFridayTo}" pattern="HH:mm"/></p>
+                                    <p>Sat: <fmt:formatDate value="${basicInformation.openHoursSaturdayFrom}"
+                                                            pattern="HH:mm"/>-<fmt:formatDate
+                                            value="${basicInformation.openHoursSaturdayTo}" pattern="HH:mm"/></p>
+                                    <p>Sun: <fmt:formatDate value="${basicInformation.openHoursSundayFrom}"
+                                                            pattern="HH:mm"/>-<fmt:formatDate
+                                            value="${basicInformation.openHoursSundayTo}" pattern="HH:mm"/></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="social d-md-flex pl-md-5 p-3 align-items-center">
-                    <ul class="social-icon d-md-flex flex-column">
-                        <li class="ftco-animate py-3"><a href="${basicInformation.twitterUrl}" target="_blank"><span
-                                class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate py-3"><a href="${basicInformation.facebookUrl}" target="blank"><span
-                                class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate py-3"><a href="${basicInformation.instagramUrl}"><span
-                                class="icon-instagram"></span></a></li>
-                    </ul>
-                </div>
+            </div>
+            <div class="social d-md-flex pl-md-5 p-3 align-items-center">
+                <ul class="social-icon d-md-flex flex-column">
+                    <li class="ftco-animate py-3"><a href="${basicInformation.twitterUrl}" target="_blank"><span
+                            class="icon-twitter"></span></a></li>
+                    <li class="ftco-animate py-3"><a href="${basicInformation.facebookUrl}" target="blank"><span
+                            class="icon-facebook"></span></a></li>
+                    <li class="ftco-animate py-3"><a href="${basicInformation.instagramUrl}"><span
+                            class="icon-instagram"></span></a></li>
+                </ul>
             </div>
         </div>
+    </div>
 </section>
 
 <section class="ftco-about d-md-flex">
     <div class="one-half img" style="background-image: url(/resources/images/about.jpg);"></div>
     <div class="one-half ftco-animate">
         <div class="heading-section ftco-animate ">
-            <h2 class="mb-4">Welcome to <span class="flaticon-pizza">${basicInformation.firstPartName} ${basicInformation.secondPartName}</span> A Restaurant</h2>
+            <h2 class="mb-4">Welcome to <span
+                    class="flaticon-pizza">${basicInformation.firstPartName} ${basicInformation.secondPartName}</span> A
+                Restaurant</h2>
         </div>
         <div>
             <p>${descriptionOnPages.longDescriptionHomePage}</p>
@@ -231,7 +234,8 @@
     </div>
 </section>
 
-<a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/pizzeria/admin/" />' role="button">Login</a>
+<a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/pizzeria/admin/" />'
+   role="button">Login</a>
 
 <%@include file="dynamic/board.jspf" %>
 

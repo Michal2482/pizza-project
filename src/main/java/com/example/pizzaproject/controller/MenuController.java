@@ -1,8 +1,10 @@
 package com.example.pizzaproject.controller;
 
 import com.example.pizzaproject.model.Category;
+import com.example.pizzaproject.model.DescriptionOnPages;
 import com.example.pizzaproject.model.Meal;
 import com.example.pizzaproject.service.CategoryService;
+import com.example.pizzaproject.service.DescriptionOnPagesService;
 import com.example.pizzaproject.service.MealService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,9 +19,11 @@ import java.util.List;
 public class MenuController {
 
     private final MealService mealService;
+    private final DescriptionOnPagesService descriptionOnPagesService;
 
-    public MenuController(MealService mealService, CategoryService categoryService) {
+    public MenuController(MealService mealService, DescriptionOnPagesService descriptionOnPagesService, CategoryService categoryService) {
         this.mealService = mealService;
+        this.descriptionOnPagesService = descriptionOnPagesService;
         this.categoryService = categoryService;
     }
 
@@ -29,8 +33,10 @@ public class MenuController {
     public String getMealList(Model model, @PathVariable String prefix) {                //wyświetla widok menu z listą dań i kategorii
         List<Meal> mealList = mealService.getMeals();
         model.addAttribute("meal", mealList);
-        List<Category> categoryList = categoryService.getCategories();
+        List<Category> categoryList = categoryService.getCategories(prefix);
         model.addAttribute("category", categoryList);
+        DescriptionOnPages descriptionOnPages = descriptionOnPagesService.getInformation(prefix);
+        model.addAttribute("descriptionOnPages", descriptionOnPages);
         return "pizzaPage/menu";
     }
 }

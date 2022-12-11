@@ -6,15 +6,13 @@ import com.example.pizzaproject.service.CategoryService;
 import com.example.pizzaproject.service.MealService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 
 @Controller
+@RequestMapping("/{prefix}")
 public class MealController {
     private final MealService mealService;
     private final CategoryService categoryService;
@@ -25,17 +23,17 @@ public class MealController {
     }
 
     @GetMapping("/addDish")                                 //wyświetla widok formularza do dodawania
-    public String getAddDish(Model model) {                     //dodany model do arg. by przekazać do widoku
-        List<Category> categoryList = categoryService.getCategories();  //przekazanie kategorii do widoku
+    public String getAddDish(Model model, @PathVariable String prefix) {                     //dodany model do arg. by przekazać do widoku
+        List<Category> categoryList = categoryService.getCategories(prefix);  //przekazanie kategorii do widoku
         model.addAttribute("category", categoryList);
         return "meals/addMeal";
     }
 
     @GetMapping("/editDish/{id}")                                //wyświetla widok formularza edytowanego dania
-    public String getEdi2tDish(@PathVariable("id") Long id, Model model) {
+    public String getEdi2tDish(@PathVariable("id") Long id, Model model, @PathVariable String prefix) {
         Meal meal = mealService.getMeal(id);
         model.addAttribute("meal", meal);
-        List<Category> categoryList = categoryService.getCategories();  //przekazanie kategorii do widoku
+        List<Category> categoryList = categoryService.getCategories(prefix);  //przekazanie kategorii do widoku
         model.addAttribute("category", categoryList);
         return "meals/editMeal";
     }
@@ -46,9 +44,9 @@ public class MealController {
 //        return new RedirectView("/addDish");
 //    }
     @PostMapping("/addDish")                          //dodawanie dania
-    public RedirectView postAddMeal(Meal meal) {
-        mealService.addMeal(meal);
-        return new RedirectView("/addDish");
+    public RedirectView postAddMeal(Meal meal, @PathVariable String prefix) {
+        mealService.addMeal(meal, prefix);
+        return new RedirectView("/{prefix}/menu");
     }
 
     @GetMapping("/edit2Dish")                           //wyświetla widok z listą dań pod edycję
