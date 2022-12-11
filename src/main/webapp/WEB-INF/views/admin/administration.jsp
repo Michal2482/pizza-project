@@ -27,196 +27,30 @@
 <section class="ftco-section administration-section">
     <div class="container mt-4">
         <div class="col-md-12 contact-info ftco-animate">
-            <form action="#" class="contact-form">
                 <h4>Basic Information</h4>
-                <div class="form-group row">
-                    <label class="col-2 col-form-label">Pizzeria name:</label>
-                    <div class="col-5">
-                        <input class="form-control" type="text" name="firstPartName"
-                               placeholder="Firt part of pizzeria name">
-                    </div>
-                    <div class="col-5">
-                        <input class="form-control" type="text" name="SecondPartName"
-                               placeholder="Second part of pizzeria name">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-2 col-form-label">Phone number:</label>
-                    <div class="col-4">
-                        <input class="form-control" type="text" name="phoneNumber"
-                               placeholder="phone number">
-                    </div>
-                    <label class="col-1 col-form-label">E-mail:</label>
-                    <div class="col-4">
-                        <input class="form-control" type="text" name="Email" placeholder="your e-mail">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-1 col-form-label">City:</label>
-                    <div class="col-3">
-                        <input class="form-control" type="text" name="city" placeholder="city">
-                    </div>
-                    <label class="col-1 col-form-label">Street:</label>
-                    <div class="col-3">
-                        <input class="form-control" type="text" name="street" placeholder="street">
-                    </div>
-                    <label class="col-2 col-form-label">Nr:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="propertyNumber"
-                               placeholder="Number">
-                    </div>
-                </div>
-                <h5>Open Hours</h5>
-                <div class="form-group row">
-                    <label class="col-2 col-form-label">Monday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                    </div>
-                    <label class="col-2 col-form-label">Tuesday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                    </div>
-                    <label class="col-2 col-form-label">Wednesday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-2 col-form-label">Thursday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                    </div>
-                    <label class="col-2 col-form-label">Friday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                    </div>
-                    <label class="col-2 col-form-label">Saturday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-2 col-form-label">Sunday:</label>
-                    <div class="col-2">
-                        <input class="form-control" type="text" name="facebook" placeholder="from - to">
-                    </div>
-                </div>
-                <h5>Social Media:</h5>
-                <div class="form-group row">
-                    <label class="col-3 col-form-label">Twitter:</label>
-                    <div class="col-8">
-                        <input class="form-control" type="text" name="twitter" placeholder="url Twitter">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-3 col-form-label">Facebook:</label>
-                    <div class="col-8">
-                        <input class="form-control" type="text" name="facebook" placeholder="url Facebook">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-3 col-form-label">Instagram:</label>
-                    <div class="col-8">
-                        <input class="form-control" type="text" name="instagram"
-                               placeholder="url Instagram">
-                    </div>
-                </div>
-
+            <p> Pizzeria name, Phone number, E-mail</p>
+                <p> Address, Open hours, Social media, Short Description Pizzeria</p>
                 <div class="d-flex justify-content-end">
-                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
-                           value="Save">
-                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
-                           value="Edit">
-                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"
-                           value="Delete">
-                </div>
-            </form>
-
-            <form action="#" class="contact-form">
-                <h4>Description on pages</h4>
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Short description Home
-                        Page:</label>
-                    <div class="col-8">
-                                <textarea class="form-control" rows="5" id="shortDescriptionHomePage"
-                                          name="shortDescriptionHomePage"
-                                          placeholder="Short despription Home Page"></textarea>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Short description Menu
-                        Page:</label>
-                    <div class="col-8">
-                                <textarea class="form-control" rows="5" id="shortDescriptionMenuPage"
-                                          name="shortDescriptionMenuPage"
-                                          placeholder="Short despription Menu Page"></textarea>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Short despription Services
-                        Page:</label>
-                    <div class="col-8">
-                                <textarea class="form-control" rows="5" id="shortDescriptionServicesPage"
-                                          name="shortDescriptionServicesPage"
-                                          placeholder="Short despription Services Page"></textarea>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-end">
-                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
-                           value="Save">
-                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
-                           value="Edit">
-                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"
-                           value="Delete">
-                </div>
-            </form>
-
-            <form action="#" class="contact-form">
-                <h4>Position of Advert</h4>
-                To wszystko obudowac w seletca od tego miejsca<br>
-                Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Photo Advert</label>
-                    <div class="col-8">
-                        <input class="form-control" type="text" name="photoAdvert"
-                               placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">
-                    </div>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/admin/basicInformation" />' role="button">Edit</a>
                 </div>
 
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Slogan</label>
-                    <div class="col-8">
-                        <input class="form-control" type="text" name="slogan" placeholder="slogan">
-                    </div>
-                </div>
+            <h4>Description on pages</h4>
+            <p> Description on:</p>
+            <p> Home Page, Menu Page and Services Page</p>
+            <div class="d-flex justify-content-end">
+                <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/admin/descriptionOnPages" />' role="button">Edit</a>
+            </div>
 
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Product name</label>
-                    <div class="col-8">
-                        <input class="form-control" type="text" name="ProductAdvertName[1]"
-                               placeholder="product Advert name">
-                    </div>
-                </div>
+            <h4>Position of Advert</h4>
+            <p> In this form you can add advert to home page</p>
+            <p> Photo, slogan, product name, description product</p>
+            <div class="d-flex justify-content-end">
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/admin/addAdvert" />' role="button">Add Advert</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/admin/adverts" />' role="button">Edit Adverts</a>
+            </div>
 
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Description Product</label>
-                    <div class="col-8">
-                                    <textarea class="form-control" rows="4" id="descriptionPizza"
-                                              name="descriptionProduct"
-                                              placeholder="Description Product and ingredients"></textarea>
-                    </div>
-                </div>
-                To wszystko obudowac w seletca do tego miejsca<br>
 
-                <div class="d-flex justify-content-end">
-                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
-                           value="Save">
-                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
-                           value="Edit">
-                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"
-                           value="Delete">
-                </div>
-            </form>
+
 
             <form action="#" class="contact-form">
                 <h4>Category:</h4>

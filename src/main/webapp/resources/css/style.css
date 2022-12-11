@@ -320,6 +320,10 @@ h3, .h3 {
 h4, .h4 {
   font-size: 1.5rem; }
 
+h4, .h4-black {
+  font-size: 1.5rem;
+  color: black; }
+
 h5, .h5 {
   font-size: 1.25rem; }
 
@@ -3585,6 +3589,31 @@ input[type="button"].btn-block {
     .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
       color: #fff; }
 
+.card-auth {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background: url(../images/bg_4.jpg) no-repeat fixed;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 5rem; }
+.card-auth > hr {
+  margin-right: 0;
+  margin-left: 0; }
+.card-auth > .list-group:first-child .list-group-item:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem; }
+.card-auth > .list-group:last-child .list-group-item:last-child {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem; }
+
 .card {
   position: relative;
   display: -webkit-box;
@@ -3596,10 +3625,10 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background: url(../images/bg_4.jpg) no-repeat fixed;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem; }
+  border-radius: 5rem; }
   .card > hr {
     margin-right: 0;
     margin-left: 0; }
@@ -7721,6 +7750,12 @@ h1, h2, h3, h4, h5,
       border-color: #000;
       color: #fff; }
 
+
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%) sepia(0%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+}
+
 .ftco-intro .wrap {
   width: 100%; }
   .ftco-intro .wrap .info {
@@ -7728,15 +7763,15 @@ h1, h2, h3, h4, h5,
     padding: 30px; }
     @media (min-width: 1200px) {
       .ftco-intro .wrap .info {
-        width: calc(100% - 35%);
-        padding: 2% 5% 2% 12%; } }
+        width: calc(100% - 15%);
+        padding: 2% 5% 2% 12%;} }
     @media (max-width: 767.98px) {
       .ftco-intro .wrap .info {
         width: 100%; } }
     .ftco-intro .wrap .info p {
       margin-bottom: 0; }
   .ftco-intro .wrap .social {
-    width: 35%;
+    width: 15%;
     background: #fac564; }
     @media (max-width: 767.98px) {
       .ftco-intro .wrap .social {
