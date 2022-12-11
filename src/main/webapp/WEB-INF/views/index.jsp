@@ -22,18 +22,14 @@
                     <span class="subheading">${advertList.slogan}</span>
                     <h1 class="mb-4">${advertList.productAdvertName}</h1>
                     <p class="mb-4 mb-md-5">${advertList.descriptionProductAdvert}</p>
-                    <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
-                                                                                                class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View
-                        Menu</a></p>
-
+                    <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a>
+                        <a href='<c:url value="/{prefix}/menu"/>' class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
                 </div>
-
-
-
+                <div class="col-md-6 ftco-animate">
+                    <img src="/resources/images/bg_1.png" class="img-fluid" alt="">
+                </div>
             </div>
-
         </div>
-
     </div>
     </c:forEach>
 </section>

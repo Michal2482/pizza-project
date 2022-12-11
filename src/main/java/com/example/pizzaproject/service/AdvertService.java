@@ -8,6 +8,7 @@ import com.example.pizzaproject.model.Company;
 import com.example.pizzaproject.repository.AdvertRepository;
 import com.example.pizzaproject.repository.CompanyRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -40,6 +41,7 @@ public class AdvertService {
     public void deleteAdvert(Long id, String prefix) {
         advertRepository.deleteById(id);
     }
+
 }
 
 
