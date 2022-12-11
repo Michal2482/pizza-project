@@ -20,7 +20,7 @@ public class CategoryService {
     public List<Category> getCategories() {
         return categoryRepository.findAll();
     }
-    public Category getCategory(Long id) {                                  //dlaczego taki typ?
+    public Category getCategory(Long id) {
         return categoryRepository.findById(id).orElse(null);
     }
     public void editCategory(Category category) {
