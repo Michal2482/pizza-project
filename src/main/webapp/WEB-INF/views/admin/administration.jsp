@@ -298,7 +298,7 @@
                 <h4>Position of Staff</h4>
                 <div class="d-flex justify-content-end">
                     <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/addPerson" />' role="button">Add person</a>
-                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/edit2Dish" />' role="button">Edit person</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/edit2Person" />' role="button">Edit person</a>
                 </div>
             </form>
             <form action="#" class="contact-form">

@@ -203,12 +203,12 @@
 <%--                            <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>--%>
 <%--                        </form>--%>
                         <h5>Position of Staff</h5>
-                        <form method="post" action='<c:url value="/addPerson"/>'>
+                        <form method="post" action='<c:url value="/addPerson/${person.id}"/>'>
                         <div class="form-group">
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Photo</h6></label>
                                 <div class="col-8">
-                                    <input class="form-control" type="text" name="photo"
+                                    <input class="form-control" type="text" name="photo" value=""
                                            placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">
                                 </div>
                             </div>
@@ -216,15 +216,15 @@
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Name</h6></label>
                                 <div class="col-8">
-                                    <input class="form-control" type="text" name="name"
+                                    <input class="form-control" type="text" name="name" value="${person.name}"
                                            placeholder="Imię i nazwisko">
                                 </div>
                             </div>
                             <div class="row">
                                 <label class="col-4 col-form-label"><h6>Function</h6></label>
                                 <div class="col-8">
-                                    <input class="form-control" type="text" name="function"
-                                           placeholder="Funkcja">
+<%--                                    <input class="form-control" type="text" name="function" value="${person.function}"--%>
+<%--                                           placeholder="Funkcja">--%>
                                 </div>
                             </div>
 
@@ -239,13 +239,18 @@
                                 <label class="col-4 col-form-label"><h6>Description</h6></label>
                                 <div class="col-8">
                                     <textarea class="form-control" rows="4" id="descriptionProduct"
-                                              name="description"
+                                              name="description" value="${person.description}"
                                               placeholder="Podaj opis">
                                     </textarea>
                                 </div>
                             </div>
                             <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Zapisz"></input>
                         </div>
+                        </form>
+                        <form method="post" action='<c:url value="/editPerson/${person.id}"/>'>
+                            <div class="d-flex justify-content-end">
+                             <input class="btn btn-danger py-2 px-4 " style="margin:10px" type="submit" value="Usuń">
+                            </div>
                         </form>
 <%--                    </form>--%>
 

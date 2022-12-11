@@ -13,6 +13,7 @@ public class Person {
     private Long id;
     private String photo;
     private String name;
+//    private String function;
     private String description;
 
     public Person() {
@@ -22,6 +23,7 @@ public class Person {
         this.id = id;
         this.photo = photo;
         this.name = name;
+//        this.function = function;
         this.description = description;
     }
 
@@ -48,6 +50,14 @@ public class Person {
     public void setName(String name) {
         this.name = name;
     }
+
+//    public String getFunction() {
+//        return function;
+//    }
+//
+//    public void setFunction(String function) {
+//        this.function = function;
+//    }
 
     public String getDescription() {
         return description;

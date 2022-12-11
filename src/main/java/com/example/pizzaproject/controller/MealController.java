@@ -24,6 +24,7 @@ public class MealController {
         this.categoryService = categoryService;
     }
 
+
     @GetMapping("/addDish")                                 //wyświetla widok formularza do dodawania
     public String getAddDish(Model model) {                     //dodany model do arg. by przekazać do widoku
         List<Category> categoryList = categoryService.getCategories();  //przekazanie kategorii do widoku
@@ -40,12 +41,7 @@ public class MealController {
         return "meals/editMeal";
     }
 
-//    @PostMapping("/addDish")                          //dodawanie dania
-//    public RedirectView postAddMeal(Meal meal, @RequestParam Long categoryId) {
-//        mealService.addMeal(meal, categoryId);
-//        return new RedirectView("/addDish");
-//    }
-    @PostMapping("/addDish")                          //dodawanie dania
+    @PostMapping("/addDish")                          //dodawanie dania do bazy
     public RedirectView postAddMeal(Meal meal) {
         mealService.addMeal(meal);
         return new RedirectView("/addDish");

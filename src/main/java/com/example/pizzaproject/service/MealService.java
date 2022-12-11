@@ -24,8 +24,6 @@ public class MealService {
 //        mealRepository.save(meal);
 //    }
     public void addMeal(Meal meal) {
-//        Category category = categoryRepository.getById(categoryId);
-//        meal.setCategory(category);
         mealRepository.save(meal);
     }
 
