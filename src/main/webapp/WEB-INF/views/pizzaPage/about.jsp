@@ -4,16 +4,16 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <%@include file="../dynamic/css.jspf" %>
-<body>
-<%@include file="../dynamic/navigationMain.jspf" %>
-<!-- END nav -->
+  <body>
+  <%@include file="../dynamic/navigationMain.jspf" %>
+    <!-- END nav -->
 
-<section class="home-slider owl-carousel img" style="background-image: url(/resources/images/bg_1.jpg);">
+    <section class="home-slider owl-carousel img" style="background-image: url(/resources/images/bg_1.jpg);">
 
-    <div class="slider-item" style="background-image: url(/resources/images/bg_3.jpg);">
-        <div class="overlay"></div>
+      <div class="slider-item" style="background-image: url(/resources/images/bg_3.jpg);">
+      	<div class="overlay"></div>
         <div class="container">
-            <div class="row slider-text justify-content-center align-items-center">
+          <div class="row slider-text justify-content-center align-items-center">
 
                 <div class="col-md-7 col-sm-12 text-center ftco-animate">
                     <h1 class="mb-3 mt-5 bread">About</h1>
@@ -117,58 +117,68 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
-                <div class="staff">
-                    <div class="img mb-4" style="background-image: url(/resources/images/person_1.jpg);"></div>
-                    <div class="info text-center">
-                        <h3><a href="teacher-single.html">Tom Smith</a></h3>
-                        <span class="position">Hair Specialist</span>
-                        <div class="text">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
-                <div class="staff">
-                    <div class="img mb-4" style="background-image: url(/resources/images/person_2.jpg);"></div>
-                    <div class="info text-center">
-                        <h3><a href="teacher-single.html">Mark Wilson</a></h3>
-                        <span class="position">Beard Specialist</span>
-                        <div class="text">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
-                <div class="staff">
-                    <div class="img mb-4" style="background-image: url(/resources/images/person_3.jpg);"></div>
-                    <div class="info text-center">
-                        <h3><a href="teacher-single.html">Patrick Jacobson</a></h3>
-                        <span class="position">Hair Stylist</span>
-                        <div class="text">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
-                <div class="staff">
-                    <div class="img mb-4" style="background-image: url(/resources/images/person_4.jpg);"></div>
-                    <div class="info text-center">
-                        <h3><a href="teacher-single.html">Ivan Dorchsner</a></h3>
-                        <span class="position">Beard Specialist</span>
-                        <div class="text">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<c:forEach items="${person}" var="title">
+				<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
+					<div class="staff">
+						<div class="img mb-4" style="background-image: url(/resources/images/person_1.jpg);"></div>
+						<div class="info text-center">
+							<h3><a href="teacher-single.html">${title.name}</a></h3>
+								<%--      					<span class="position">${title.function}</span>--%>
+							<div class="text">
+								<p>${title.description}</p>
+							</div>
+							</div>
+					</div>
+				</div>
+			</c:forEach>
+<%--        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">--%>
+<%--        		<div class="staff">--%>
+<%--      				<div class="img mb-4" style="background-image: url(/resources/images/person_1.jpg);"></div>--%>
+<%--      				<div class="info text-center">--%>
+<%--      					<h3><a href="teacher-single.html">Tom Smith</a></h3>--%>
+<%--      					<span class="position">Hair Specialist</span>--%>
+<%--      					<div class="text">--%>
+<%--	        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>--%>
+<%--	        			</div>--%>
+<%--      				</div>--%>
+<%--        		</div>--%>
+<%--        	</div>--%>
+<%--        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">--%>
+<%--        		<div class="staff">--%>
+<%--      				<div class="img mb-4" style="background-image: url(/resources/images/person_2.jpg);"></div>--%>
+<%--      				<div class="info text-center">--%>
+<%--      					<h3><a href="teacher-single.html">Mark Wilson</a></h3>--%>
+<%--      					<span class="position">Beard Specialist</span>--%>
+<%--      					<div class="text">--%>
+<%--	        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>--%>
+<%--	        			</div>--%>
+<%--      				</div>--%>
+<%--        		</div>--%>
+<%--        	</div>--%>
+<%--        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">--%>
+<%--        		<div class="staff">--%>
+<%--      				<div class="img mb-4" style="background-image: url(/resources/images/person_3.jpg);"></div>--%>
+<%--      				<div class="info text-center">--%>
+<%--      					<h3><a href="teacher-single.html">Patrick Jacobson</a></h3>--%>
+<%--      					<span class="position">Hair Stylist</span>--%>
+<%--      					<div class="text">--%>
+<%--	        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>--%>
+<%--	        			</div>--%>
+<%--      				</div>--%>
+<%--        		</div>--%>
+<%--        	</div>--%>
+<%--        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">--%>
+<%--        		<div class="staff">--%>
+<%--      				<div class="img mb-4" style="background-image: url(/resources/images/person_4.jpg);"></div>--%>
+<%--      				<div class="info text-center">--%>
+<%--      					<h3><a href="teacher-single.html">Ivan Dorchsner</a></h3>--%>
+<%--      					<span class="position">Beard Specialist</span>--%>
+<%--      					<div class="text">--%>
+<%--	        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>--%>
+<%--	        			</div>--%>
+<%--      				</div>--%>
+<%--        		</div>--%>
+<%--        	</div>--%>
         </div>
     </div>
 </section>

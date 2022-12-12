@@ -27,12 +27,14 @@
 <section class="ftco-section administration-section">
     <div class="container mt-4">
         <div class="col-md-12 contact-info ftco-animate">
+            <form action="#" class="contact-form">
                 <h4>Basic Information</h4>
             <p> Pizzeria name, Phone number, E-mail</p>
                 <p> Address, Open hours, Social media, Short Description Pizzeria</p>
                 <div class="d-flex justify-content-end">
                     <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/admin/basicInformation" />' role="button">Edit</a>
                 </div>
+            </form>
 
             <h4>Description on pages</h4>
             <p> Description on:</p>
@@ -41,16 +43,52 @@
                 <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/admin/descriptionOnPages" />' role="button">Edit</a>
             </div>
 
-            <h4>Position of Advert</h4>
-            <p> In this form you can add advert to home page</p>
-            <p> Photo, slogan, product name, description product</p>
-            <div class="d-flex justify-content-end">
-                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/admin/addAdvert" />' role="button">Add Advert</a>
-                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/admin/adverts" />' role="button">Edit Adverts</a>
-            </div>
+            <form action="#" class="contact-form">
+                <h4>Position of Advert</h4>
+                To wszystko obudowac w seletca od tego miejsca<br>
+                Tytaj dodać selecta z możliwością dodania do zakładaek "burgers, drinks, pizza itp"
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Photo Advert</label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="photoAdvert"
+                               placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">
+                    </div>
+                </div>
 
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Slogan</label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="slogan" placeholder="slogan">
+                    </div>
+                </div>
 
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Product name</label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" name="ProductAdvertName[1]"
+                               placeholder="product Advert name">
+                    </div>
+                </div>
 
+                <div class="form-group row">
+                    <label class="col-4 col-form-label">Description Product</label>
+                    <div class="col-8">
+                                    <textarea class="form-control" rows="4" id="descriptionPizza"
+                                              name="descriptionProduct"
+                                              placeholder="Description Product and ingredients"></textarea>
+                    </div>
+                </div>
+                To wszystko obudowac w seletca do tego miejsca<br>
+
+                <div class="d-flex justify-content-end">
+                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
+                           value="Save">
+                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
+                           value="Edit">
+                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"
+                           value="Delete">
+                </div>
+            </form>
 
             <form action="#" class="contact-form">
                 <h4>Category:</h4>
@@ -132,7 +170,7 @@
                 <h4>Position of Staff</h4>
                 <div class="d-flex justify-content-end">
                     <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/addPerson" />' role="button">Add person</a>
-                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/edit2Dish" />' role="button">Edit person</a>
+                    <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/${prefix}/edit2Person" />' role="button">Edit person</a>
                 </div>
             </form>
             <form action="#" class="contact-form">

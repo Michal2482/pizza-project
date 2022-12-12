@@ -27,7 +27,7 @@ public class CategoryService {
         Company companyInDatabase = companyRepository.findCompanyByPrefix(prefix).orElseThrow(()->new PizzaProjectException(PizzaProjectException.EMPTY_COMPANY_ID+prefix));
         return categoryRepository.findAllByCompanyId(companyInDatabase.getId());
     }
-    public Category getCategory(Long id) {                                  //dlaczego taki typ?
+    public Category getCategory(Long id) {
         return categoryRepository.findById(id).orElse(null);
     }
     public void editCategory(Category category) {

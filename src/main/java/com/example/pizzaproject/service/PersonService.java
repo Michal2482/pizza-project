@@ -20,8 +20,8 @@ public class PersonService {
         personRepository.save(person);
     }
 
-    public List<Person> getPersons() {                          //pobiera wszystkie dania, korzysta z niej
-        return personRepository.findAll();                    //met. getMealList w MenuControllerze
+    public List<Person> getPersons() {                          //pobiera wszystkie osoby, korzysta z niej
+        return personRepository.findAll();
     }
 
     public Person getPerson(Long id) {
