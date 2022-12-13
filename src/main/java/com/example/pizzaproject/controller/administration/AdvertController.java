@@ -26,15 +26,16 @@ public class AdvertController {
         return "advert/addAdvert";
     }
 
-    @PostMapping(value="/admin/addAdvert",  params="submitAndGoAdminPage")
-    public RedirectView postAddAdvert(@PathVariable String prefix, Advert advert) {
-        advertService.addAdvert(advert, prefix);
-        return new RedirectView("");
-    }
+//    @PostMapping(value="/admin/addAdvert",  params="submitAndGoAdminPage")
+//    public RedirectView postAddAdvert(@PathVariable String prefix, Advert advert) {
+//        advertService.addAdvert(advert, prefix);
+//        return new RedirectView("");
+//    }
 
     @PostMapping(value="/admin/addAdvert",  params="submitAndGoHomePage")
-    public RedirectView postAddAdvertAndGoHomePage(@PathVariable String prefix, Advert advert) {
-        advertService.addAdvert(advert, prefix);
+    public RedirectView postAddAdvertAndGoHomePage(@PathVariable String prefix, Advert advert, @RequestParam("file") MultipartFile file) {
+        advertService.store(file);
+        advertService.addAdvert(advert, prefix, file);
         return new RedirectView("/{prefix}");
     }
 
@@ -51,17 +52,17 @@ public class AdvertController {
         model.addAttribute("advert",advert);
         return "advert/editAdvert";
     }
-    @PostMapping(value="/admin/editAdvert/{id}",  params="submitAndGoAdverts")
-    public RedirectView postEditAdvert(@PathVariable("prefix") String prefix, @PathVariable("id") Long id, Advert advert) {
-        advertService.addAdvert(advert, prefix);
-        return new RedirectView("/{prefix}/admin/adverts");
-    }
+//    @PostMapping(value="/admin/editAdvert/{id}",  params="submitAndGoAdverts")
+//    public RedirectView postEditAdvert(@PathVariable("prefix") String prefix, @PathVariable("id") Long id, Advert advert) {
+//        advertService.addAdvert(advert, prefix);
+//        return new RedirectView("/{prefix}/admin/adverts");
+//    }
 
-    @PostMapping(value="/admin/editAdvert/{id}",  params="submitAndGoHomePage")
-    public RedirectView postEditAdvertAndGoHomePage(@PathVariable("prefix") String prefix, @PathVariable("id") Long id, Advert advert) {
-        advertService.addAdvert(advert, prefix);
-        return new RedirectView("/{prefix}");
-    }
+//    @PostMapping(value="/admin/editAdvert/{id}",  params="submitAndGoHomePage")
+//    public RedirectView postEditAdvertAndGoHomePage(@PathVariable("prefix") String prefix, @PathVariable("id") Long id, Advert advert) {
+//        advertService.addAdvert(advert, prefix);
+//        return new RedirectView("/{prefix}");
+//    }
 
     @PostMapping(value="/admin/deleteAdvert/{id}",  params="delete")
     public RedirectView deleteAdvert(@PathVariable("prefix") String prefix, @PathVariable("id") Long id) {

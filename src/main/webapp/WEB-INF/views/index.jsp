@@ -27,7 +27,7 @@
                                class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
                     </div>
                     <div class="col-md-6 ftco-animate">
-                        <img src="/resources/images/bg_1.png" class="img-fluid" alt="">
+                        <img src="${advertList.photoAdvert}" class="img-fluid" alt="">${advertList.photoAdvert}
                     </div>
                 </div>
             </div>
