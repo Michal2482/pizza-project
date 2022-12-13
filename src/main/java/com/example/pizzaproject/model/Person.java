@@ -1,30 +1,49 @@
 package com.example.pizzaproject.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity(name = "Persons")
+@Entity
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
     private String photo;
     private String name;
-//    private String function;
+    private String surname;
+    private String job;
+
+    public Person(Long id, String photo, String name, String surname, String job, String description) {
+        this.id = id;
+        this.photo = photo;
+        this.name = name;
+        this.surname = surname;
+        this.job = job;
+        this.description = description;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
     private String description;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="company_id")
+    private Company company;
 
     public Person() {
     }
 
-    public Person(Long id, String photo, String name, String description) {
-        this.id = id;
-        this.photo = photo;
-        this.name = name;
-//        this.function = function;
-        this.description = description;
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
     public Long getId() {
@@ -51,13 +70,13 @@ public class Person {
         this.name = name;
     }
 
-//    public String getFunction() {
-//        return function;
-//    }
-//
-//    public void setFunction(String function) {
-//        this.function = function;
-//    }
+    public String getJob() {
+        return job;
+    }
+
+    public void setJob(String job) {
+        this.job = job;
+    }
 
     public String getDescription() {
         return description;

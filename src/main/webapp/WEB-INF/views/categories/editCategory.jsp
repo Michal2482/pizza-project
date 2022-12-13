@@ -10,20 +10,20 @@
     <div class="container mt-4">
         <div class="col-md-12 contact-info ftco-animate">
 
-            <form method="post" action='<c:url value="/${prefix}/addCategory/${category.id}" />'>
+            <form method="post" action='<c:url value="/${prefix}/editCategory/${category.id}" />'>
                     <h4>Category:</h4>
                     <div class="form-group row">
-                        <label class="col-4 col-form-label">Category name::</label>
+                        <label class="col-4 col-form-label">Category name:</label>
                         <div class="col-8">
                             <input class="form-control" type="text" name="categoryName" value="${category.categoryName}"
                                    placeholder="Category name">
                         </div>
                     </div>
                     <div class="d-flex justify-content-end">
-                        <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit" value="Zapisz">
+                        <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit" value="Save">
                     </div>
             </form>
-            <form method="post" action='<c:url value="/${prefix}/editCategory/${category.id}" />'>
+            <form method="post" action='<c:url value="/${prefix}/deleteCategory/${category.id}" />'>
                 <div class="d-flex justify-content-end">
                     <input class="btn btn-danger py-2 px-4 " style="margin:10px" type="submit" value="Delete">
                 </div>

@@ -1,4 +1,4 @@
-package com.example.pizzaproject.controller;
+package com.example.pizzaproject.controller.administration;
 
 import com.example.pizzaproject.model.Category;
 import com.example.pizzaproject.service.CategoryService;
@@ -46,22 +46,18 @@ public class CategoryController {
         return "categories/editCategory";
     }
 
-    @PostMapping("/addCategory/{id}")
-    public RedirectView postEditCategory(Category editedCategory, @PathVariable("id")Long id, @PathVariable String prefix) {
-        categoryService.editCategory(editedCategory);
-        return new RedirectView("/{prefix}");
-    }
-
-
     @PostMapping("/editCategory/{id}")
-    public RedirectView deleteCategory(@PathVariable("id")Long id, @PathVariable String prefix) {
-        categoryService.deleteCategory(id, prefix);
+    public RedirectView postEditCategory(Category editedCategory, @PathVariable("id")Long id, @PathVariable String prefix) {
+        categoryService.editCategory(editedCategory,prefix);
         return new RedirectView("/{prefix}/admin");
     }
 
 
-
-
-
+    @PostMapping("/deleteCategory/{id}")
+    public RedirectView deleteCategory(@PathVariable("id")Long id, @PathVariable String prefix) {
+        categoryService.deleteCategory(id);
+        return new RedirectView("/{prefix}/admin");
+        // Trzeba edytować tą metodę, bo nie można usuwac kategorii jeżeli jest połączona z innymi daniami
+    }
 
 }

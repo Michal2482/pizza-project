@@ -1,4 +1,4 @@
-package com.example.pizzaproject.controller;
+package com.example.pizzaproject.controller.administration;
 
 import com.example.pizzaproject.model.Category;
 import com.example.pizzaproject.model.Meal;
@@ -46,27 +46,27 @@ public class MealController {
     @PostMapping("/addDish")                          //dodawanie dania
     public RedirectView postAddMeal(Meal meal, @PathVariable String prefix) {
         mealService.addMeal(meal, prefix);
-        return new RedirectView("/{prefix}/menu");
+        return new RedirectView("/{prefix}/admin");
     }
 
-    @GetMapping("/edit2Dish")                           //wyświetla widok z listą dań pod edycję
-    public String getMealList(Model model) {
+    @GetMapping("/mealList")                           //wyświetla widok z listą dań pod edycję
+    public String getMealList(Model model, @PathVariable String prefix) {
         List<Meal> mealList = mealService.getMeals();
         model.addAttribute("meal", mealList);
-        return "meals/edit2Meal";
+        return "meals/mealList";
     }
 
-    @PostMapping("/addDish/{id}")                       //zapisuje edytowane danie
-    public RedirectView postEditMeal(Meal editedMeal, @PathVariable("id")Long id) {
-        mealService.editMeal(editedMeal);
-        return new RedirectView("/edit2Dish");          //przekierowuje na widok listy do edycji
+    @PostMapping("/editDish/{id}")                       //zapisuje edytowane danie
+    public RedirectView postEditMeal(Meal editedMeal, @PathVariable("id")Long id, @PathVariable String prefix) {
+        mealService.editMeal(editedMeal,prefix);
+        return new RedirectView("/{prefix}/mealList");          //przekierowuje na widok listy do edycji
 
     }
 
-    @PostMapping("editDish/{id}")
-    public RedirectView deleteMeal(@PathVariable("id")Long id) {
+    @PostMapping("deleteDish/{id}")
+    public RedirectView deleteMeal(@PathVariable("id")Long id, @PathVariable String prefix) {
         mealService.deleteMeal(id);
-        return new RedirectView("/edit2Dish");
+        return new RedirectView("/{prefix}/mealList");
     }
 
 

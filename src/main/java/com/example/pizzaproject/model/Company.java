@@ -30,4 +30,7 @@ public class Company {
 
     @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     private Set<Meal> meals = new HashSet<>();
+
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    private Set<Person> persons = new HashSet<>();
 }

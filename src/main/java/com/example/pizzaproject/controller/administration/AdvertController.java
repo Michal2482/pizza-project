@@ -51,10 +51,10 @@ public class AdvertController {
         model.addAttribute("advert",advert);
         return "advert/editAdvert";
     }
-    @PostMapping(value="/admin/editAdvert/{id}",  params="submitAndGoAdminPage")
+    @PostMapping(value="/admin/editAdvert/{id}",  params="submitAndGoAdverts")
     public RedirectView postEditAdvert(@PathVariable("prefix") String prefix, @PathVariable("id") Long id, Advert advert) {
         advertService.addAdvert(advert, prefix);
-        return new RedirectView("/{prefix}/admin");
+        return new RedirectView("/{prefix}/admin/adverts");
     }
 
     @PostMapping(value="/admin/editAdvert/{id}",  params="submitAndGoHomePage")
@@ -63,10 +63,10 @@ public class AdvertController {
         return new RedirectView("/{prefix}");
     }
 
-    @PostMapping(value="/admin/editAdvert/{id}",  params="delete")
+    @PostMapping(value="/admin/deleteAdvert/{id}",  params="delete")
     public RedirectView deleteAdvert(@PathVariable("prefix") String prefix, @PathVariable("id") Long id) {
-        advertService.deleteAdvert(id, prefix);
-        return new RedirectView("/{prefix}/admin");
+        advertService.deleteAdvert(id);
+        return new RedirectView("/{prefix}/admin/adverts");
     }
 
 }

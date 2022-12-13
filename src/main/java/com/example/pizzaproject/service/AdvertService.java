@@ -38,7 +38,7 @@ public class AdvertService {
         return advertRepository.findById(id).orElse(null);
     }
 
-    public void deleteAdvert(Long id, String prefix) {
+    public void deleteAdvert(Long id) {
         advertRepository.deleteById(id);
     }
 

@@ -33,7 +33,7 @@ public class AboutController {
         model.addAttribute("descriptionOnPages",descriptionOnPages);
         BasicInformation basicInformation = basicInformationService.getInformation(prefix);
         model.addAttribute("basicInformation",basicInformation);
-        List<Person> personList = personService.getPersons();
+        List<Person> personList = personService.getPersons(prefix);
         model.addAttribute("person", personList);
         return "pizzaPage/about";
     }

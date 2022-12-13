@@ -42,7 +42,8 @@ public class MealService {
         return mealRepository.findById(id).orElse(null);
     }
 
-    public void editMeal(Meal meal) {                       //do zapisywania edycji
+    public void editMeal(Meal meal, String prefix) {                       //do zapisywania edycji
+        meal.setCompany(companyRepository.findCompanyByPrefix(prefix).orElseThrow(()->new PizzaProjectException(PizzaProjectException.EMPTY_COMPANY_ID+prefix)));
         mealRepository.save(meal);
     }
 

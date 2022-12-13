@@ -117,15 +117,15 @@
             </div>
         </div>
         <div class="row">
-			<c:forEach items="${person}" var="title">
+			<c:forEach items="${person}" var="category">
 				<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
 					<div class="staff">
 						<div class="img mb-4" style="background-image: url(/resources/images/person_1.jpg);"></div>
 						<div class="info text-center">
-							<h3><a href="teacher-single.html">${title.name}</a></h3>
+							<h3><a href="teacher-single.html">${category.name}</a></h3>
 								<%--      					<span class="position">${title.function}</span>--%>
 							<div class="text">
-								<p>${title.description}</p>
+								<p>${category.description}</p>
 							</div>
 							</div>
 					</div>

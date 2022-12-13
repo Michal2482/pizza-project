@@ -17,7 +17,7 @@
 
             <div class="col-md-7 col-sm-12 text-center ftco-animate">
             	<h1 class="mb-3 mt-5 bread">Our Menu</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Menu</span></p>
+	            <p class="breadcrumbs"><span class="mr-2"><a href='<c:url value="/${prefix}"/>'>Home</a></span> <span>Menu</span></p>
             </div>
 
           </div>
@@ -36,14 +36,14 @@
     	</div>
     	<div class="container-wrap">
     		<div class="row no-gutters d-flex">
-				<c:forEach items="${meal}" var="title">
+				<c:forEach items="${meal}" var="category">
     			<div class="col-lg-4 d-flex ftco-animate">
     				<div class="services-wrap d-flex">
     					<a href='' class="img" style="background-image: url(/resources/images/pizza-1.jpg);"></a>
     					<div class="text p-4">
-    						<h3>${title.name}</h3>
-    						<p>${title.description}</p>
-    						<p class="price"><span>${title.price}</span> <a href='' class="ml-2 btn btn-white btn-outline-white">Order</a></p>
+    						<h3>${category.name}</h3>
+    						<p>${category.description}</p>
+    						<p class="price"><span>${category.price}</span> <a href='' class="ml-2 btn btn-white btn-outline-white">Order</a></p>
     					</div>
     				</div>
     			</div>

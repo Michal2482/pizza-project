@@ -30,11 +30,12 @@ public class CategoryService {
     public Category getCategory(Long id) {
         return categoryRepository.findById(id).orElse(null);
     }
-    public void editCategory(Category category) {
+    public void editCategory(Category category, String prefix) {
+        category.setCompany(companyRepository.findCompanyByPrefix(prefix).orElseThrow(()->new PizzaProjectException(PizzaProjectException.EMPTY_COMPANY_ID+prefix)));
         categoryRepository.save(category);
     }
 
-    public void deleteCategory(Long id, String prefix) {
+    public void deleteCategory(Long id) {
         categoryRepository.deleteById(id);
         System.out.println("Deleting category on id "+ id);
     }

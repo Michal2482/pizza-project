@@ -8,70 +8,61 @@
 <%@include file="../dynamic/navigationMain.jspf" %>
 
 <section class="ftco-section administration-section">
-    <div class="container mt-5">
+    <div class="container mt-4">
         <div class="row block-12">
             <div class="col-md-12 administration-info ftco-animate">
-                <div class="row">
-                        <h5>Position of Menu</h5>
-                        <form method="post" action='<c:url value="/${prefix}/addDish"/>'>
-                        <div class="form-group">
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Photo</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="photo"
-                                           placeholder="photo">
-                                </div>
-                            </div>
 
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Product name</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="name"
-                                           placeholder="product name">
-                                </div>
-                            </div>
+                <h5>Position of Menu</h5>
+                <form method="post" class="contact-form" action='<c:url value="/${prefix}/addDish"/>'>
+                    <div class="form-group row">
+                        <label class="col-4 col-form-label"><h6>Photo</h6></label>
+                        <div class="col-8">
+                            <input class="form-control" type="text" name="photo"
+                                   placeholder="photo">
+                        </div>
 
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Category</h6></label>
-                                <div class="col-8">
-<%--                                    <select name="categoryId">--%>
-<%--&lt;%&ndash;                                    <imput class="form-control" type="text" name="category.id" placeholder="Wpisz kategorię: pizza, makaron, burger, napój"></imput>&ndash;%&gt;--%>
-<%--                                        <option hidden>Wybierz kategorię</option>--%>
-<%--                                        <c:forEach items="${category}" var="title">--%>
-<%--                                            <option value="${title.id}"> ${title.categoryName}</option>--%>
-<%--                                        </c:forEach>--%>
+                        <label class="col-4 col-form-label"><h6>Product name</h6></label>
+                        <div class="col-8">
+                            <input class="form-control" type="text" name="name"
+                                   placeholder="product name">
+                        </div>
 
-<%--                                    </select>--%>
-                                    <select name="category.id">
-                                        <option hidden>Select Category</option>
-                                        <c:forEach items="${category}" var="title">
-                                            <option value="${title.id}"> ${title.categoryName}</option>
-                                        </c:forEach>
+                        <label class="col-4 col-form-label"><h6>Category</h6></label>
+                        <div class="col-8">
+                            <%-- <select name="categoryId">--%>
+                            <%-- <imput class="form-control" type="text" name="category.id" placeholder="Wpisz kategorię: pizza, makaron, burger, napój"></imput>&ndash;%&gt;--%>
+                            <%--  <option hidden>Wybierz kategorię</option>--%>
+                            <%--    <c:forEach items="${category}" var="title">--%>
+                            <%--         <option value="${title.id}"> ${title.categoryName}</option>--%>
+                            <%--    </c:forEach>--%>
 
-                                    </select>
+                            <%--    </select>--%>
+                            <select name="category.id" class="custom-select ">
+                                <option hidden>Select Category</option>
+                                <c:forEach items="${category}" var="category">
+                                    <option value="${category.id}"> ${category.categoryName}</option>
+                                </c:forEach>
+                            </select>
+                        </div>
 
-                                </div>
-                            </div>
+                        <label class="col-4 col-form-label"><h6>Price</h6></label>
+                        <div class="col-8">
+                            <input class="form-control" type="text" name="price" placeholder="Price">
+                        </div>
 
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Price</h6></label>
-                                <div class="col-8">
-                                    <input class="form-control" type="text" name="price" placeholder="Price">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <label class="col-4 col-form-label"><h6>Description Product</h6></label>
-                                <div class="col-8">
+                        <label class="col-4 col-form-label"><h6>Description Product</h6></label>
+                        <div class="col-8">
                                     <textarea class="form-control" rows="4" id="descriptionProduct"
                                               name="description"
-                                              placeholder="Description product and write ingredients">
-                                    </textarea>
-                                </div>
-                            </div>
-                            <input class="btn btn-primary py-2 px-4 pull-right" type="submit" value="Save"></input>
+                                              placeholder="Description product and write ingredients"></textarea>
                         </div>
-                        </form>
-                </div>
+                    </div>
+                        <div class="d-flex justify-content-end">
+                            <input class="btn btn-primary py-2 px-4" type="submit" value="Save"/>
+                        </div>
+
+                </form>
+
             </div>
         </div>
     </div>
