@@ -41,7 +41,7 @@ public class AdvertService {
 
     public void addAdvert(Advert advert, String prefix, MultipartFile file) {
         advert.setCompany(companyRepository.findCompanyByPrefix(prefix).orElseThrow(()->new PizzaProjectException(PizzaProjectException.EMPTY_COMPANY_ID+prefix)));
-        advert.setPhotoAdvert(load(file.getOriginalFilename()).getFileName().toString());
+        advert.setPhotoAdvert(loadAsResource(file.getOriginalFilename()).getFilename());
         advertRepository.save(advert);
     }
 
