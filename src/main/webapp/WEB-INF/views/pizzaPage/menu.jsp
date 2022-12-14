@@ -90,14 +90,17 @@
                                             <div class="d-flex justify-content-between">
                                                 <div class="col-4">
                                                     <div class="menu-wrap">
-                                                        <a href="#" class="menu-img img mb-4"
+                                                        <a href='<c:url value="/addOrder/${menuElement.id}"/>'
+                                                           class="menu-img img mb-4"
                                                            style="background-image: url(/resources/images/pizza-1.jpg);"></a>
                                                         <div class="text">
                                                             <h3><a href="#">${menuElement.name}</a></h3>
                                                             <p>${menuElement.description}</p>
                                                             <p class="price"><span>${menuElement.price}</span></p>
-                                                            <p><a href="#" class="btn btn-white btn-outline-white">Add
-                                                                to cart</a></p>
+                                                            <p>
+                                                                <a href='<c:url value="/${prefix}/order/add"><c:param name="mealId" value="${menuElement.id}"/></c:url>'
+                                                                   class="btn btn-white btn-outline-white">Add
+                                                                    to cart</a></p>
                                                         </div>
                                                     </div>
                                                 </div>
