@@ -12,7 +12,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/{prefix}")
@@ -29,12 +32,14 @@ public class MenuController {
 
     private final CategoryService categoryService;
 
-    @GetMapping ("/menu")
+    @GetMapping("/menu")
     public String getMealList(Model model, @PathVariable String prefix) {                //wyświetla widok menu z listą dań i kategorii
-        List<Meal> mealList = mealService.getMeals();
+        List<Meal> mealList = mealService.getMeals(prefix);
         model.addAttribute("meal", mealList);
         List<Category> categoryList = categoryService.getCategories(prefix);
+        Map<String, List<Meal>> mealByCategories =mealService.mealByCategories(mealList);
         model.addAttribute("category", categoryList);
+        model.addAttribute("categoryMap", mealByCategories);
         DescriptionOnPages descriptionOnPages = descriptionOnPagesService.getInformation(prefix);
         model.addAttribute("descriptionOnPages", descriptionOnPages);
         return "pizzaPage/menu";
