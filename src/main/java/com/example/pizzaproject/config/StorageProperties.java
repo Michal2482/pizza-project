@@ -8,7 +8,7 @@ public class StorageProperties {
     /**
      * Folder location for storing files
      */
-    private String location = "src/main/webapp/resources/imagesFromUser";
+    private String location = "imagesFromUser";
 
     public String getLocation() {
         return location;

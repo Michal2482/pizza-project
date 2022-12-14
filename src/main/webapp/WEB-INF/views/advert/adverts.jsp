@@ -13,7 +13,7 @@
     <p class="mb-4 mb-md-5 ">On this page you can edit and delete your advert, which are display on HomePage</p>
 </div>
 
-<c:forEach items="${adverts}" var="advertList">
+<c:forEach items="${adverts}" var="advertElement">
     <section class="home-slider owl-carousel img row form-group"
              style="background-image: url(/resources/images/bg_1.jpg);">
         <div class="slider-item">
@@ -22,10 +22,10 @@
                 <div class="row slider-text align-items-center" data-scrollax-parent="true">
 
                     <div class="col-md-6 col-sm-12 ftco-animate">
-                        <span class="subheading">${advertList.slogan}</span>
-                        <h1 class="mb-4">${advertList.productAdvertName}</h1>
-                        <p class="mb-4 mb-md-5">${advertList.descriptionProductAdvert}</p>
-                        <a href='<c:url value="/${prefix}/admin/editAdvert/${advertList.id}" />'
+                        <span class="subheading">${advertElement.slogan}</span>
+                        <h1 class="mb-4">${advertElement.productAdvertName}</h1>
+                        <p class="mb-4 mb-md-5">${advertElement.descriptionProductAdvert}</p>
+                        <a href='<c:url value="/${prefix}/admin/editAdvert/${advertElement.id}" />'
                            class="btn btn-primary p-3 px-xl-4 py-xl-3">Edit</a>
                         <button type="button" class="btn btn-danger p-3 px-xl-4 py-xl-3" data-toggle="modal"
                                 style="margin:10px"
@@ -61,7 +61,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
                     <form method="post" class="contact-form"
-                          action='<c:url value="/${prefix}/admin/deleteAdvert/${advertList.id}"/>'>
+                          action='<c:url value="/${prefix}/admin/deleteAdvert/${advertElement.id}"/>'>
                         <input type="submit" class="btn btn-danger" name="delete" value="Delete"/>
                     </form>
                 </div>

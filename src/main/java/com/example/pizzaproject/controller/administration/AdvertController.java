@@ -2,6 +2,7 @@ package com.example.pizzaproject.controller.administration;
 
 import com.example.pizzaproject.model.Advert;
 import com.example.pizzaproject.service.AdvertService;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -34,8 +35,8 @@ public class AdvertController {
 
     @PostMapping(value="/admin/addAdvert",  params="submitAndGoHomePage")
     public RedirectView postAddAdvertAndGoHomePage(@PathVariable String prefix, Advert advert, @RequestParam("file") MultipartFile file) {
-        advertService.store(file);
-        advertService.addAdvert(advert, prefix, file);
+        String filePath = advertService.store(file);
+        advertService.addAdvert(advert, prefix, filePath);
         return new RedirectView("/{prefix}");
     }
 
@@ -68,6 +69,12 @@ public class AdvertController {
     public RedirectView deleteAdvert(@PathVariable("prefix") String prefix, @PathVariable("id") Long id) {
         advertService.deleteAdvert(id);
         return new RedirectView("/{prefix}/admin/adverts");
+    }
+
+    @GetMapping(value = "/advert/{id}/image")
+    @ResponseBody
+    public Resource getImageForAdvert(@PathVariable Long id){
+        return advertService.loadAsResourceByAdvId(id);
     }
 
 }
