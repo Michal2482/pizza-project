@@ -9,7 +9,7 @@
 <!-- END nav -->
 
 <section class="home-slider owl-carousel img" style="background-image: url(/resources/images/bg_1.jpg);">
-    <c:forEach items="${adverts}" var="advertList">
+    <c:forEach items="${adverts}" var="advertElement">
         <div class="slider-item">
             <div class="overlay"></div>
 
@@ -18,16 +18,15 @@
                 <div class="row slider-text align-items-center" data-scrollax-parent="true">
 
                     <div class="col-md-6 col-sm-12 ftco-animate">
-
-                        <span class="subheading">${advertList.slogan}</span>
-                        <h1 class="mb-4">${advertList.productAdvertName}</h1>
-                        <p class="mb-4 mb-md-5">${advertList.descriptionProductAdvert}</p>
+                        <span class="subheading">${advertElement.slogan}</span>
+                        <h1 class="mb-4">${advertElement.productAdvertName}</h1>
+                        <p class="mb-4 mb-md-5">${advertElement.descriptionProductAdvert}</p>
                         <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a>
                             <a href='<c:url value="/${prefix}/menu"/>'
                                class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
                     </div>
                     <div class="col-md-6 ftco-animate">
-                        <img src="/resources/imagesFromUser/${advertList.photoAdvert}" class="img-fluid" alt="">
+                        <img src="/${prefix}/advert/${advertElement.id}/image" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
@@ -233,9 +232,6 @@
         </div>
     </div>
 </section>
-
-<a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/pizzeria/admin/" />'
-   role="button">Login</a>
 
 <%@include file="dynamic/board.jspf" %>
 

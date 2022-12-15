@@ -41,7 +41,6 @@ public class AdvertService {
 
     public void addAdvert(Advert advert, String prefix, String fileName) {
         advert.setCompany(companyRepository.findCompanyByPrefix(prefix).orElseThrow(()->new PizzaProjectException(PizzaProjectException.EMPTY_COMPANY_ID+prefix)));
-//        advert.setPhotoAdvert(loadAsResource(file.getOriginalFilename()).getFilename());
         advert.setPhotoAdvert(fileName);
         advertRepository.save(advert);
     }
@@ -90,7 +89,7 @@ public class AdvertService {
     }
 
     public Resource loadAsResourceByAdvertId(Long id) {
-        String filename = advertRepository.findById(id).map(Advert::getPhotoAdvert).orElseThrow();
+        String filename = advertRepository.findById(id).map(advert -> advert.getPhotoAdvert()).orElseThrow();
         return loadAsResource(filename);
     }
 
