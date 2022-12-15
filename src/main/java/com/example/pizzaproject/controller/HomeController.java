@@ -28,7 +28,7 @@ public class HomeController {
     }
 
     @GetMapping
-    public String getHome(Model model, @PathVariable String prefix) {
+    public String getHome(Model model, @PathVariable("prefix") String prefix) {
         BasicInformation basicInformation = basicInformationService.getInformation(prefix);
         model.addAttribute("basicInformation", basicInformation);
         DescriptionOnPages descriptionOnPages = descriptionOnPagesService.getInformation(prefix);

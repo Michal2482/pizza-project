@@ -20,7 +20,7 @@ public class PizzaProjectApplication {
     @Bean
     CommandLineRunner init(AdvertService advertService) {
         return (args) -> {
-            advertService.deleteAll();
+
             advertService.init();
         };
     }
