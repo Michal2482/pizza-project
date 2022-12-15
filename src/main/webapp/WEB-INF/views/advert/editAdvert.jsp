@@ -12,13 +12,12 @@
 <section class="ftco-section administration-section">
     <div class="container mt-4">
         <div class="col-md-12 contact-info ftco-animate">
-            <form method="post" class="contact-form" action='<c:url value="/${prefix}/admin/editAdvert/${id}"/>'>
+            <form method="post" enctype="multipart/form-data" class="contact-form" action='<c:url value="/${prefix}/admin/editAdvert/${id}"/>'>
                 <h4>Position of Advert</h4>
                 <div class="form-group row">
                     <label class="col-4 col-form-label">Photo Advert</label>
                     <div class="col-8">
-                        <input class="form-control" type="text" name="photoAdvert" placeholder="wybierz zdjęcie"
-                               value="${advert.photoAdvert}">
+                        <input class="form-control" type="file" name="file" placeholder="Select photo">
                     </div>
                 </div>
                 <div class="form-group row">

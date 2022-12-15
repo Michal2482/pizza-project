@@ -234,9 +234,6 @@
     </div>
 </section>
 
-<a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/pizzeria/admin/" />'
-   role="button">Login</a>
-
 <%@include file="dynamic/board.jspf" %>
 
 <%@include file="dynamic/javaScript.jspf" %>

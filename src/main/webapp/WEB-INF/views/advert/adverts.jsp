@@ -1,4 +1,3 @@
-<%@ page import="org.apache.jasper.tagplugins.jstl.core.Url" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <jsp:useBean id="now" class="java.util.Date"/>
@@ -25,7 +24,7 @@
                         <span class="subheading">${advertElement.slogan}</span>
                         <h1 class="mb-4">${advertElement.productAdvertName}</h1>
                         <p class="mb-4 mb-md-5">${advertElement.descriptionProductAdvert}</p>
-                        <a href='<c:url value="/${prefix}/admin/editAdvert/${advertElement.id}" />'
+                        <a href='<c:url value="/${prefix}/admin/editAdvert/${advertElement.id}"/>'
                            class="btn btn-primary p-3 px-xl-4 py-xl-3">Edit</a>
                         <button type="button" class="btn btn-danger p-3 px-xl-4 py-xl-3" data-toggle="modal"
                                 style="margin:10px"
@@ -34,7 +33,7 @@
                     </div>
 
                     <div class="col-md-6 ftco-animate">
-                        <img src="/resources/images/bg_1.png" class="img-fluid" alt="">
+                        <img src="/${prefix}/advert/${advertElement.id}/image" class="img-fluid" alt="">
                     </div>
 
                 </div>
