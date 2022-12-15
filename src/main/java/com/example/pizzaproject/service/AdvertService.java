@@ -39,13 +39,14 @@ public class AdvertService {
         this.rootLocation = Paths.get(properties.getLocation());
     }
 
-    public void addAdvert(Advert advert, String prefix, MultipartFile file) {
+    public void addAdvert(Advert advert, String prefix, String fileName) {
         advert.setCompany(companyRepository.findCompanyByPrefix(prefix).orElseThrow(()->new PizzaProjectException(PizzaProjectException.EMPTY_COMPANY_ID+prefix)));
-        advert.setPhotoAdvert(loadAsResource(file.getOriginalFilename()).getFilename());
+//        advert.setPhotoAdvert(loadAsResource(file.getOriginalFilename()).getFilename());
+        advert.setPhotoAdvert(fileName);
         advertRepository.save(advert);
     }
 
-    public void store(MultipartFile file) {
+    public String store(MultipartFile file) {
         try {
             if (file.isEmpty()) {
                 throw new StorageException("Failed to store empty file.");
@@ -62,6 +63,7 @@ public class AdvertService {
                 Files.copy(inputStream, destinationFile,
                         StandardCopyOption.REPLACE_EXISTING);
             }
+            return destinationFile.toString();
         }
         catch (IOException e) {
             throw new StorageException("Failed to store file.", e);
@@ -87,6 +89,10 @@ public class AdvertService {
         return rootLocation.resolve(filename);
     }
 
+    public Resource loadAsResourceByAdvertId(Long id) {
+        String filename = advertRepository.findById(id).map(Advert::getPhotoAdvert).orElseThrow();
+        return loadAsResource(filename);
+    }
 
     public Resource loadAsResource(String filename) {
         try {

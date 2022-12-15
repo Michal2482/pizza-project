@@ -34,8 +34,9 @@ public class AdvertController {
 
     @PostMapping(value="/admin/addAdvert",  params="submitAndGoHomePage")
     public RedirectView postAddAdvertAndGoHomePage(@PathVariable String prefix, Advert advert, @RequestParam("file") MultipartFile file) {
-        advertService.store(file);
-        advertService.addAdvert(advert, prefix, file);
+//        advertService.store(file);
+        String filePath = advertService.store(file);
+        advertService.addAdvert(advert, prefix, filePath);
         return new RedirectView("/{prefix}");
     }
 
