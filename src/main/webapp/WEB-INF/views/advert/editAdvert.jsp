@@ -12,13 +12,31 @@
 <section class="ftco-section administration-section">
     <div class="container mt-4">
         <div class="col-md-12 contact-info ftco-animate">
+            <h4>Position of Advert</h4>
+
+            <c:choose>
+                <c:when test="${param.newAdvertImage}">
+                </c:when>
+                <c:otherwise>
+                    <form>
+                        <input type="hidden" name="newAdvertImage" value="true">
+                        <input type="submit" value="Zamień zdjęcie">
+                    </form>
+                </c:otherwise>
+            </c:choose>
             <form method="post" enctype="multipart/form-data" class="contact-form" action='<c:url value="/${prefix}/admin/editAdvert/${id}"/>'>
-                <h4>Position of Advert</h4>
                 <div class="form-group row">
                     <label class="col-4 col-form-label">Photo Advert</label>
-                    <div class="col-8">
-                        <input class="form-control" type="file" name="file" placeholder="Select photo">
-                    </div>
+                    <c:choose>
+                        <c:when test="${param.newAdvertImage}">
+                            <div class="col-8">
+                                <input class="form-control" type="file" value=${advert.photoAdvert} name="file" placeholder="Select photo">
+                            </div>
+                        </c:when>
+                        <c:otherwise>
+                            <img src="/${prefix}/advert/${advert.id}/image" width="200px" class="img-fluid" alt="">
+                        </c:otherwise>
+                    </c:choose>
                 </div>
                 <div class="form-group row">
                     <label class="col-4 col-form-label">Slogan</label>

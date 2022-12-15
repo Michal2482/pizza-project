@@ -12,6 +12,7 @@ import com.example.pizzaproject.repository.CompanyRepository;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -23,6 +24,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AdvertService {
@@ -115,6 +117,24 @@ public class AdvertService {
         } catch (IOException e) {
             throw new StorageException("Could not initialize storage", e);
         }
+    }
+
+    @Transactional
+    public void editAdvert(Advert editedAdvert, String prefix, MultipartFile file) {
+        Advert storedAdvert = advertRepository
+                .findById(editedAdvert.getId())
+                .orElseThrow(() -> new RuntimeException("cannot modify not existing element"));
+
+        String path = Optional.ofNullable(file).map(
+                x -> {
+                    store(file);
+                    return file.getOriginalFilename();
+                }
+        ).orElseGet(storedAdvert::getPhotoAdvert);
+        storedAdvert.setDescriptionProductAdvert(editedAdvert.getDescriptionProductAdvert());
+        storedAdvert.setProductAdvertName(editedAdvert.getProductAdvertName());
+        storedAdvert.setSlogan(editedAdvert.getSlogan());
+        storedAdvert.setPhotoAdvert(path);
     }
 }
 
