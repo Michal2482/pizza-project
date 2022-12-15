@@ -22,7 +22,7 @@ public class Order {
     private String telephone;
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
-    private BigDecimal price;
+
     private BigDecimal sum;
     private String delivery;
 
