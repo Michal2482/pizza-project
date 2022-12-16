@@ -39,7 +39,7 @@ public class AuthController {
     @PostMapping("/login")
     public RedirectView postLoginCompany(Long id, Model model) {
         String prefix =registerCompanyService.getPrefixCompanyById(id);
-//        model.addAttribute("prefix",prefix);
+        model.addAttribute("prefix",prefix);
         System.out.println(prefix);
         return new RedirectView("/"+prefix);
     }

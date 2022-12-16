@@ -16,9 +16,4 @@ public class AdministrationController {
         return "admin/administration";
     }
 
-    @ModelAttribute
-    public void setPrefix(@PathVariable String prefix, Model model){
-        model.addAttribute("prefix",prefix);
-    }
-
 }

@@ -29,8 +29,9 @@
                           </div>
                           <form class="user" method="post" action='<c:url value="/login"/>'>
                             <div class="form-group h4">
-                              <input type="text" class="form-control" name="id" placeholder="Login">
+                              <input type="text" class="form-control" name="username" placeholder="Username">
                             </div>
+
                             <div class="form-group">
                               <input type="password" class="form-control" name="password" id="exampleInputPassword" placeholder="Password">
                             </div>
@@ -41,11 +42,7 @@
                                 <label class="custom-control-label" for="customCheck">Remeber me!</label>
                               </div>
                             </div>
-                            <input type="submit" name="submit" value="Login" class="btn btn-primary btn-user btn-block">
-                            <a class="btn btn-primary py-2 px-4" style="margin:10px" href='<c:url value="/pizzeria/admin/" />' role="button">Login</a>
-        
-                            <hr>
-                          
+                            <input type="submit" value="Login" class="btn btn-primary btn-user btn-block">
                           </form>
                           <div class="text-center">
                             <a class="small" href='<c:url value="/register"/>'>Create account</a>
