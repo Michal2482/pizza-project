@@ -33,25 +33,23 @@
             <p>${descriptionOnPages.shortDescriptionMenuPage}</p>
           </div>
         </div>
-    </div>
-    <div class="container-wrap">
-        <div class="row no-gutters d-flex">
-            <c:forEach items="${meal}" var="category">
-                <div class="col-lg-4 d-flex ftco-animate">
-                    <div class="services-wrap d-flex">
-                        <a href='' class="img" style="background-image: url(/resources/images/pizza-1.jpg);"></a>
-                        <div class="text p-4">
-                            <h3>${category.name}</h3>
-                            <p>${category.description}</p>
-                            <p class="price"><span>${category.price}</span> <a href=''
-                                                                               class="ml-2 btn btn-white btn-outline-white">Order</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </c:forEach>
-        </div>
-    </div>
+    	</div>
+    	<div class="container-wrap">
+    		<div class="row no-gutters d-flex">
+				<c:forEach items="${meal}" var="category">
+    			<div class="col-lg-4 d-flex ftco-animate">
+    				<div class="services-wrap d-flex">
+    					<a href='' class="img" style="background-image: url(/resources/images/pizza-1.jpg);"></a>
+    					<div class="text p-4">
+    						<h3>${category.name}</h3>
+    						<p>${category.description}</p>
+    						<p class="price"><span>${category.price}</span> <a href='' class="ml-2 btn btn-white btn-outline-white">Order</a></p>
+    					</div>
+    				</div>
+    			</div>
+				</c:forEach>
+    		</div>
+    	</div>
 
   
     </section>

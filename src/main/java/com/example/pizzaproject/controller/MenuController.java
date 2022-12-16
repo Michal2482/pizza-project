@@ -32,7 +32,7 @@ public class MenuController {
 
     private final CategoryService categoryService;
 
-    @GetMapping("/menu")
+    @GetMapping ("/menu")
     public String getMealList(Model model, @PathVariable String prefix) {                //wyświetla widok menu z listą dań i kategorii
         List<Meal> mealList = mealService.getMeals(prefix);
         model.addAttribute("meal", mealList);
