@@ -1,6 +1,7 @@
 package com.example.pizzaproject.model;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity(name = "Meals")
 public class Meal {
@@ -12,7 +13,7 @@ public class Meal {
 //    private String category;
     private String name;
     private String description;
-    private Double price;
+    private BigDecimal price;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id")
@@ -33,7 +34,7 @@ public class Meal {
     public Meal() {
     }
 
-    public Meal(Long id, String photo, String name, String description, Double price, Category category) {
+    public Meal(Long id, String photo, String name, String description, BigDecimal price, Category category) {
         this.id = id;
         this.photo = photo;
         this.name = name;
@@ -74,11 +75,11 @@ public class Meal {
         this.description = description;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 

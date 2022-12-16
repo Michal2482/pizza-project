@@ -51,7 +51,7 @@ public class MealController {
 
     @GetMapping("/mealList")                           //wyświetla widok z listą dań pod edycję
     public String getMealList(Model model, @PathVariable String prefix) {
-        List<Meal> mealList = mealService.getMeals();
+        List<Meal> mealList = mealService.getMeals(prefix);
         model.addAttribute("meal", mealList);
         return "meals/mealList";
     }
