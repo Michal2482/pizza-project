@@ -51,24 +51,22 @@ public class AdvertController {
     @GetMapping("/admin/editAdvert/{id}")
     public String getEditAdvert(@PathVariable("prefix") String prefix, @PathVariable("id") Long id, Model model) {
         Advert advert = advertService.getAdvert(id);
-        advert.setPhotoAdvert("C:/Users/User/Desktop/Programowanie/PizzaProject/src/main/webapp/resources/imagesFromUser/5100_4_08.jpg");
         model.addAttribute("advert",advert);
         return "advert/editAdvert";
     }
     @PostMapping(value="/admin/editAdvert/{id}",  params="submitAndGoAdverts")
     public RedirectView postEditAdvert(@PathVariable("prefix") String prefix, @PathVariable("id") Long id,
                                        Advert advert, @RequestParam(name = "file", required = false) MultipartFile file) {
-        String filePath = advertService.store(file);
-        advertService.addAdvert(advert, prefix, filePath);
         advertService.editAdvert(advert, prefix, file);
         return new RedirectView("/{prefix}/admin/adverts");
     }
 
-//    @PostMapping(value="/admin/editAdvert/{id}",  params="submitAndGoHomePage")
-//    public RedirectView postEditAdvertAndGoHomePage(@PathVariable("prefix") String prefix, @PathVariable("id") Long id, Advert advert) {
-//        advertService.addAdvert(advert, prefix);
-//        return new RedirectView("/{prefix}");
-//    }
+    @PostMapping(value="/admin/editAdvert/{id}",  params="submitAndGoHomePage")
+    public RedirectView postEditAdvertAndGoHomePage(@PathVariable("prefix") String prefix, @PathVariable("id") Long id,
+                                                    Advert advert, @RequestParam(name = "file", required = false) MultipartFile file) {
+        advertService.editAdvert(advert, prefix, file);
+        return new RedirectView("/{prefix}");
+    }
 
     @PostMapping(value="/admin/deleteAdvert/{id}",  params="delete")
     public RedirectView deleteAdvert(@PathVariable("prefix") String prefix, @PathVariable("id") Long id) {
