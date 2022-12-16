@@ -2,7 +2,6 @@ package com.example.pizzaproject.service;
 
 
 import com.example.pizzaproject.config.StorageProperties;
-import com.example.pizzaproject.controller.administration.AdvertController;
 import com.example.pizzaproject.exceptions.PizzaProjectException;
 import com.example.pizzaproject.exceptions.StorageException;
 import com.example.pizzaproject.exceptions.StorageFileNotFoundException;
@@ -15,7 +14,8 @@ import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
+import org.springframework.transaction.annotation.Transactional;
+
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,6 +25,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
+import java.util.Optional;
+
 
 @Service
 public class AdvertService {
@@ -122,6 +124,24 @@ public class AdvertService {
         catch (IOException e) {
             throw new StorageException("Could not initialize storage", e);
         }
+    }
+
+    @Transactional
+    public void editAdvert(Advert editedAdvert, String prefix, MultipartFile file) {
+        Advert storedAdvert = advertRepository
+                .findById(editedAdvert.getId())
+                .orElseThrow(() -> new RuntimeException("cannot modify not existing element"));
+
+        String path = Optional.ofNullable(file).map(
+                x -> {
+                    store(file);
+                    return file.getOriginalFilename();
+                }
+        ).orElseGet(storedAdvert::getPhotoAdvert);
+        storedAdvert.setDescriptionProductAdvert(editedAdvert.getDescriptionProductAdvert());
+        storedAdvert.setProductAdvertName(editedAdvert.getProductAdvertName());
+        storedAdvert.setSlogan(editedAdvert.getSlogan());
+        storedAdvert.setPhotoAdvert(path);
     }
 }
 

@@ -30,14 +30,14 @@ public class AdvertController {
     @PostMapping(value="/admin/addAdvert",  params="submitAndGoAdminPage")
     public RedirectView postAddAdvert(@PathVariable String prefix, Advert advert, @RequestParam("file") MultipartFile file) {
         String filePath = advertService.store(file);
-        advertService.addAdvert(advert, prefix, filePath);
+        advertService.addAdvert(advert, prefix, file.getOriginalFilename());
         return new RedirectView("");
     }
 
     @PostMapping(value="/admin/addAdvert",  params="submitAndGoHomePage")
     public RedirectView postAddAdvertAndGoHomePage(@PathVariable String prefix, Advert advert, @RequestParam("file") MultipartFile file) {
         String filePath = advertService.store(file);
-        advertService.addAdvert(advert, prefix, filePath);
+        advertService.addAdvert(advert, prefix, file.getOriginalFilename());
         return new RedirectView("/{prefix}");
     }
 
@@ -56,9 +56,11 @@ public class AdvertController {
         return "advert/editAdvert";
     }
     @PostMapping(value="/admin/editAdvert/{id}",  params="submitAndGoAdverts")
-    public RedirectView postEditAdvert(@PathVariable("prefix") String prefix, @PathVariable("id") Long id, Advert advert, @RequestParam("file") MultipartFile file) {
+    public RedirectView postEditAdvert(@PathVariable("prefix") String prefix, @PathVariable("id") Long id,
+                                       Advert advert, @RequestParam(name = "file", required = false) MultipartFile file) {
         String filePath = advertService.store(file);
         advertService.addAdvert(advert, prefix, filePath);
+        advertService.editAdvert(advert, prefix, file);
         return new RedirectView("/{prefix}/admin/adverts");
     }
 
