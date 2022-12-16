@@ -27,7 +27,13 @@
 <section class="ftco-section administration-section">
     <div class="container mt-4">
         <div class="col-md-12 contact-info ftco-animate">
-            <form action="#" class="contact-form">
+
+            <h4>Orders</h4>
+            <p> Display orders</p>
+            <div class="d-flex justify-content-end">
+                <a class="btn btn-primary py-2 px-4" style="margin:10px"
+                   href='<c:url value="/${prefix}/admin/orders" />' role="button">Orders</a>
+            </div>
                 <h4>Basic Information</h4>
                 <p> Pizzeria name, Phone number, E-mail</p>
                 <p> Address, Open hours, Social media, Short Description Pizzeria</p>
@@ -35,7 +41,6 @@
                     <a class="btn btn-primary py-2 px-4" style="margin:10px"
                        href='<c:url value="/${prefix}/admin/basicInformation" />' role="button">Edit</a>
                 </div>
-            </form>
 
             <h4>Description on pages</h4>
             <p> Description on:</p>
@@ -79,7 +84,7 @@
 
             <form action="#" class="contact-form">
                 <h4>Position of Services</h4>
-                To wszystko obudowac w seletca od tego miejsca<br>
+
                 <div class="form-group row">
 
                     <label class="col-4 col-form-label">Picture</label>
@@ -104,7 +109,7 @@
                                               name="descriptionService" placeholder="Description Service"></textarea>
                     </div>
                 </div>
-                To wszystko obudowac w seletca do tego miejsca<br>
+
                 <div class="d-flex justify-content-end">
                     <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
                            value="Save">

@@ -3,6 +3,7 @@ package com.example.pizzaproject.controller;
 import com.example.pizzaproject.common.Message;
 import com.example.pizzaproject.model.Meal;
 import com.example.pizzaproject.model.Order;
+import com.example.pizzaproject.model.OrderStatus;
 import com.example.pizzaproject.service.MealService;
 import com.example.pizzaproject.service.OrderService;
 
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Controller
 @RequestMapping("/{prefix}")
@@ -43,10 +45,22 @@ public class OrderController {
     }
 
     @PostMapping("/order/pay")
-    public String postPayOrderAndRealize(@RequestParam String address, @RequestParam String telephone, Model model) {
+    public String postPayOrderAndRealize(@RequestParam String address, @RequestParam String telephone, Model model, @PathVariable String prefix) {
         Order order = orderService.postOrderToRealize(address, telephone);
-        model.addAttribute("message", new Message("Dziękujemy", "Zamówienie przekazane do realizacji"));
         return "message";
+    }
+
+    @GetMapping("/admin/orders")
+    public String getOrders(@PathVariable String prefix, Model model) {
+        List<Order> orders = orderService.getOrders();
+        model.addAttribute("orders", orders);
+        return "admin/orders";
+    }
+
+    @GetMapping("/admin/order")
+    public RedirectView postOrderDone(@PathVariable String prefix, @RequestParam Long id) {
+        orderService.changeOrderStatusDone(id);
+        return new RedirectView("/{prefix}/admin/orders");
     }
 
 

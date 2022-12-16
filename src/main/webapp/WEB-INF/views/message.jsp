@@ -10,19 +10,11 @@
 
 <%--<section class="home-slider owl-carousel img" style="background-image: url(/resources/images/bg_1.jpg);">--%>
     <div class="container">
-        <div class="jumbotron home-jumbo">
-            <div class="container text-center text-white jumbo-container">
-
-
-                    <h1 class="display-3" value="${message.title}">Sukces</h1>
-                    <p value="">${message.content}</p>
-
-
-
-                    <h1 class="display-3">Sukces</h1>
-                    <p value="${message}">Wszystko poszło zgodnie z planem. Hurra!</p>
-
-                <a href="/">Powrót do strony głównej</a>
+        <div class="jumbotron bg-dark">
+            <div class="container text-center text-black jumbo-container">
+                    <h1 class="display-3">Success</h1>
+                    <p>Your order is being prepared!</p>
+                <a href="/${prefix}/">Home Page</a>
             </div>
         </div>
     </div>

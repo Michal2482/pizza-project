@@ -8,7 +8,9 @@ import com.example.pizzaproject.repository.OrderRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
 
+import javax.transaction.Transactional;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Service
 @SessionScope
@@ -46,5 +48,14 @@ public class OrderService {
         orderRepository.save(order);
         clear();
         return order;
+    }
+
+    public List<Order> getOrders() {
+        return orderRepository.findAllByStatus(OrderStatus.NEW);
+    }
+@Transactional
+    public void changeOrderStatusDone(Long id) {
+        Order order2 = orderRepository.findById(id).orElse(null);
+        order2.setStatus(OrderStatus.COMPLETE);
     }
 }

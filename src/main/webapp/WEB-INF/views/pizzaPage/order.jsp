@@ -66,18 +66,19 @@
                                     <form method="post" class="contact-form"
                                           action='<c:url value="/${prefix}/order/pay"/>'>
                                         <div class="form-group row">
-                                            <label class="col-4 col-form-label" for="addressInput">Address</label>
-                                            <div class="col-8">
-                                                <input id="addressInput" class="form-control" type="text" name="address"
-                                                       placeholder="Address">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
                                             <label class="col-4 col-form-label" for="telephoneInput">Phone
                                                 number</label>
                                             <div class="col-8">
                                                 <input id="telephoneInput" class="form-control" type="text"
                                                        name="telephone" placeholder="Phone number">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label class="col-4 col-form-label" for="addressInput">Address</label>
+                                            <div class="col-8">
+                                                <input id="addressInput" class="form-control" type="text" name="address"
+                                                       placeholder="Address">
                                             </div>
                                         </div>
                                         <div class="d-flex justify-content-end">
