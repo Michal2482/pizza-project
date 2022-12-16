@@ -11,14 +11,14 @@
 
     <div class="container-wrap">
         <div class="row no-gutters d-flex">
-            <c:forEach items="${meal}" var="category">
+            <c:forEach items="${meal}" var="mealElement">
                 <div class="col-lg-4 d-flex ftco-animate">
                     <div class="services-wrap d-flex">
-                        <a href='' class="img" style="background-image: url(/resources/images/pizza-1.jpg);"></a>
+                        <a href='' class="img" style="background-image: url(/${prefix}/meal/${mealElement.id}/image);"></a>
                         <div class="text p-4">
-                            <h3>${category.name}</h3>
-                            <p>${category.description}</p>
-                            <p class="price"><span>${category.price}</span> <a href='<c:url value="/${prefix}/editDish/${category.id}"/>' class="ml-2 btn btn-white btn-outline-white">Edit</a></p>
+                            <h3>${mealElement.name}</h3>
+                            <p>${mealElement.description}</p>
+                            <p class="price"><span>${mealElement.price}</span> <a href='<c:url value="/${prefix}/editDish/${mealElement.id}"/>' class="ml-2 btn btn-white btn-outline-white">Edit</a></p>
                         </div>
                     </div>
                 </div>

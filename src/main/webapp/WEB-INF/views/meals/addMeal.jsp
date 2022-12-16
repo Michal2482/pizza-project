@@ -13,12 +13,11 @@
             <div class="col-md-12 administration-info ftco-animate">
 
                 <h5>Position of Menu</h5>
-                <form method="post" class="contact-form" action='<c:url value="/${prefix}/addDish"/>'>
+                <form method="post" enctype="multipart/form-data" class="contact-form" action='<c:url value="/${prefix}/addDish"/>'>
                     <div class="form-group row">
                         <label class="col-4 col-form-label"><h6>Photo</h6></label>
                         <div class="col-8">
-                            <input class="form-control" type="text" name="photo"
-                                   placeholder="photo">
+                            <input class="form-control" type="file" name="file">
                         </div>
 
                         <label class="col-4 col-form-label"><h6>Product name</h6></label>

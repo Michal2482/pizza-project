@@ -12,16 +12,15 @@
 <section class="ftco-section administration-section">
     <div class="container mt-4">
         <div class="col-md-12 contact-info ftco-animate">
-            <%--            <form method="post" enctype="multipart/form-data" class="contact-form" action='<c:url value="/${prefix}/admin/editAdvert/${id}"/>'>--%>
-            <h4>Position of Advert</h4>
 
+            <h4>Position of Advert</h4>
             <c:choose>
                 <c:when test="${param.newAdvertImage}">
                 </c:when>
                 <c:otherwise>
                     <form>
                         <input type="hidden" name="newAdvertImage" value="true">
-                        <input type="submit" value="Zamień zdjęcie">
+                        <input type="submit" value="Edit Photo">
                     </form>
                 </c:otherwise>
             </c:choose>

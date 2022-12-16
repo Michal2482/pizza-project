@@ -13,6 +13,7 @@
     <div class="container mt-4">
         <div class="col-md-12 contact-info ftco-animate">
             <form method="post" enctype="multipart/form-data" class="contact-form" action='<c:url value="/${prefix}/admin/addAdvert"/>'>
+
                 <h4>Position of Advert</h4>
                 <div class="form-group row">
                     <label class="col-4 col-form-label">Photo Advert</label>

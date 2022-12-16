@@ -4,9 +4,11 @@ import com.example.pizzaproject.model.Category;
 import com.example.pizzaproject.model.Meal;
 import com.example.pizzaproject.service.CategoryService;
 import com.example.pizzaproject.service.MealService;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
@@ -44,8 +46,9 @@ public class MealController {
 //        return new RedirectView("/addDish");
 //    }
     @PostMapping("/addDish")                          //dodawanie dania
-    public RedirectView postAddMeal(Meal meal, @PathVariable String prefix) {
-        mealService.addMeal(meal, prefix);
+    public RedirectView postAddMeal(Meal meal, @PathVariable String prefix, @RequestParam("file") MultipartFile file) {
+        mealService.store(file);
+        mealService.addMeal(meal, prefix, file.getOriginalFilename());
         return new RedirectView("/{prefix}/admin");
     }
 
@@ -57,8 +60,9 @@ public class MealController {
     }
 
     @PostMapping("/editDish/{id}")                       //zapisuje edytowane danie
-    public RedirectView postEditMeal(Meal editedMeal, @PathVariable("id")Long id, @PathVariable String prefix) {
-        mealService.editMeal(editedMeal,prefix);
+    public RedirectView postEditMeal(Meal editedMeal, @PathVariable("id")Long id,
+                                     @PathVariable String prefix, @RequestParam(name = "file", required = false) MultipartFile file) {
+        mealService.editMeal(editedMeal,prefix, file);
         return new RedirectView("/{prefix}/mealList");          //przekierowuje na widok listy do edycji
 
     }
@@ -69,6 +73,10 @@ public class MealController {
         return new RedirectView("/{prefix}/mealList");
     }
 
-
+    @GetMapping(value = "/meal/{id}/image")
+    @ResponseBody
+    public Resource getImageForAdvert(@PathVariable Long id){
+        return mealService.loadAsResourceByMealId(id);
+    }
 
 }

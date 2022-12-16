@@ -4,55 +4,38 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <%@include file="../dynamic/css.jspf" %>
-  <body>
-  <%@include file="../dynamic/navigationMain.jspf" %>
-    <!-- END nav -->
+<body>
+<%@include file="../dynamic/navigationMain.jspf" %>
+<!-- END nav -->
 
-    <section class="home-slider owl-carousel img" style="background-image: url(/resources/images/bg_1.jpg);">
+<section class="home-slider owl-carousel img" style="background-image: url(/resources/images/bg_1.jpg);">
 
-      <div class="slider-item" style="background-image: url(/resources/images/bg_3.jpg);">
-      	<div class="overlay"></div>
+    <div class="slider-item" style="background-image: url(/resources/images/bg_3.jpg);">
+        <div class="overlay"></div>
         <div class="container">
-          <div class="row slider-text justify-content-center align-items-center">
+            <div class="row slider-text justify-content-center align-items-center">
 
-            <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<h1 class="mb-3 mt-5 bread">Our Menu</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href='<c:url value="/${prefix}"/>'>Home</a></span> <span>Menu</span></p>
+                <div class="col-md-7 col-sm-12 text-center ftco-animate">
+                    <h1 class="mb-3 mt-5 bread">Our Menu</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href='<c:url value="/${prefix}"/>'>Home</a></span>
+                        <span>Menu</span></p>
+                </div>
+
             </div>
-
-          </div>
         </div>
-      </div>
-    </section>
-    
-		<section class="ftco-section">
-    	<div class="container">
-    		<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate text-center">
-            <h2 class="mb-4">Our Menu</h2>
-            <p>${descriptionOnPages.shortDescriptionMenuPage}</p>
-          </div>
-        </div>
-    	</div>
-    	<div class="container-wrap">
-    		<div class="row no-gutters d-flex">
-				<c:forEach items="${meal}" var="category">
-    			<div class="col-lg-4 d-flex ftco-animate">
-    				<div class="services-wrap d-flex">
-    					<a href='' class="img" style="background-image: url(/resources/images/pizza-1.jpg);"></a>
-    					<div class="text p-4">
-    						<h3>${category.name}</h3>
-    						<p>${category.description}</p>
-    						<p class="price"><span>${category.price}</span> <a href='' class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-    					</div>
-    				</div>
-    			</div>
-				</c:forEach>
-    		</div>
-    	</div>
+    </div>
+</section>
 
-  
-    </section>
+<section class="py-4">
+    <div class="container">
+        <div class="row justify-content-center mb-2 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                <h2 class="mb-4">Our Menu</h2>
+                <p>${descriptionOnPages.shortDescriptionMenuPage}</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="ftco-menu">
     <div class="container-fluid">
@@ -82,14 +65,14 @@
                                      id="${'v-pills-'.concat(loop.index+1)}" role="tabpanel"
                                      aria-labelledby="v-pills-1-tab">
 
-                                    <div class="row">
+                                    <div class="row" id="yu">
                                         <c:forEach items="${entry.value}" var="menuElement">
                                             <div class="d-flex justify-content-between">
                                                 <div class="col-4">
                                                     <div class="menu-wrap">
-                                                        <a href='<c:url value="/addOrder/${menuElement.id}"/>'
+                                                        <a href='#/yu'
                                                            class="menu-img img mb-4"
-                                                           style="background-image: url(/resources/images/pizza-1.jpg);"></a>
+                                                           style="background-image: url(/${prefix}/meal/${menuElement.id}/image);"></a>
                                                         <div class="text">
                                                             <h3><a href="#">${menuElement.name}</a></h3>
                                                             <p>${menuElement.description}</p>
@@ -117,9 +100,9 @@
     </div>
 </section>
 
-    <%@include file="../dynamic/board.jspf" %>
+<%@include file="../dynamic/board.jspf" %>
 
-	<%@include file="../dynamic/javaScript.jspf" %>
-    
-  </body>
+<%@include file="../dynamic/javaScript.jspf" %>
+
+</body>
 </html>
