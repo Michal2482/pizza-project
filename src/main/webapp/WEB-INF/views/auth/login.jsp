@@ -29,7 +29,7 @@
                           </div>
 
                           <c:if test="${!error.isEmpty()}"><div class="text-danger">${error}</div></c:if>
-                          <c:if test="${!message.isEmpty()}"><div class="text-danger">${message}</div></c:if>
+                          <c:if test="${!message.isEmpty()}"><div class="text-primary">${message}</div></c:if>
 
                           <form class="user" method="post" action='<c:url value="/login"/>'>
                             <div class="form-group h4">
@@ -47,6 +47,7 @@
                               </div>
                             </div>
                             <input type="submit" value="Login" class="btn btn-primary btn-user btn-block">
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                           </form>
 
                           <div class="text-center">

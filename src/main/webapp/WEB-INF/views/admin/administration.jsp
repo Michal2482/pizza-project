@@ -29,8 +29,10 @@
         <div class="col-md-12 contact-info ftco-animate">
             <div class="mb-5">
                 <form action='<c:url value="/logout"/>' method="post">
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                     <input type="submit" value="Sign Out" class="btn btn-primary btn-user btn-block"/>
                 </form>
+
             </div>
             <h4>Orders</h4>
             <p> Display orders</p>
