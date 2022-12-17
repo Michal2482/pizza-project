@@ -27,7 +27,11 @@
 <section class="ftco-section administration-section">
     <div class="container mt-4">
         <div class="col-md-12 contact-info ftco-animate">
-
+            <div class="mb-5">
+                <form action='<c:url value="/logout"/>' method="post">
+                    <input type="submit" value="Sign Out" class="btn btn-primary btn-user btn-block"/>
+                </form>
+            </div>
             <h4>Orders</h4>
             <p> Display orders</p>
             <div class="d-flex justify-content-end">

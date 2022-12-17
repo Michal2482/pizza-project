@@ -1,7 +1,9 @@
 package com.example.pizzaproject.config;
 
+import com.example.pizzaproject.service.RegisterCompanyService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -12,6 +14,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
+
 public class Auth extends WebSecurityConfigurerAdapter {
 
     @Bean
@@ -55,13 +58,12 @@ public class Auth extends WebSecurityConfigurerAdapter {
                 .loginPage("/login")
                 .usernameParameter("username")
                 .passwordParameter("password")
-                .loginProcessingUrl("/login")
-                .failureForwardUrl("/pizzeria")
-//                .defaultSuccessUrl("/pizzeria/admin")
-//                .successForwardUrl("/pizzeria/menu")
+//                .loginProcessingUrl("/login")
+                .defaultSuccessUrl("/pizzeria/admin")
+                .failureUrl("/login?error")
                 .and()
                 .logout()
-                .logoutSuccessUrl("/login");
+                .logoutSuccessUrl("/login?logout");
     }
 
 }

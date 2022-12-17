@@ -4,9 +4,8 @@ import com.example.pizzaproject.model.Company;
 import com.example.pizzaproject.service.RegisterCompanyService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.Optional;
@@ -21,9 +20,20 @@ public class AuthController {
     }
 
     @GetMapping("/login")
-    public String getLogin() {
+    public String getLogin(Model model, @RequestParam(value = "error",required = false) String error,
+                           @RequestParam(value = "logout",	required = false) String logout) {
+
+        if (error != null) {
+            model.addAttribute("error", "Wrong username or password. Try again");
+        }
+
+        if (logout != null) {
+            model.addAttribute("message", "Logged out successfully. Welcome again");
+        }
+
         return "auth/login";
     }
+
 
     @GetMapping("/register")
     public String getRegister() {
@@ -36,11 +46,4 @@ public class AuthController {
         return new RedirectView("/login");
     }
 
-    @PostMapping("/login")
-    public RedirectView postLoginCompany(Long id, Model model) {
-        String prefix =registerCompanyService.getPrefixCompanyById(id);
-        model.addAttribute("prefix",prefix);
-        System.out.println(prefix);
-        return new RedirectView("/"+prefix);
-    }
 }

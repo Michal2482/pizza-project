@@ -27,6 +27,10 @@
                           <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Welcome !</h1>
                           </div>
+
+                          <c:if test="${!error.isEmpty()}"><div class="text-danger">${error}</div></c:if>
+                          <c:if test="${!message.isEmpty()}"><div class="text-danger">${message}</div></c:if>
+
                           <form class="user" method="post" action='<c:url value="/login"/>'>
                             <div class="form-group h4">
                               <input type="text" class="form-control" name="username" placeholder="Username">
@@ -44,6 +48,7 @@
                             </div>
                             <input type="submit" value="Login" class="btn btn-primary btn-user btn-block">
                           </form>
+
                           <div class="text-center">
                             <a class="small" href='<c:url value="/register"/>'>Create account</a>
                           </div>
