@@ -31,22 +31,21 @@
                                     </div>
                                     <form class="user" method="post" action='<c:url value="/register"/>'>
                                         <div class="form-group">
-
-                                            <input type="text" class="form-control form-control-user"
+                                            <input type="text" class="form-control form-control-user" name="username"
                                                    id="exampleFirstName" placeholder="Username">
 
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
+                                            <input type="email" class="form-control form-control-user" name="email"
                                                    id="exampleInputEmail" placeholder="email">
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                                <input type="password" class="form-control form-control-user"
+                                                <input type="password" class="form-control form-control-user" name="password"
                                                        id="exampleInputPassword" placeholder="Password">
                                             </div>
                                             <div class="form-group row">
-                                                <input type="password" class="form-control form-control-user"
+                                                <input type="password" class="form-control form-control-user" name="password"
                                                        id="exampleRepeatPassword" placeholder="Confirm Password ">
                                             </div>
                                             <div class="col-sm-6">

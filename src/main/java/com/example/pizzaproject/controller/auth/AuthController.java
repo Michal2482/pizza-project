@@ -1,48 +1,61 @@
 package com.example.pizzaproject.controller.auth;
 
-import com.example.pizzaproject.model.Company;
+import com.example.pizzaproject.model.User;
+import com.example.pizzaproject.service.CustomUserDetailsService;
+import com.example.pizzaproject.service.DbInitializer;
 import com.example.pizzaproject.service.RegisterCompanyService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
-import java.util.Optional;
+import javax.validation.Valid;
 
 @Controller
 public class AuthController {
 
     private final RegisterCompanyService registerCompanyService;
+    private final CustomUserDetailsService customUserDetailsService;
+    private final DbInitializer dbInitializer;
 
-    public AuthController(RegisterCompanyService registerCompanyService) {
+    public AuthController(RegisterCompanyService registerCompanyService, CustomUserDetailsService customUserDetailsService, DbInitializer dbInitializer) {
         this.registerCompanyService = registerCompanyService;
+        this.customUserDetailsService = customUserDetailsService;
+        this.dbInitializer = dbInitializer;
     }
 
     @GetMapping("/login")
-    public String getLogin(Model model, @RequestParam(value = "error",required = false) String error,
-                           @RequestParam(value = "logout",	required = false) String logout) {
-
-        if (error != null) {
-            model.addAttribute("error", "Wrong username or password. Try again");
-        }
-
-        if (logout != null) {
-            model.addAttribute("message", "Logged out successfully. Welcome again");
-        }
+    public String getLogin(Model model, @RequestParam(value = "error", required = false) String error,
+                           @RequestParam(value = "logout", required = false) String logout) {
+//
+//        if (error != null) {
+//            model.addAttribute("error", "Wrong username or password. Try again");
+//        }
+//
+//        if (logout != null) {
+//            model.addAttribute("message", "Logged out successfully. Welcome again");
+//        }
+//
 
         return "auth/login";
     }
 
 
     @GetMapping("/register")
-    public String getRegister() {
+    public String getRegister(Model model) {
+        model.addAttribute("user",new User());
         return "auth/register";
     }
 
+//    @PostMapping("/register")
+//    public RedirectView postRegisterCompany(Company company) {
+//        registerCompanyService.addCompany(company);
+//        return new RedirectView("/login");
+//    }
+
     @PostMapping("/register")
-    public RedirectView postRegisterCompany(Company company) {
-        registerCompanyService.addCompany(company);
+    public RedirectView postRegisterUser(@Valid User user) {
+        dbInitializer.addUser(user);
         return new RedirectView("/login");
     }
 
