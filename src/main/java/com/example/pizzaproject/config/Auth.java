@@ -1,12 +1,11 @@
 package com.example.pizzaproject.config;
 
 
-import com.example.pizzaproject.service.CustomUserDetailsService;
+import com.example.pizzaproject.service.RegisterCompanyService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -15,17 +14,17 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import javax.sql.DataSource;
-
 
 @Configuration
 @EnableWebSecurity
 public class Auth extends WebSecurityConfigurerAdapter {
 
     private final UserDetailsService userDetailsService;
+    private final RegisterCompanyService registerCompanyService;
 
-    public Auth(@Qualifier("customUserDetailsService") final UserDetailsService userDetailsService) {
+    public Auth(@Qualifier("customUserDetailsService") final UserDetailsService userDetailsService, RegisterCompanyService registerCompanyService) {
         this.userDetailsService = userDetailsService;
+        this.registerCompanyService = registerCompanyService;
     }
     @Override
     protected UserDetailsService userDetailsService() {
@@ -37,29 +36,10 @@ public class Auth extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-//    @Bean
-//    public DaoAuthenticationProvider authProvider() {
-//        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-//        authProvider.setUserDetailsService(userDetailsService);
-//        authProvider.setPasswordEncoder(passwordEncoder());
-//        return authProvider;
-//    }
-
 //    @Override
 //    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.userDetailsService(this.userDetailsService);
+//        auth.userDetailsService(this.userDetailsService).passwordEncoder(passwordEncoder());
 //
-//    }
-
-
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.inMemoryAuthentication()
-//               .withUser("bar").password(passwordEncoder().encode("bar")).roles("PIZZERIA_OWNER")
-//                .and()
-//                .withUser("pizzeriaOwner").password(passwordEncoder().encode("pizzeriaOwner")).roles("PIZZERIA_OWNER")
-//                .and()
-//                .withUser("admin").password(passwordEncoder().encode("admin")).roles("ADMIN");
 //    }
 
     @Override
@@ -79,7 +59,7 @@ public class Auth extends WebSecurityConfigurerAdapter {
                 .antMatchers("/pizzeria/editPerson/**").hasAnyRole("ADMIN","PIZZERIA_OWNER")
                 .antMatchers("/pizzeria/personList").hasAnyRole("ADMIN","PIZZERIA_OWNER")
                 .antMatchers("/pizzeria/deletePerson/**").hasAnyRole("ADMIN","PIZZERIA_OWNER")
-                .antMatchers("/pizzeria/admin/**").authenticated()
+//                .antMatchers("/pizzeria/admin/**").hasAnyRole("ADMIN","PIZZERIA_OWNER")
                 .anyRequest().permitAll()
                 .and()
                 .csrf().disable()

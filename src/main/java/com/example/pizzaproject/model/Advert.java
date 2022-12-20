@@ -4,8 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
@@ -22,8 +26,19 @@ public class Advert {
     @JoinColumn(name="company_id")
     private Company company;
 
+
+//    @NotNull(message = "Is empty")
+//    @NotEmpty(message = "Is empty")
     private String photoAdvert;
+
+
+    @Length(max=25,message = "Slogan cannot be longer than 25 signs")
     private String slogan;
+
+    @NotEmpty(message = "Cannot be empty")
+    @Length(max=35,message = "Product name cannot be longer than 35 signs")
     private String productAdvertName;
+
+    @Length(max=250,message = "Description cannot be longer than 250 signs")
     private String descriptionProductAdvert;
 }

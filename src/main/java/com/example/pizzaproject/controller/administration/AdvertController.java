@@ -5,11 +5,14 @@ import com.example.pizzaproject.service.AdvertService;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -23,15 +26,22 @@ public class AdvertController {
     }
 
     @GetMapping("/admin/addAdvert")
-    public String getAdvertForm(@PathVariable String prefix) {
+    public String getAdvertForm(@PathVariable String prefix, final ModelMap modelMap) {
+        modelMap.addAttribute("form",new Advert());
         return "advert/addAdvert";
     }
 
     @PostMapping(value="/admin/addAdvert",  params="submitAndGoAdminPage")
-    public RedirectView postAddAdvert(@PathVariable String prefix, Advert advert, @RequestParam("file") MultipartFile file) {
-        advertService.store(file);
-        advertService.addAdvert(advert, prefix, file.getOriginalFilename());
-        return new RedirectView("");
+    public String postAddAdvert(@PathVariable String prefix, @Valid @RequestParam(value = "file") MultipartFile file,
+                                      @ModelAttribute("form") @Valid Advert advert, BindingResult result,Model model) {
+        if (file.isEmpty()||result.hasErrors()){
+            model.addAttribute("errorMessage", "Photo cannot be empty");
+            return "advert/addAdvert";
+        } else {
+            advertService.store(file);
+            advertService.addAdvert(advert, prefix, file.getOriginalFilename());
+            return "redirect:/{prefix}/admin";
+        }
     }
 
     @PostMapping(value="/admin/addAdvert",  params="submitAndGoHomePage")

@@ -44,10 +44,10 @@
                                                 <input type="password" class="form-control form-control-user" name="password"
                                                        id="exampleInputPassword" placeholder="Password">
                                             </div>
-                                            <div class="form-group row">
-                                                <input type="password" class="form-control form-control-user" name="password"
-                                                       id="exampleRepeatPassword" placeholder="Confirm Password ">
-                                            </div>
+<%--                                            <div class="form-group row">--%>
+<%--                                                <input type="password" class="form-control form-control-user" name="password"--%>
+<%--                                                       id="exampleRepeatPassword" placeholder="Confirm Password ">--%>
+<%--                                            </div>--%>
                                             <div class="col-sm-6">
                                                 <input type="text" class="form-control" id="prefix" name="prefix"
                                                        placeholder="Prefix">

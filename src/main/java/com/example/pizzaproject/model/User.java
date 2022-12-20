@@ -9,6 +9,7 @@ import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Data
 @NoArgsConstructor
@@ -17,18 +18,21 @@ import javax.validation.constraints.NotEmpty;
 public class User {
 
     @Id
-    @NonNull
+    @NotNull
     @NotEmpty
     private String username;
 
     @Column(name="password")
-    @NonNull
+    @NotNull
     @NotEmpty
     private String password;
 
 
     @Column(name="role")
     private String role;
+
+    @OneToOne
+    private Company company;
 
 //    @Column(name="email")
 //    @NonNull
