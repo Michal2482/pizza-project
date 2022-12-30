@@ -88,42 +88,42 @@
                    role="button">Edit person</a>
             </div>
 
-            <form action="#" class="contact-form">
-                <h4>Position of Services</h4>
+<%--            <form action="#" class="contact-form">--%>
+<%--                <h4>Position of Services</h4>--%>
 
-                <div class="form-group row">
+<%--                <div class="form-group row">--%>
 
-                    <label class="col-4 col-form-label">Picture</label>
-                    <div class="col-8">
-                        <input class="form-control" type="text" name="picture"
-                               placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">
-                    </div>
-                </div>
+<%--                    <label class="col-4 col-form-label">Picture</label>--%>
+<%--                    <div class="col-8">--%>
+<%--                        <input class="form-control" type="text" name="picture"--%>
+<%--                               placeholder="trzeba to jakos edytować z możliwością dodania zdjęcia">--%>
+<%--                    </div>--%>
+<%--                </div>--%>
 
-                <div class="form-group row">
-                    <label class="col-4 col-form-labe">Service name</label>
-                    <div class="col-8">
-                        <input class="form-control" type="text" name="ServiceName[1]"
-                               placeholder="service name">
-                    </div>
-                </div>
+<%--                <div class="form-group row">--%>
+<%--                    <label class="col-4 col-form-labe">Service name</label>--%>
+<%--                    <div class="col-8">--%>
+<%--                        <input class="form-control" type="text" name="ServiceName[1]"--%>
+<%--                               placeholder="service name">--%>
+<%--                    </div>--%>
+<%--                </div>--%>
 
-                <div class="form-group row">
-                    <label class="col-4 col-form-label">Description Service</label>
-                    <div class="col-8">
-                                    <textarea class="form-control" rows="4" id="descriptionService"
-                                              name="descriptionService" placeholder="Description Service"></textarea>
-                    </div>
-                </div>
+<%--                <div class="form-group row">--%>
+<%--                    <label class="col-4 col-form-label">Description Service</label>--%>
+<%--                    <div class="col-8">--%>
+<%--                                    <textarea class="form-control" rows="4" id="descriptionService"--%>
+<%--                                              name="descriptionService" placeholder="Description Service"></textarea>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
 
-                <div class="d-flex justify-content-end">
-                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
-                           value="Save">
-                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"
-                           value="Edit">
-                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"
-                           value="Delete">
-                </div>
+<%--                <div class="d-flex justify-content-end">--%>
+<%--                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"--%>
+<%--                           value="Save">--%>
+<%--                    <input class="btn btn-primary py-2 px-4" style="margin:10px" type="submit"--%>
+<%--                           value="Edit">--%>
+<%--                    <input class="btn btn-danger py-2 px-4" style="margin:10px" type="submit"--%>
+<%--                           value="Delete">--%>
+<%--                </div>--%>
             </form>
         </div>
     </div>

@@ -25,7 +25,7 @@ public class RegisterService {
 
     @Transactional
     public void addUser(User user, Company company) {
-        userRepository.save(new User(user.getUsername(), passwordEncoder.encode(user.getPassword()), "ROLE_PIZZERIA_OWNER",company));
+        userRepository.save(new User(user.getUsername(), passwordEncoder.encode(user.getPassword()), "ROLE_PIZZERIA_OWNER",company, user.getEmail()));
     }
 
 

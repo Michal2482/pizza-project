@@ -1,6 +1,5 @@
 package com.example.pizzaproject.controller;
 
-import com.example.pizzaproject.common.Message;
 import com.example.pizzaproject.model.Meal;
 import com.example.pizzaproject.model.Order;
 import com.example.pizzaproject.model.OrderStatus;

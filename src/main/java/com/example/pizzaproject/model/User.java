@@ -8,6 +8,7 @@ import lombok.NonNull;
 import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
@@ -34,10 +35,10 @@ public class User {
     @OneToOne
     private Company company;
 
-//    @Column(name="email")
-//    @NonNull
-//    @NotEmpty
-//    private String email;
+    @Column(name="email")
+    @Email
+    @NotEmpty
+    private String email;
 
 
 }

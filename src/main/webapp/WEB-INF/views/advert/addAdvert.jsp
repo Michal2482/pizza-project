@@ -19,7 +19,8 @@
                     <label class="col-4 col-form-label">Photo Advert</label>
                     <div class="col-8">
                         <input class="form-control" type="file" name="file"
-                               id="photoAdvert"/>
+                               id="photoAdvert" path="photoAdvert"/>
+
                         <c:if test="${not empty errorMessage}">
                             <div class="text-danger">${errorMessage}</div>
                         </c:if>

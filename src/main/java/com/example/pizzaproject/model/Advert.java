@@ -26,9 +26,6 @@ public class Advert {
     @JoinColumn(name="company_id")
     private Company company;
 
-
-//    @NotNull(message = "Is empty")
-//    @NotEmpty(message = "Is empty")
     private String photoAdvert;
 
 

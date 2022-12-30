@@ -113,10 +113,6 @@ public class AdvertService {
         }
 }
 
-    public void deleteAll() {
-        FileSystemUtils.deleteRecursively(rootLocation.toFile());
-    }
-
     public void init(){
         try {
             Files.createDirectories(rootLocation);

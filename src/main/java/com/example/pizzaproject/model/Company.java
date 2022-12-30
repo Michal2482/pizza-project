@@ -22,15 +22,15 @@ public class Company {
 
     private String prefix;
 
-    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @OneToMany(mappedBy="company",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private Set<Advert> adverts = new HashSet<>();
 
-    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @OneToMany(mappedBy="company",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private Set<Category> categories = new HashSet<>();
 
-    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @OneToMany(mappedBy="company",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private Set<Meal> meals = new HashSet<>();
 
-    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @OneToMany(mappedBy="company",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private Set<Person> persons = new HashSet<>();
 }

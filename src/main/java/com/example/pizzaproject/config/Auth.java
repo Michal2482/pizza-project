@@ -59,7 +59,7 @@ public class Auth extends WebSecurityConfigurerAdapter {
                 .antMatchers("/pizzeria/editPerson/**").hasAnyRole("ADMIN","PIZZERIA_OWNER")
                 .antMatchers("/pizzeria/personList").hasAnyRole("ADMIN","PIZZERIA_OWNER")
                 .antMatchers("/pizzeria/deletePerson/**").hasAnyRole("ADMIN","PIZZERIA_OWNER")
-//                .antMatchers("/pizzeria/admin/**").hasAnyRole("ADMIN","PIZZERIA_OWNER")
+                .antMatchers("/pizzeria/admin/**").hasAnyRole("ADMIN","PIZZERIA_OWNER")
                 .anyRequest().permitAll()
                 .and()
                 .csrf().disable()
