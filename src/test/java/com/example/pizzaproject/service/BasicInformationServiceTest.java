@@ -133,23 +133,45 @@ class BasicInformationServiceTest {
         assertThat(basicInformation.getShortDescriptionPizzeria()).isEqualTo(existingBasicInformation.getShortDescriptionPizzeria());
     }
 
-//    @Test
-//    public void addBasicInformationTest() {
-//        // given
-//        BasicInformation cos = mock(BasicInformation.class);
-//
-//        when(basicInformationRepository.findByCompanyPrefix(PREFIX)).thenReturn(Optional.empty());
-//        when(basicInformationRepository.save(any())).thenReturn(cos);
-//        when(companyRepository.findCompanyByPrefix(PREFIX)).thenReturn(Optional.of(company));
-//
-//
-//        // when
-//        basicInformationService.addBasicInformation(basicInformation, PREFIX);
-//
-//        // then
-//        verify(basicInformationRepository).save(cos);
-//
-//    }
+    @Test
+    public void shouldAddBasicInformation() {
+        // given
+        BasicInformation existingBasicInformation = mock(BasicInformation.class);
+
+        when(basicInformationRepository.findByCompanyPrefix(PREFIX)).thenReturn(Optional.empty());
+        when(basicInformationRepository.save(any())).thenReturn(existingBasicInformation);
+        when(companyRepository.findCompanyByPrefix(PREFIX)).thenReturn(Optional.of(company));
+
+
+        // when
+        basicInformationService.addBasicInformation(basicInformation, PREFIX);
+
+        // then
+        verify(basicInformationRepository).save(any());
+        System.out.println(basicInformation);
+        System.out.println(existingBasicInformation);
+        assertThat(basicInformation.getFirstPartName()).isEqualTo(existingBasicInformation.getFirstPartName());
+
+    }
+
+    @Test
+    void shouldDeleteBasicInformation() {
+        BasicInformation basicInformationToDelete = new BasicInformation();
+        final String PREFIX_TO_DELETE = "pizzeria";
+        Company companyWithPrefixToDelete = new Company(1L,PREFIX_TO_DELETE,null,null,null,null);
+        basicInformationToDelete.setCompany(companyWithPrefixToDelete);
+        basicInformationToDelete.setId(1L);
+        basicInformationRepository.save(basicInformationToDelete);
+        when(basicInformationRepository.findByCompanyPrefix(PREFIX_TO_DELETE)).thenReturn(Optional.of(basicInformationToDelete),Optional.empty());
+
+        basicInformationService.deleteBasicInformation(PREFIX_TO_DELETE);
+
+        verify(basicInformationRepository).deleteById(any());
+        Optional<BasicInformation> optionalBasicInformation = basicInformationRepository.findByCompanyPrefix(PREFIX_TO_DELETE);
+        assertFalse(optionalBasicInformation.isPresent());
+
+
+    }
 }
 
 

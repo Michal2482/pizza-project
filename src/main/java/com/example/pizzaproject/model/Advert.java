@@ -38,4 +38,5 @@ public class Advert {
 
     @Length(max=250,message = "Description cannot be longer than 250 signs")
     private String descriptionProductAdvert;
+
 }

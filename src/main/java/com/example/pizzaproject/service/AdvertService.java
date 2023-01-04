@@ -39,6 +39,7 @@ public class AdvertService {
         this.advertRepository = advertRepository;
         this.companyRepository = companyRepository;
         this.rootLocation = Paths.get(properties.getLocation());
+
     }
 
     public void addAdvert(Advert advert, String prefix, String fileName) {
@@ -112,6 +113,8 @@ public class AdvertService {
             throw new StorageFileNotFoundException("Could not read file: " + filename, e);
         }
 }
+
+
 
     public void init(){
         try {
