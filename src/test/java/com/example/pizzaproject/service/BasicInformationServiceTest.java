@@ -68,7 +68,7 @@ class BasicInformationServiceTest {
     }
 
     @Test
-    public void shouldChangeExistingBasicInformation() {
+    public void shouldEditBasicInformation() {
         BasicInformation existingBasicInformation = mock(BasicInformation.class);
         when(basicInformationRepository.findByCompanyPrefix(PREFIX)).thenReturn(Optional.of(existingBasicInformation));
         when(companyRepository.findCompanyByPrefix(PREFIX)).thenReturn(Optional.of(company));
