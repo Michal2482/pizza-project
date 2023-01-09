@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +43,17 @@ public class MenuController {
         model.addAttribute("categoryMap", mealByCategories);
         DescriptionOnPages descriptionOnPages = descriptionOnPagesService.getInformation(prefix);
         model.addAttribute("descriptionOnPages", descriptionOnPages);
+        return "pizzaPage/menu";
+    }
+
+    @GetMapping(value = "/menu/search")
+    public String getSearchedMealList(Model model, @PathVariable String prefix, @RequestParam("freeText") String freeText) {
+        List<Meal> mealListWithSearchedText = mealService.getMealsWithSearchedText(prefix,freeText);
+        model.addAttribute("mealBeforeSearch", mealListWithSearchedText);
+
+        DescriptionOnPages descriptionOnPages = descriptionOnPagesService.getInformation(prefix);
+        model.addAttribute("descriptionOnPages", descriptionOnPages);
+
         return "pizzaPage/menu";
     }
 }

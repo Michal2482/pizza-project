@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@taglib uri="http://www.springframework.org/tags" prefix="s" %>
 <jsp:useBean id="now" class="java.util.Date"/>
 <%@ page contentType="text/html; charset=UTF-8" %>
 
@@ -44,7 +45,36 @@
                  style="background-image: url(/resources/images/about.jpg);">
             </div>
             <div class="col-lg-8 ftco-animate p-md-5">
-                <div class="row">
+                <div class="row mb-2">
+                    <form action='<s:url value="/${prefix}/menu/search"/>'>
+                        <div class=" form-group row">
+                            <div class="col-10"><input class="form-control" type="text" name="freeText"
+                                                       placeholder="Enter meal to search"></div>
+                            <div class="col-2">
+                                <button class="btn btn-primary">Find</button>
+                            </div>
+                            <c:forEach items="${mealBeforeSearch}" var="menuElement">
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-4">
+                                        <div class="menu-wrap">
+                                            <a href='#/yu'
+                                               class="menu-img img mb-4"
+                                               style="background-image: url(/${prefix}/meal/${menuElement.id}/image);"></a>
+                                            <div class="text">
+                                                <h3><a href="#">${menuElement.name}</a></h3>
+                                                <p>${menuElement.description}</p>
+                                                <p class="price"><span>${menuElement.price}</span></p>
+                                                <p>
+                                                    <a href='<c:url value="/${prefix}/order/add"><c:param name="mealId" value="${menuElement.id}"/></c:url>'
+                                                       class="btn btn-white btn-outline-white">Add
+                                                        to cart</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </c:forEach>
+                        </div>
+                    </form>
                     <div class="col-md-12 nav-link-wrap mb-5">
                         <div class="nav ftco-animate nav-pills" id="v-pills-tab" role="tablist"
                              aria-orientation="vertical">

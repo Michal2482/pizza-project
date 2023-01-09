@@ -87,6 +87,11 @@ public class MealService {
         return mealRepository.findAllByCompanyId(companyInDatabase.getId());                    //met. getMealList w MenuControllerze
     }
 
+    public List<Meal> getMealsWithSearchedText(String prefix, String searchedText) {
+        Company companyInDatabase = companyRepository.findCompanyByPrefix(prefix).orElseThrow(()->new PizzaProjectException(PizzaProjectException.EMPTY_COMPANY_ID+prefix));
+        return mealRepository.findAllByCompanyIdAndSearchedText(companyInDatabase.getId(),searchedText);                    //met. getMealList w MenuControllerze
+    }
+
     public Map<String, List<Meal>> mealByCategories(List<Meal> mealList) {
         return mealList.stream().collect(Collectors.toMap(meal -> meal.getCategory().getCategoryName(),
                 meal -> List.of(meal),
