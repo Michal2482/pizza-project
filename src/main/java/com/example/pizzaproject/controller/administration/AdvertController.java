@@ -3,7 +3,7 @@ package com.example.pizzaproject.controller.administration;
 import com.example.pizzaproject.model.Advert;
 import com.example.pizzaproject.service.AdvertService;
 import com.example.pizzaproject.validation.FileValidator;
-import com.example.pizzaproject.validation.ImageValidator;
+
 import com.example.pizzaproject.validation.ValidImage;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.io.Resource;
@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.view.RedirectView;
@@ -21,6 +22,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/{prefix}")
+@Validated
 public class AdvertController {
 
     private final AdvertService advertService;
@@ -39,7 +41,7 @@ public class AdvertController {
     @PostMapping(value="/admin/addAdvert",  params="submitAndGoAdminPage")
     public String postAddAdvert(@PathVariable String prefix, @ValidImage @RequestParam(value = "file")  MultipartFile file,
                                       @ModelAttribute("form") @Valid Advert advert, BindingResult result,Model model) {
-        if (result.hasErrors() || ImageValidator.isValid(file)){
+        if (result.hasErrors()){
             model.addAttribute("errorMessage","You must send photo with sufix .jpg or .png");
             return "advert/addAdvert";
         } else {
